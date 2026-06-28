@@ -6,6 +6,11 @@
 
 **TecNM Campus Tijuana · Ingeniería en Sistemas Computacionales**
 
+[![Tests](https://github.com/tectijuana/programacionlogicayfuncional/actions/workflows/test.yml/badge.svg)](https://github.com/tectijuana/programacionlogicayfuncional/actions/workflows/test.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Cite](https://img.shields.io/badge/Citar-CITATION.cff-green)](CITATION.cff)
+![Languages](https://img.shields.io/badge/Lenguajes-Prolog%20%7C%20Erlang%20%7C%20Haskell%20%7C%20Clojure%20%7C%20Elixir-orange)
+
 ## ¿Por qué importa este curso? La conexión real con la industria
 
 > *"A longtime JavaScript programmer and functional programming evangelist."*
@@ -35,6 +40,19 @@ Otros ejemplos de producción que estudiarás en este curso:
 ## Objetivo General
 
 Proveer a los estudiantes de las bases teóricas y prácticas necesarias para la programación en paradigmas lógicos y funcionales, desarrollando su capacidad para resolver problemas complejos de manera efectiva.
+
+## Resultados de Aprendizaje (Taxonomía de Bloom)
+
+Al concluir el curso, el estudiante será capaz de:
+
+| Nivel | Verbo | Resultado medible |
+|-------|-------|-------------------|
+| **Recordar** | Identificar | Los paradigmas funcional y lógico, sus lenguajes representativos y casos de uso en la industria |
+| **Comprender** | Explicar | La diferencia entre evaluación estricta y perezosa, unificación vs. asignación, y "let it crash" |
+| **Aplicar** | Implementar | Soluciones recursivas con tail-call optimization en Erlang, Haskell y Prolog |
+| **Analizar** | Comparar | El mismo problema en tres paradigmas (imperativo, funcional, lógico) midiendo líneas de código y garantías del compilador |
+| **Evaluar** | Justificar | La elección de paradigma para un problema dado, con métricas concretas de complejidad y mantenibilidad |
+| **Crear** | Diseñar | Un sistema multi-paradigma que integre lógica declarativa (Prolog), estado supervisado (Erlang/OTP) y tipos fuertes (Haskell) |
 
 ## Unidades y Temas
 

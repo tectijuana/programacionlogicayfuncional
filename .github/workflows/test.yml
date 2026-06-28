@@ -1,0 +1,100 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  prolog:
+    name: SWI-Prolog Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install SWI-Prolog
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y swi-prolog
+
+      - name: Load check — all Prolog files
+        run: |
+          for f in \
+            unidad1/tema1.3/curp_logico.pl \
+            unidad3/tema3.1/hechos_consultas.pl \
+            unidad3/tema3.2/reglas_negacion.pl \
+            unidad3/tema3.3/unificacion.pl \
+            unidad3/tema3.4/listas.pl \
+            unidad3/tema3.4/aritmetica.pl \
+            unidad3/tema3.5/sistema_experto/diagnostico.pl \
+            unidad4/tema4.1/modulos_prolog.pl \
+            unidad4/tema4.2/busqueda_dfs.pl \
+            unidad4/tema4.2/busqueda_bfs.pl \
+            unidad4/tema4.2/estrategias.pl \
+            unidad4/tema4.3/clpfd_basico.pl \
+            unidad4/tema4.3/sudoku.pl \
+            unidad4/tema4.3/horarios_tec.pl \
+            unidad4/tema4.4/proyecto_final/validador.pl; do
+            echo "Checking $f..."
+            swipl -g halt -l "$f"
+          done
+
+      - name: Run plunit test suites
+        run: |
+          echo "=== curp_logico (8 tests) ==="
+          swipl -g "run_tests, halt" -l unidad1/tema1.3/curp_logico.pl
+
+          echo "=== unificacion (15 tests) ==="
+          swipl -g "run_tests, halt" -l unidad3/tema3.3/unificacion.pl
+
+          echo "=== listas (28 tests) ==="
+          swipl -g "run_tests, halt" -l unidad3/tema3.4/listas.pl
+
+          echo "=== aritmetica (48 tests) ==="
+          swipl -g "run_tests, halt" -l unidad3/tema3.4/aritmetica.pl
+
+  erlang:
+    name: Erlang Compilation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Erlang/OTP
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y erlang
+
+      - name: Compile all Erlang files
+        run: |
+          mkdir -p /tmp/ebin
+          for f in \
+            unidad1/tema1.3/curp_funcional.erl \
+            unidad2/tema2.1/inmutabilidad.erl \
+            unidad2/tema2.1/patron_matching.erl \
+            unidad2/tema2.5/sensor_supervisor/src/sensor_app.erl \
+            unidad2/tema2.5/sensor_supervisor/src/sensor_sup.erl \
+            unidad2/tema2.5/sensor_supervisor/src/sensor_server.erl; do
+            echo "Compiling $f..."
+            erlc -o /tmp/ebin "$f"
+          done
+
+  haskell:
+    name: Haskell Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GHC
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ghc
+
+      - name: Type-check Haskell files
+        run: |
+          for f in \
+            unidad2/tema2.3/recursion.hs \
+            unidad2/tema2.4/lazy.hs; do
+            echo "Checking $f..."
+            ghc -fno-code "$f"
+          done

@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "Si utilizas este material en tu investigación o docencia, por favor cítalo."
+type: software
+title: "Programación Lógica y Funcional — TecNM Campus Tijuana"
+abstract: >
+  Material didáctico para el curso de Programación Lógica y Funcional
+  de la carrera de Ingeniería en Sistemas Computacionales en el
+  Tecnológico Nacional de México Campus Tijuana. Incluye prácticas
+  ejecutables en SWI-Prolog, Erlang/OTP, Haskell, Clojure y Elixir
+  con contexto de aplicaciones mexicanas reales.
+authors:
+  - family-names: Solís Reyes
+    given-names: René
+    alias: IoTeacher
+    affiliation: "Tecnológico Nacional de México Campus Tijuana"
+    email: rene.solis@tectijuana.edu.mx
+    orcid: ""
+repository-code: "https://github.com/tectijuana/programacionlogicayfuncional"
+url: "https://github.com/tectijuana/programacionlogicayfuncional"
+license: GPL-3.0
+version: "2026.1"
+date-released: "2026-08-01"
+keywords:
+  - "programación lógica"
+  - "programación funcional"
+  - Prolog
+  - Erlang
+  - Haskell
+  - Clojure
+  - Elixir
+  - "TecNM"
+  - "ingeniería en sistemas"
+  - "paradigmas de programación"
+preferred-citation:
+  type: generic
+  title: "Programación Lógica y Funcional — TecNM Campus Tijuana"
+  authors:
+    - family-names: Solís Reyes
+      given-names: René
+  year: 2026
+  url: "https://github.com/tectijuana/programacionlogicayfuncional"

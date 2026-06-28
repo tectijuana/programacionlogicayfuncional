@@ -1,32 +1,74 @@
-# Archivos temporales de macOS
+# ===== macOS =====
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Archivos de icono de directorio
 Icon?
-
-# Archivos de vista previa generados por QuickLook
 ._*
-
-# Archivos de almacenamiento Spotlight
 .Spotlight-V100
 .Trashes
-
-# Archivo de almacenamiento de metadatos
-.DS_Store
-.DS_Store?
-
-# Archivo temporal del Finder
 .fseventsd
-
-# Almacenamiento de volúmenes montados
 .VolumeIcon.icns
-AppleDouble
-AppleDB
-AppleDesktop
-
-# Archivo de almacenamiento de configuraciones de red
-Network Trash Folder
-Temporary Items
+Network\ Trash\ Folder
+Temporary\ Items
 .apdisk
+
+# ===== Erlang / BEAM =====
+*.beam
+ebin/
+.eunit/
+_build/
+deps/
+*.plt
+erl_crash.dump
+
+# ===== Haskell / GHC =====
+*.hi
+*.o
+*.dyn_hi
+*.dyn_o
+dist/
+dist-newstyle/
+.stack-work/
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+
+# ===== SWI-Prolog =====
+*.qlf
+
+# ===== Clojure / JVM =====
+*.class
+target/
+.lein-repl-history
+pom.xml
+*.jar
+.clj-kondo/
+.lsp/
+.cpcache/
+
+# ===== Elixir / Mix =====
+/cover/
+/doc/
+/.fetch
+*.ez
+/config/*.secret.exs
+.elixir_ls/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.py[cod]
+.env
+.venv
+
+# ===== Editores =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Temporales =====
+*.log
+*.tmp
+*.bak
