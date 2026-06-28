@@ -99,3 +99,38 @@ jobs:
             echo "Checking $f..."
             ghc -fno-code "$f"
           done
+
+  clojure:
+    name: Clojure Execution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Clojure CLI
+        run: |
+          curl -sL https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh \
+            -o /tmp/clojure-install.sh
+          chmod +x /tmp/clojure-install.sh
+          sudo bash /tmp/clojure-install.sh
+
+      - name: Run Clojure files
+        run: |
+          echo "=== higher_order.clj ==="
+          clojure -e "(load-file \"unidad2/tema2.2/higher_order.clj\")"
+
+  elixir:
+    name: Elixir Execution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Elixir
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y elixir
+
+      - name: Run Elixir files
+        timeout-minutes: 3
+        run: |
+          echo "=== stream.exs ==="
+          elixir unidad2/tema2.4/stream.exs
