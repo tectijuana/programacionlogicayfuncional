@@ -132,6 +132,20 @@ Al concluir el curso, el estudiante será capaz de:
 | [4.3 Optimización / CLP(FD)](unidad4/tema4.3/) | Restricciones sobre enteros, **Sudoku 9×9**, asignación de **horarios TecNM** como CSP | SWI-Prolog + CLP(FD) |
 | [4.4 Proyecto final](unidad4/tema4.4/) | Sistema de **trámites TecNM** multi-módulo con CLP, 33 tests automatizados | SWI-Prolog |
 
+### Proyectos Finales — Integración Multi-Paradigma
+
+Cada alumno elige **uno** de los cuatro proyectos y construye un sistema completo en tres capas.
+El código base (starter code) ya está en el repositorio.
+
+| Proyecto | Dominio | Capa 1 — Lógica | Capa 2 — Estado | Capa 3 — Tipos |
+|----------|---------|-----------------|-----------------|----------------|
+| [P1 — Trámites IMSS](proyectos_finales/proyecto1_tramites_imss/) | Seguridad social · 74M derechohabientes | Prolog + CLP(FD) | Erlang/OTP | Haskell |
+| [P2 — Horarios TecNM](proyectos_finales/proyecto2_horarios_tecnm/) | Scheduling · problema NP-completo | Prolog CLP(FD) | Clojure | — |
+| [P3 — Monitor IoT CENAPRED](proyectos_finales/proyecto3_monitor_iot/) | Sensores en tiempo real · "let it crash" | Prolog + CLP(FD) | Erlang/OTP | Elixir Stream |
+| [P4 — Inventario SAT](proyectos_finales/proyecto4_inventario_sat/) | Fiscal · 9,600M CFDIs/año | Prolog + CLP(FD) | Erlang/OTP | Haskell |
+
+> Ver [`proyectos_finales/README.md`](proyectos_finales/README.md) para la arquitectura obligatoria de 3 capas, rúbrica y casos de uso reales en producción.
+
 ---
 
 ## Recomendaciones para Innovar el Curso
