@@ -28,14 +28,15 @@ de seguros en Europa operan con motores Prolog o Datalog en producción.
 
 ### Proyecto 2 — Horarios TecNM
 El problema de asignación de horarios universitarios es un **problema NP-completo**.
-Las universidades más grandes del mundo (MIT, UNAM, Tecnológico de Monterrey) usan
-solvers de restricciones para resolverlo — exactamente `CLP(FD)` como el tuyo, o
-herramientas industriales basadas en los mismos principios (Google OR-Tools, IBM CP Optimizer).
-El TecNM asigna horarios para **266 campus**; lo que construyes aquí es el núcleo
-de ese tipo de sistema.
+Universidades como MIT, UNAM e IPN usan solvers de restricciones para resolverlo —
+exactamente `CLP(FD)` como el tuyo, o herramientas industriales basadas en los mismos
+principios (Google OR-Tools, IBM CP Optimizer).
+El **TecNM — Tecnológico Nacional de México** (sistema público al que pertenece el
+Instituto Tecnológico de Tijuana) coordina horarios para **266 campus** en todo el país;
+lo que construyes aquí es el núcleo de ese tipo de sistema.
 
-> "Cuando el sistema de inscripciones del TecNM asigna tu horario sin traslapes,
-> un solver de restricciones resolvió el mismo problema que ves en `planificador.pl`."
+> "Cuando el control escolar del Instituto Tecnológico de Tijuana asigna tu horario
+> sin traslapes, un solver de restricciones resolvió el mismo problema que ves en `planificador.pl`."
 
 ---
 
