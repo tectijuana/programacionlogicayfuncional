@@ -94,6 +94,7 @@ jobs:
         run: |
           for f in \
             unidad2/tema2.3/recursion.hs \
+            unidad2/tema2.3/induccion_estructural.hs \
             unidad2/tema2.4/lazy.hs; do
             echo "Checking $f..."
             ghc -fno-code "$f"
