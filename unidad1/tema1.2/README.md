@@ -16,6 +16,34 @@ Lee [linea_tiempo.md](linea_tiempo.md) en este mismo directorio.
 Presta especial atención a la conexión:
 **OCaml (1996) → Meta/Flow (2013) → Claude Code (2025)**
 
+### Demo en clase — OCaml en 20 minutos (no evaluado)
+
+Antes de entrar a los lenguajes del curso, veremos en vivo el lenguaje
+que Meta eligió para construir Flow, Hack e Infer:
+
+```bash
+# Instalar OCaml (solo para el demo)
+brew install ocaml          # macOS
+sudo apt install ocaml      # Linux
+
+# Ejecutar
+ocaml ocaml_demo.ml
+```
+
+Ver código comentado: [`ocaml_demo.ml`](ocaml_demo.ml)
+
+El demo cubre en 20 minutos:
+1. **Inferencia de tipos** — el compilador deduce `int -> int -> int` sin que lo declares
+2. **`Option`** — el null seguro que Flow usa para eliminar `NullPointerException`
+3. **Tipos algebraicos + pattern matching exhaustivo** — cómo se modela un AST
+4. **Módulos** — el sistema que Hack usa para separar análisis de tipos de análisis de flujo
+5. **Mapa OCaml → curso** — cada concepto del demo reaparece en Haskell, Erlang o Prolog
+
+> OCaml **no** es lenguaje evaluado en este curso. El demo existe para
+> responder "¿por qué estudiar paradigmas funcionales?" con código real
+> de producción que conoces: la herramienta que posiblemente estás usando
+> para programar.
+
 ---
 
 ### Parte B — Análisis de 5 sistemas de producción
