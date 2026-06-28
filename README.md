@@ -4,6 +4,32 @@
 
 # Temario de Programación Lógica y Funcional
 
+## ¿Por qué importa este curso? La conexión real con la industria
+
+> *"A longtime JavaScript programmer and functional programming evangelist."*
+> — Perfil público de Boris Cherny
+
+**Boris Cherny** es el creador de **Claude Code** — la herramienta de IA que posiblemente estás usando ahora mismo para programar. Antes de Anthropic, pasó cinco años como Principal Engineer en **Meta/Facebook**, donde trabajó con **Flow** (el verificador de tipos de JavaScript) y **Hack** (el lenguaje tipado de Meta). Ambas herramientas están implementadas en **OCaml** — un lenguaje funcional que verás en este curso.
+
+El hilo conductor es directo:
+
+```
+OCaml (lenguaje funcional, 1996)
+  └─► Flow & Hack en Meta  (herramientas de producción, ~2013-2024)
+        └─► Claude Code en Anthropic  (herramienta que cambió la industria, 2025)
+```
+
+**Lo que esto significa para ti como estudiante de ISC en TecNM:**
+La programación funcional no es teoría académica. Es la base de las herramientas que usan los mejores ingenieros del mundo. Dominar estos paradigmas — Prolog, Erlang, Haskell, OCaml, Clojure — te da una ventaja real y duradera sobre quienes solo conocen el paradigma imperativo.
+
+Otros ejemplos de producción que estudiarás en este curso:
+- **WhatsApp** (2 mil millones de usuarios) — construido sobre **Erlang/OTP**
+- **Discord** (150 millones de usuarios) — migró a **Elixir** en BEAM para escalar
+- **Nubank** (el banco digital más grande de América Latina) — construido con **Clojure**
+- **Meta/Infer** (analizador estático de código) — implementado en **OCaml**
+
+---
+
 ## Objetivo General
 
 Proveer a los estudiantes de las bases teóricas y prácticas necesarias para la programación en paradigmas lógicos y funcionales, desarrollando su capacidad para resolver problemas complejos de manera efectiva.
