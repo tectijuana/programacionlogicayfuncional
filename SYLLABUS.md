@@ -121,7 +121,7 @@ Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](p
 
 ### Criterio de acreditación
 
-- Calificación mínima aprobatoria: **60 / 100**
+- Calificación mínima aprobatoria: **70 / 100**
 - Asistencia mínima requerida: **80 %** de las sesiones presenciales
 - Todo código entregado debe **compilar sin errores** — prácticas que no compilen reciben calificación 0
 
