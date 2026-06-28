@@ -44,7 +44,7 @@ Al concluir el curso el estudiante será capaz de:
 
 ## Calendario Semanal
 
-El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas.
+El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas más una semana de presentaciones finales.
 
 | Sem | Fecha aprox. | Unidad / Tema | Actividad | Entregable |
 |-----|-------------|---------------|-----------|------------|
@@ -63,10 +63,8 @@ El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas.
 | 13 | 2–6 nov | **U3 · Tema 3.5** Aplicaciones de PL | Sistema experto médico interactivo (contexto IMSS); 8 condiciones, `assert`/`retract` | — |
 | 14 | 9–13 nov | **U4 · Temas 4.1–4.2** Módulos y búsqueda | Módulos Prolog con firmas; DFS y BFS sobre grafo metro CDMX; cut verde vs. rojo | **Práctica 6** |
 | 15 | 16–20 nov | **U4 · Tema 4.3** Optimización / CLP(FD) | Restricciones sobre enteros, Sudoku 9×9, asignación de horarios TecNM como CSP | **Examen Parcial 2** (U3–U4) |
-| 16 | 23–27 nov | **U4 · Tema 4.4** Proyecto final | Sistema de trámites TecNM multi-módulo con CLP; presentación en equipo | **Proyecto Final** |
-
-> **Semana 17 (30 nov – 4 dic):** Presentaciones de Proyecto Final y cierre administrativo.
-> Cada equipo demuestra en vivo su sistema multi-paradigma. Ver [`proyectos_finales/`](proyectos_finales/) para los 4 dominios disponibles.
+| 16 | 23–27 nov | **U4 · Tema 4.4** Proyecto final | Sistema de trámites TecNM multi-módulo con CLP; última semana de desarrollo | — |
+| 17 | 30 nov–4 dic | [**Proyectos Finales**](proyectos_finales/) — Presentaciones | Demostración en vivo del sistema multi-paradigma (3 capas); el sistema debe correr sin modificaciones en el equipo del profesor. Proyectos disponibles: [P1 IMSS](proyectos_finales/proyecto1_tramites_imss/) · [P2 Horarios](proyectos_finales/proyecto2_horarios_tecnm/) · [P3 IoT](proyectos_finales/proyecto3_monitor_iot/) · [P4 SAT](proyectos_finales/proyecto4_inventario_sat/) | **Proyecto Final** |
 
 ---
 
