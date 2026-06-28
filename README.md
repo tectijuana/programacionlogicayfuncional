@@ -2,7 +2,9 @@
 ![DALL·E 2024-08-25 12 00 07 - A friendly and intelligent small robot named Lambda Bot, designed as the mascot for a programming class focused on functional and logic programming  T](https://github.com/user-attachments/assets/f0fae45f-f121-43ab-98f5-8b91f037d774)
 
 
-# Temario de Programación Lógica y Funcional
+# Programación Lógica y Funcional — Agosto–Diciembre 2026
+
+**TecNM Campus Tijuana · Ingeniería en Sistemas Computacionales**
 
 ## ¿Por qué importa este curso? La conexión real con la industria
 
@@ -70,6 +72,49 @@ Proveer a los estudiantes de las bases teóricas y prácticas necesarias para la
 - **Tema 4.2:** Estrategias de búsqueda
 - **Tema 4.3:** Optimización de programas lógicos
 - **Tema 4.4:** Proyectos prácticos y casos de estudio
+
+---
+
+## Contenido del Curso
+
+### Unidad 1 — Conceptos Fundamentales
+
+| Tema | Contenido | Lenguajes |
+|------|-----------|-----------|
+| [1.1 Introducción](unidad1/tema1.1/) | Taxonomía de paradigmas, primer contacto con los lenguajes del curso | Python · Erlang · Prolog |
+| [1.2 Historia y evolución](unidad1/tema1.2/) | Línea de tiempo: Lambda Calculus 1930 → Gleam 2024, casos de industria | — |
+| [1.3 Comparación de paradigmas](unidad1/tema1.3/) | Validador de **CURP mexicana** en 3 paradigmas: imperativo, funcional, lógico | Python · Erlang · Prolog |
+
+### Unidad 2 — Modelo de Programación Funcional
+
+| Tema | Contenido | Lenguajes |
+|------|-----------|-----------|
+| [2.1 Fundamentos FP](unidad2/tema2.1/) | Inmutabilidad, transparencia referencial, pattern matching con **RFC** | Erlang |
+| [2.2 Funciones de orden superior](unidad2/tema2.2/) | `map`, `filter`, `reduce`, composición, closures — pipeline de alumnos TecNM | Clojure |
+| [2.3 Recursión e inmutabilidad](unidad2/tema2.3/) | Recursión de cola, `Maybe`/`Either`, tipos algebraicos | Haskell |
+| [2.4 Evaluación perezosa](unidad2/tema2.4/) | Listas infinitas (Fibonacci, primos), Stream sobre registros **IMSS** | Haskell · Elixir |
+| [2.5 Aplicaciones FP](unidad2/tema2.5/) | **OTP completo**: `application` + `supervisor` + `gen_server`, "let it crash" con sensores IoT estilo **CENAPRED** | Erlang/OTP |
+
+### Unidad 3 — Programación Lógica
+
+| Tema | Contenido | Lenguajes |
+|------|-----------|-----------|
+| [3.1 Fundamentos](unidad3/tema3.1/) | Hechos, consultas, base de datos organizacional TecNM Tijuana | SWI-Prolog |
+| [3.2 Sistemas formales y lógica de predicados](unidad3/tema3.2/) | Reglas, negación como falla (`\+`), elegibilidad para **beca TecNM** | SWI-Prolog |
+| [3.3 Unificación y resolución](unidad3/tema3.3/) | Algoritmo de unificación, traza SLD, occurs check — 15 tests | SWI-Prolog |
+| [3.4 Introducción a Prolog](unidad3/tema3.4/) | Listas desde cero (`mi_member`, `mi_append`, `mi_flatten`…), aritmética, `entre/3` — 76 tests | SWI-Prolog |
+| [3.5 Aplicaciones](unidad3/tema3.5/) | **Sistema experto médico interactivo** (contexto IMSS): 8 condiciones, `assert`/`retract` | SWI-Prolog |
+
+### Unidad 4 — Modelo de Programación Lógica
+
+| Tema | Contenido | Lenguajes |
+|------|-----------|-----------|
+| [4.1 Desarrollo de programas lógicos](unidad4/tema4.1/) | Módulos Prolog, firmas explícitas, documentación de aridad y determinismo — validador **CURP** | SWI-Prolog |
+| [4.2 Estrategias de búsqueda](unidad4/tema4.2/) | DFS y BFS sobre grafo **metro CDMX**, cut verde vs. rojo, `findall`/`bagof`/`setof` | SWI-Prolog |
+| [4.3 Optimización / CLP(FD)](unidad4/tema4.3/) | Restricciones sobre enteros, **Sudoku 9×9**, asignación de **horarios TecNM** como CSP | SWI-Prolog + CLP(FD) |
+| [4.4 Proyecto final](unidad4/tema4.4/) | Sistema de **trámites TecNM** multi-módulo con CLP, 33 tests automatizados | SWI-Prolog |
+
+---
 
 ## Recomendaciones para Innovar el Curso
 
