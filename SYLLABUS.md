@@ -65,7 +65,8 @@ El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas.
 | 15 | 16–20 nov | **U4 · Tema 4.3** Optimización / CLP(FD) | Restricciones sobre enteros, Sudoku 9×9, asignación de horarios TecNM como CSP | **Examen Parcial 2** (U3–U4) |
 | 16 | 23–27 nov | **U4 · Tema 4.4** Proyecto final | Sistema de trámites TecNM multi-módulo con CLP; presentación en equipo | **Proyecto Final** |
 
-> **Semana 17 (30 nov – 4 dic):** Presentaciones finales y cierre administrativo.
+> **Semana 17 (30 nov – 4 dic):** Presentaciones de Proyecto Final y cierre administrativo.
+> Cada equipo demuestra en vivo su sistema multi-paradigma. Ver [`proyectos_finales/`](proyectos_finales/) para los 4 dominios disponibles.
 
 ---
 
@@ -91,6 +92,32 @@ Cada unidad se evalúa independientemente:
 | P4 | Reglas de negocio TecNM | SWI-Prolog | Sem 10 |
 | P5 | Listas y aritmética Prolog | SWI-Prolog (plunit) | Sem 12 |
 | P6 | Búsqueda metro CDMX | SWI-Prolog | Sem 14 |
+
+### Proyecto Final multi-paradigma
+
+El Proyecto Final integra los tres paradigmas del curso en un sistema funcional de dominio real.
+Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](proyectos_finales/):
+
+| # | Proyecto | Dominio | Capa 1 | Capa 2 | Capa 3 |
+|---|----------|---------|--------|--------|--------|
+| [P1](proyectos_finales/proyecto1_tramites_imss/) | Validación de trámites IMSS | Seguridad social | Prolog | Erlang/OTP | Haskell |
+| [P2](proyectos_finales/proyecto2_horarios_tecnm/) | Planificador de horarios TecNM | Educación / CSP | Prolog CLP(FD) | Clojure | — |
+| [P3](proyectos_finales/proyecto3_monitor_iot/) | Monitor de alertas IoT CENAPRED | Ingeniería de sistemas | Prolog | Erlang/OTP | Elixir |
+| [P4](proyectos_finales/proyecto4_inventario_sat/) | Inventario con reglas fiscales SAT | Contabilidad / CFDI | Prolog | Erlang/OTP | Haskell |
+
+**Rúbrica del Proyecto Final:**
+
+| Criterio | Peso |
+|----------|------|
+| Capa 1: tests `plunit` pasando, CLP(FD) aplicado | 30% |
+| Capa 2: OTP/Clojure arrancando, supervisión demostrada con `kill` | 30% |
+| Capa 3: Haskell/Elixir compilando con tipos o Stream correctos | 20% |
+| Integración entre capas documentada y funcional | 10% |
+| Exposición técnica (10–15 min, demostración en vivo, sem. 17) | 10% |
+
+> Código que no compila = 0 en esa capa. La demostración debe correr sin modificaciones en el equipo del profesor.
+
+---
 
 ### Criterio de acreditación
 
