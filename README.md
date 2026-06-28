@@ -139,7 +139,7 @@ El código base (starter code) ya está en el repositorio.
 | Proyecto | Dominio | Capa 1 — Lógica | Capa 2 — Estado | Capa 3 — Tipos |
 |----------|---------|-----------------|-----------------|----------------|
 | [P1 — Trámites IMSS](proyectos_finales/proyecto1_tramites_imss/) | Seguridad social · 74M derechohabientes | Prolog + CLP(FD) | Erlang/OTP | Haskell |
-| [P2 — Horarios TecNM](proyectos_finales/proyecto2_horarios_tecnm/) | Scheduling · problema NP-completo | Prolog CLP(FD) | Clojure | — |
+| [P2 — Turnos maquiladora](proyectos_finales/proyecto2_maquiladora/) | Manufactura · 700+ plantas en Tijuana | Prolog CLP(FD) | Clojure | — |
 | [P3 — Monitor IoT CENAPRED](proyectos_finales/proyecto3_monitor_iot/) | Sensores en tiempo real · "let it crash" | Prolog + CLP(FD) | Erlang/OTP | Elixir Stream |
 | [P4 — Inventario SAT](proyectos_finales/proyecto4_inventario_sat/) | Fiscal · 9,600M CFDIs/año | Prolog + CLP(FD) | Erlang/OTP | Haskell |
 

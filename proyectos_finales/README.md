@@ -26,17 +26,17 @@ de seguros en Europa operan con motores Prolog o Datalog en producción.
 
 ---
 
-### Proyecto 2 — Horarios TecNM
-El problema de asignación de horarios universitarios es un **problema NP-completo**.
-Universidades como MIT, UNAM e IPN usan solvers de restricciones para resolverlo —
-exactamente `CLP(FD)` como el tuyo, o herramientas industriales basadas en los mismos
-principios (Google OR-Tools, IBM CP Optimizer).
-El **TecNM — Tecnológico Nacional de México** (sistema público al que pertenece el
-Instituto Tecnológico de Tijuana) coordina horarios para **266 campus** en todo el país;
-lo que construyes aquí es el núcleo de ese tipo de sistema.
+### Proyecto 2 — Turnos en línea de ensamble (maquiladora)
+Tijuana concentra más de **700 plantas maquiladoras** — Samsung, Hyundai, Toyota,
+Honeywell, Plantronics. Cada turno, un planificador asigna operadores a estaciones:
+quién va a soldadura, quién a PCB, quién a inspección de calidad — sin traslapes y
+respetando certificaciones por puesto. Es un problema de satisfacción de restricciones
+(CSP) que Google OR-Tools, IBM CP Optimizer y SAP APO resuelven con los mismos
+principios que `CLP(FD)` en Prolog.
 
-> "Cuando el control escolar del Instituto Tecnológico de Tijuana asigna tu horario
-> sin traslapes, un solver de restricciones resolvió el mismo problema que ves en `planificador.pl`."
+> "Cuando el planificador de Samsung Tijuana asigna operadores a 150+ estaciones
+> cada turno, un solver de restricciones resolvió exactamente el mismo problema
+> que ves en `planificador.pl`."
 
 ---
 
@@ -86,7 +86,7 @@ real que use cada paradigma donde tiene ventaja natural:
 | # | Proyecto | Dominio | Paradigmas requeridos |
 |---|----------|---------|----------------------|
 | [1](proyecto1_tramites_imss/) | Sistema de validación de trámites IMSS | Seguridad social | Prolog + Erlang/OTP + Haskell |
-| [2](proyecto2_horarios_tecnm/) | Planificador de horarios TecNM | Educación | Prolog CLP(FD) + Clojure |
+| [2](proyecto2_maquiladora/) | Asignación de turnos en línea de ensamble | Manufactura / maquiladora | Prolog CLP(FD) + Clojure |
 | [3](proyecto3_monitor_iot/) | Monitor de alertas IoT estilo CENAPRED | Ingeniería de sistemas | Prolog + Erlang/OTP + Elixir |
 | [4](proyecto4_inventario_sat/) | Gestor de inventario con reglas fiscales SAT | Contabilidad / RFC | Prolog + Erlang/OTP + Haskell |
 
