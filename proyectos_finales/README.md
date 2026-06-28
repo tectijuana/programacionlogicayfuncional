@@ -137,25 +137,38 @@ La diferencia está en el dominio del problema.
 
 | Criterio | Peso |
 |----------|------|
-| Capa 1: tests `plunit` pasando, CLP(FD) usado | 30% |
-| Capa 2: OTP/Clojure arrancando, supervisión demostrada | 30% |
-| Capa 3: Haskell/OCaml compilando con tipos correctos | 20% |
+| Capa 1: tests `plunit` pasando, CLP(FD) usado | 25% |
+| Capa 2: OTP/Clojure arrancando, supervisión demostrada | 25% |
+| Capa 3: Haskell/Elixir compilando con tipos correctos | 20% |
 | Integración entre capas documentada y funcional | 10% |
 | Exposición técnica (10–15 min, demostración en vivo) | 10% |
+| Evidencia de ejecución: asciinema (CLI) + LOOM (UI si aplica) | 10% |
 
 ---
 
 ## Entregables
 
-Todos los entregables vía **Pull Request** a este repositorio antes del cierre del semestre:
+Pull Request a este repositorio antes del cierre del semestre con la siguiente estructura:
 
 ```
 proyectos_finales/proyectoN_<nombre>/
 ├── README.md          ← arquitectura, instrucciones de ejecución, decisiones de diseño
 ├── capa1/             ← código Prolog (*.pl)
 ├── capa2/             ← código Erlang (*.erl) o Clojure (*.clj)
-└── capa3/             ← código Haskell (*.hs) u OCaml (*.ml + *.mli)
+└── capa3/             ← código Haskell (*.hs) u Elixir (*.exs)
 ```
+
+**Evidencia requerida en la descripción del PR:**
+
+| Capa | Herramienta | Qué grabar |
+|------|-------------|------------|
+| Capa 1 — Prolog | [asciinema](https://asciinema.org) | `run_tests.` pasando en SWI-Prolog |
+| Capa 2 — Erlang/Clojure | [asciinema](https://asciinema.org) | Supervisor arrancando + demostración de reinicio tras `kill` |
+| Capa 3 — Haskell/Elixir | [asciinema](https://asciinema.org) | Compilación y salida del reporte o dashboard |
+| UI o dashboard gráfico (si el proyecto lo incluye) | [LOOM](https://www.loom.com) | Video de pantalla máx. 5 min |
+| Mockups de interfaz | [Google Stitch](https://stitch.withgoogle.com) | Exportar imagen e incluir en `README.md` |
+
+> Un PR sin los links de evidencia se considera incompleto — 0 en el criterio de demostración.
 
 ---
 

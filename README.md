@@ -6,7 +6,6 @@
 
 **TecNM Campus Tijuana · Ingeniería en Sistemas Computacionales**
 
-[![Tests](https://github.com/tectijuana/programacionlogicayfuncional/actions/workflows/test.yml/badge.svg)](https://github.com/tectijuana/programacionlogicayfuncional/actions/workflows/test.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Cite](https://img.shields.io/badge/Citar-CITATION.cff-green)](CITATION.cff)
 ![Languages](https://img.shields.io/badge/Lenguajes-Prolog%20%7C%20Erlang%20%7C%20Haskell%20%7C%20Clojure%20%7C%20Elixir-orange)
@@ -199,13 +198,26 @@ El código base (starter code) ya está en el repositorio.
 
 ## Utilerías
 
-- **GitHub Student Pack:** [GitHub Education Pack](https://education.github.com/pack)
-- **Publicación de código privado o público:** Utiliza [GitHub Gist](http://gist.github.com). Se requiere una cuenta.
-- **Amazon Web Services:** Obtén una "Beca de $100 USD" con recarga durante el semestre en [AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login).
-- **Subidas anónimas auto purgables:** Utiliza [file.io](http://file.io) para subir archivos que se eliminarán automáticamente después de 2 meses.
-- **Generador de arte ASCII:** Crea arte ASCII con [ASCII Generator](https://ascii-generator.site).
-- **Grabación de habilidades:** Usa [asciinema](http://asciinema.org) para grabar y compartir sesiones en la terminal.
-- **Herramientas de IA para optimizar entregas académicas:** Explora [Future Tools](http://futuretools.io) para encontrar herramientas útiles. El autor tiene un canal en YouTube y es de San Diego.
+### Evidencia de entregas
+
+| Herramienta | Uso | Cuándo usarla |
+|-------------|-----|---------------|
+| **[asciinema](https://asciinema.org)** | Grabación de sesión de terminal | Todas las prácticas CLI — Prolog, Erlang, Haskell, Clojure |
+| **[LOOM](https://www.loom.com)** | Video de pantalla con audio (máx. 5 min) | Proyectos con interfaz gráfica o dashboard |
+| **[Google Stitch](https://stitch.withgoogle.com)** | Generación de UI con IA | Base de mockups y prototipos UI en el Proyecto Final |
+| **GitHub** | Pull Request como entregable formal | Todas las entregas — PR con link a asciinema/LOOM en la descripción |
+
+### Cómputo en la nube
+
+- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login):** Crédito de $100 USD por semestre para desplegar aplicaciones Erlang/Elixir/Haskell en EC2.
+
+### Otros recursos
+
+- **[GitHub Student Pack](https://education.github.com/pack):** Acceso gratuito a herramientas de desarrollo.
+- **[GitHub Gist](http://gist.github.com):** Publicación de snippets de código.
+- **[file.io](http://file.io):** Subidas anónimas auto-purgables (2 meses).
+- **[ASCII Generator](https://ascii-generator.site):** Arte ASCII para reportes.
+- **[Future Tools](http://futuretools.io):** Catálogo de herramientas de IA útiles para el curso.
 
 
 

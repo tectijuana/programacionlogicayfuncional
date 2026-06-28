@@ -23,6 +23,12 @@
 - [ ] El código Erlang usa OTP behaviors (sin `spawn` desnudo)
 - [ ] Se probó localmente con el comando exacto indicado en el README del tema
 
+## Evidencia de ejecución
+
+- [ ] **asciinema** (sesión CLI) — link: <!-- https://asciinema.org/a/XXXXX -->
+- [ ] **LOOM** (demo UI/gráfica, si aplica) — link: <!-- https://www.loom.com/share/XXXXX -->
+- [ ] **Google Stitch** (mockup UI, si aplica) — imagen incluida en el README del proyecto
+
 ## Comandos de verificación
 
 ```bash

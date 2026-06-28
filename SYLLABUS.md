@@ -132,6 +132,17 @@ Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](p
 - **Plagio:** cualquier entrega con código idéntico o mínimamente modificado de otro equipo o fuente no citada resulta en calificación 0 para todos los involucrados y reporte al departamento
 - El uso de IA (Claude, ChatGPT, etc.) está **permitido y fomentado** como herramienta; debe citarse en comentarios del código (`%% Generado con Claude Code, verificado y modificado por [matrícula]`)
 
+### Evidencia requerida por tipo de entrega
+
+| Tipo de entregable | Evidencia obligatoria | Cómo incluirla |
+|--------------------|----------------------|----------------|
+| Práctica CLI (Prolog, Erlang, Haskell, Clojure) | [asciinema](https://asciinema.org) — grabación de sesión de terminal | Link en la descripción del Pull Request |
+| Proyecto con interfaz gráfica o dashboard | [LOOM](https://www.loom.com) — video de pantalla máx. 5 min | Link en la descripción del Pull Request |
+| Proyecto Final (sem. 17) | asciinema para capas CLI + LOOM si hay UI | Ambos links en el PR y en el `README.md` del proyecto |
+| Mockups / prototipos UI | [Google Stitch](https://stitch.withgoogle.com) — exportar imagen o link | Imagen en el `README.md` del tema |
+
+> Un PR sin evidencia (asciinema o LOOM según corresponda) se considera incompleto y recibe 0 en el criterio de demostración.
+
 ---
 
 ## Instalación del Entorno de Desarrollo
@@ -194,8 +205,19 @@ Ver: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ---
 
+## Herramientas del semestre
+
+| Herramienta | Propósito |
+|-------------|-----------|
+| **GitHub Classroom** | Entrega de todas las prácticas y proyectos vía Pull Request |
+| **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** | Cómputo en la nube — EC2 para ejecutar Erlang/OTP, Haskell, Prolog, Elixir ($100 USD/semestre) |
+| **[asciinema](https://asciinema.org)** | Evidencia obligatoria de sesiones CLI — Prolog, Erlang, Haskell, Clojure |
+| **[LOOM](https://www.loom.com)** | Evidencia de demos con interfaz gráfica o dashboard (máx. 5 min por video) |
+| **[Google Stitch](https://stitch.withgoogle.com)** | Generación de UI con IA — base de mockups y prototipos para el Proyecto Final |
+| **SWI-Prolog WASM** | Prolog en el navegador para demos rápidas sin instalación |
+| **[Exercism.io](https://exercism.org)** | Práctica adicional guiada en cada lenguaje del curso |
+
 ## Recursos Institucionales
 
-- **GitHub Student Pack:** https://education.github.com/pack — acceso gratuito a herramientas de desarrollo
-- **AWS Academy:** $100 USD de crédito por semestre — útil para desplegar aplicaciones Erlang/Elixir en la nube
-- **Asciinema:** https://asciinema.org — grabar y compartir sesiones de terminal para entregas
+- **[GitHub Student Pack](https://education.github.com/pack)** — acceso gratuito a herramientas de desarrollo
+- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** — $100 USD de crédito por semestre para desplegar proyectos en la nube
