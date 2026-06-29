@@ -26,13 +26,41 @@ OCaml (lenguaje funcional, 1996)
 ```
 
 **Lo que esto significa para ti como estudiante de ISC en TecNM:**
-La programación funcional no es teoría académica. Es la base de las herramientas que usan los mejores ingenieros del mundo. Dominar estos paradigmas — Prolog, Erlang, Haskell, OCaml, Clojure — te da una ventaja real y duradera sobre quienes solo conocen el paradigma imperativo.
+La programación funcional y lógica no es solo teoría académica: está detrás de herramientas que usan a diario equipos de ingeniería de primer nivel. Aprender a pensar de forma declarativa — con Prolog, Erlang y Haskell como ejes del curso — te da una herramienta mental que se transfiere a cualquier lenguaje, aunque tu trabajo futuro sea mayormente imperativo. (OCaml, el lenguaje de Flow y Hack, aparece aquí como referencia histórica, no como lenguaje a dominar.)
 
 Otros ejemplos de producción que estudiarás en este curso:
-- **WhatsApp** (2 mil millones de usuarios) — construido sobre **Erlang/OTP**
-- **Discord** (150 millones de usuarios) — migró a **Elixir** en BEAM para escalar
-- **Nubank** (el banco digital más grande de América Latina) — construido con **Clojure**
+- **WhatsApp** (≈2 mil millones de usuarios) — construido sobre **Erlang/OTP**
+- **Discord** (cientos de millones de usuarios) — migró parte de su backend a **Elixir** en BEAM para escalar
+- **Nubank** (uno de los bancos digitales más grandes de América Latina) — construido con **Clojure**
 - **Meta/Infer** (analizador estático de código) — implementado en **OCaml**
+
+> Las cifras de esta sección son aproximadas y provienen de publicaciones de las propias
+> empresas. Aprende a distinguir cuándo un lenguaje es la base de un sistema completo y
+> cuándo es solo un motor declarativo dentro de él — ver
+> [`casos_reales_mundo_real.md`](casos_reales_mundo_real.md).
+
+---
+
+## Qué lenguajes vas a usar (y en cuáles concentrarte)
+
+Este curso muestra **seis lenguajes**, pero no todos pesan igual. No necesitas volverte
+experto en los seis: necesitas dominar tres y reconocer los demás. Concentra tu esfuerzo así:
+
+| Rol | Lenguaje | Para qué lo usamos | Dónde aparece |
+|-----|----------|--------------------|---------------|
+| **Central** | **SWI-Prolog** | Toda la mitad lógica del curso: hechos, reglas, unificación, búsqueda, CLP(FD) | Unidades 3 y 4 completas + capa 1 de todos los proyectos |
+| **Central** | **Erlang/OTP** | Inmutabilidad, pattern matching, concurrencia y supervisión ("let it crash") | Temas 2.1 y 2.5 + capa 2 de proyectos |
+| **Central** | **Haskell** | Recursión, tipos algebraicos, `Maybe`/`Either`, evaluación perezosa | Temas 2.3 y 2.4 + capa 3 de proyectos |
+| Complementario | **Clojure** | Funciones de orden superior en un Lisp (caso Nubank) | Tema 2.2 + capa 2 del Proyecto 2 |
+| Complementario | **Elixir** | Streams perezosos sobre la misma VM que Erlang (BEAM) | Tema 2.4 + capa 3 del Proyecto 3 |
+| Instrumental | **Python** | Solo como punto de contraste imperativo | Tema 1.3 (validador CURP) |
+
+> **OCaml** se menciona como hilo histórico (Meta: Flow, Hack, Infer) y se muestra un demo
+> en el Tema 1.2, pero **no es un lenguaje evaluable del curso**: aparece para entender de
+> dónde vienen las herramientas, no para programar en él.
+
+**Regla práctica:** si vas justo de tiempo, prioriza **Prolog, Erlang y Haskell**. Con esos
+tres cubres los dos paradigmas del curso y puedes completar cualquiera de los proyectos finales.
 
 ---
 
@@ -147,46 +175,28 @@ El código base (starter code) ya está en el repositorio.
 
 ---
 
-## Recomendaciones para Innovar el Curso
+## Cómo estudiar este curso
 
-### Integración de Nuevas Tecnologías
+Una guía corta para aprovechar el material, pensada para ti como estudiante:
 
-- **Lenguajes Modernos:** Introducir lenguajes de programación funcionales y lógicos modernos como Haskell, Scala, y Clojure.
-- **Herramientas y Entornos de Desarrollo:** Utilizar entornos de desarrollo interactivos como Jupyter Notebooks para Haskell y Prolog.
+1. **Instala el entorno la primera semana.** No dejes la instalación para el día de la entrega.
+   Sigue [`SYLLABUS.md`](SYLLABUS.md#instalación-del-entorno-de-desarrollo); si tu equipo es
+   Windows, usa WSL2 o GitHub Codespaces.
+2. **Lee el `README.md` de cada unidad antes de la clase.** Cada uno trae el objetivo, los
+   temas y la regla de entrega. Llegar con el entorno listo y el código clonado vale tiempo.
+3. **Ejecuta todo el código tú mismo.** El curso es práctico: "código que no compila = 0".
+   No basta con leerlo — cárgalo, rómpelo, modifícalo y observa qué cambia.
+4. **Concentra el esfuerzo en los tres lenguajes centrales** (Prolog, Erlang, Haskell). Clojure
+   y Elixir se entienden rápido una vez que dominas las ideas de fondo (inmutabilidad,
+   recursión, orden superior, supervisión).
+5. **Empieza el proyecto final temprano.** La capa 1 (Prolog) puedes comenzarla desde la
+   Unidad 3; no esperes a la semana 16.
+6. **Usa la IA como herramienta, citándola.** Está permitida (ver política de entregas en el
+   sílabo): debes entender y poder defender cada línea que entregues.
 
-### Aprendizaje Basado en Proyectos
-
-- **Proyectos Reales:** Incluir proyectos basados en problemas del mundo real.
-- **Colaboración en Equipos:** Fomentar el trabajo en equipo mediante proyectos colaborativos.
-
-### Recursos Adicionales y Material Didáctico
-
-- **Tutoriales en Línea y MOOCs:** Incorporar recursos adicionales como cursos en línea de Coursera, edX, o Udacity.
-- **Bibliografía Actualizada:** Actualizar la bibliografía recomendada y proporcionar eBooks a los estudiantes, libros no mas de 15 años y revistas 5 años de su publicación.
-
-### Evaluaciones y Retroalimentación
-
-- **Evaluaciones Continuas:** Implementar evaluaciones formativas continuas.
-- **Rubricas Detalladas:** Utilizar rubricas detalladas para evaluar proyectos y tareas.
-
-### Innovación en la Enseñanza
-
-- **Flipped Classroom:** Aplicar el modelo de aula invertida.
-- **Gamificación:** Incorporar elementos de gamificación.
-
-### Sugerencias Específicas por Unidad
-
-- **Unidad 1: Conceptos Fundamentales**
-  - Talleres interactivos y comparación práctica entre paradigmas.
-
-- **Unidad 2: Modelo de Programación Funcional**
-  - Proyectos de manipulación y análisis de datos y aplicaciones prácticas en la industria.
-
-- **Unidad 3: Programación Lógica**
-  - Casos de uso reales y uso de simuladores de lógica.
-
-- **Unidad 4: Modelo de Programación Lógica**
-  - Creación de sistemas expertos básicos y resolución de problemas complejos.
+> **Para el docente:** el plan de sesiones detallado (4 h × 4 por unidad, objetivos y
+> actividades por tema) está en [`PLAN_RENOVACION.md`](PLAN_RENOVACION.md), separado de esta
+> guía para no saturar la lectura del estudiante.
 
 ## Referencias
 

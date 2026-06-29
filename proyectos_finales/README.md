@@ -5,66 +5,76 @@
 
 ---
 
-## Estos proyectos no son académicos — ya existen en producción
+## Por qué estos dominios importan
 
-Los cuatro dominios de esta lista no son inventados para el curso.
-Son versiones simplificadas de sistemas reales que corren hoy, en este momento,
-usando exactamente los paradigmas que acabas de aprender.
+Los cuatro proyectos son **modelos simplificados, inspirados en problemas reales**
+que enfrentan instituciones y empresas mexicanas e internacionales. No afirmamos que
+el IMSS, el SAT, CENAPRED o una maquiladora específica usen exactamente estos lenguajes
+en producción: lo que afirmamos —y sí es verificable— es que **problemas de esta clase**
+(reglas de negocio, asignación con restricciones, monitoreo tolerante a fallos, validación
+fiscal tipada) se resuelven en la industria con las técnicas que practicas aquí.
+
+> Para la distinción entre "lenguaje principal de un sistema" y "motor de razonamiento
+> declarativo", y para la lista de casos **verificados**, consulta
+> [`casos_reales_mundo_real.md`](../casos_reales_mundo_real.md).
 
 ---
 
 ### Proyecto 1 — Trámites IMSS
-El IMSS atiende a **74 millones de derechohabientes**. Su plataforma IMSS Digital
-procesa solicitudes de incapacidades, pensiones y préstamos con reglas de elegibilidad
-que cambian por decreto. Los sistemas de reglas de negocio declarativas — como el
-que construyes en Prolog — son el estándar industrial para este tipo de lógica:
-IBM Watson usó lógica de predicados para su motor de reglas médicas; muchos sistemas
-de seguros en Europa operan con motores Prolog o Datalog en producción.
+El IMSS atiende a decenas de millones de derechohabientes. Trámites como incapacidades,
+pensiones y préstamos dependen de reglas de elegibilidad que cambian por decreto.
+Este tipo de lógica —condiciones que se *declaran*, no se programan paso a paso— es el
+caso de uso natural de los **motores de reglas de negocio declarativas** como el que
+construyes en Prolog. Los motores de reglas y la lógica declarativa se usan en la
+industria de seguros y salud para precisamente esta clase de problema.
 
-> "Las reglas de negocio del IMSS no se programan, se *declaran*. Prolog es, literalmente,
-> el lenguaje diseñado para eso."
+> Las reglas de elegibilidad de un trámite no describen *cómo* calcular, sino *qué*
+> condiciones deben cumplirse. Prolog es un lenguaje diseñado alrededor de esa idea.
 
 ---
 
 ### Proyecto 2 — Turnos en línea de ensamble (maquiladora)
-Tijuana concentra más de **700 plantas maquiladoras** — Samsung, Hyundai, Toyota,
-Honeywell, Plantronics. Cada turno, un planificador asigna operadores a estaciones:
-quién va a soldadura, quién a PCB, quién a inspección de calidad — sin traslapes y
-respetando certificaciones por puesto. Es un problema de satisfacción de restricciones
-(CSP) que Google OR-Tools, IBM CP Optimizer y SAP APO resuelven con los mismos
+Tijuana concentra cientos de plantas maquiladoras. En una línea de ensamble, cada turno
+hay que asignar operadores a estaciones —soldadura, PCB, inspección de calidad— sin
+traslapes y respetando las certificaciones que cada puesto exige. Ese es un **problema
+de satisfacción de restricciones (CSP)**: la misma clase de problema que herramientas
+industriales como Google OR-Tools, IBM CP Optimizer y SAP APO resuelven con los mismos
 principios que `CLP(FD)` en Prolog.
 
-> "Cuando el planificador de Samsung Tijuana asigna operadores a 150+ estaciones
-> cada turno, un solver de restricciones resolvió exactamente el mismo problema
-> que ves en `planificador.pl`."
+> Este proyecto no afirma reproducir el sistema de ninguna planta en particular: modela
+> un problema de asignación con restricciones —representativo de la manufactura— que en
+> la industria se resuelve con solvers de restricciones y optimización. La herramienta
+> exacta en producción varía; los principios son los mismos que ves en `planificador.pl`.
 
 ---
 
 ### Proyecto 3 — Monitor IoT CENAPRED
-El CENAPRED opera la **Red Sísmica Nacional**: 100+ sensores en tiempo real,
-con alertas que activan el Sistema de Alerta Sísmica de México (SASMEX).
-WhatsApp maneja 2 millones de conexiones simultáneas con un equipo de 50 ingenieros
-gracias a Erlang/OTP — el mismo modelo de supervisión que implementas aquí.
-Discord escala a 150 millones de usuarios con Elixir/Phoenix sobre la misma VM (BEAM).
-La filosofía "let it crash" + supervisión automática que demuestras con `kill(pid)` es
-exactamente cómo esos sistemas logran **99.9999% de uptime**.
+México opera redes de monitoreo en tiempo real —sísmico, volcánico, hidrometeorológico—
+donde un sensor que falla no puede tumbar toda la red de alerta. Ese requisito de
+**tolerancia a fallos por aislamiento** es justamente el problema que resuelve el modelo
+de supervisión de Erlang/OTP. Es el mismo modelo —procesos ligeros aislados, "let it
+crash" y reinicio automático— que WhatsApp (Erlang/OTP) y Discord (Elixir sobre BEAM)
+usan para sostener millones de conexiones concurrentes con alta disponibilidad.
 
-> "Un sensor que falla no puede detener la red de alerta sísmica. Erlang/OTP garantiza
-> eso por diseño — no por código defensivo."
+> Este proyecto modela un monitor inspirado en sistemas de alerta temprana; no reproduce
+> la infraestructura de CENAPRED ni del SASMEX. Lo que sí es real es el principio: un
+> sensor que falla no debe detener la red, y Erlang/OTP da ese aislamiento por diseño
+> —no por código defensivo— como demuestras con `kill(pid)`.
 
 ---
 
 ### Proyecto 4 — Inventario SAT
-El SAT emitió **9,600 millones de CFDIs** en 2023. Cada factura electrónica pasa por
-validación de RFC, cálculo de IVA y verificación de restricciones fiscales — las mismas
-reglas que codificas en `reglas_fiscales.pl`.
-Nubank procesa millones de transacciones financieras diarias en Clojure, con
-inmutabilidad total: cada transacción es un hecho, nunca una modificación de estado.
-El módulo Haskell de facturas tipadas es la misma estrategia que usan los equipos de
-Meta (Flow, Hack, Infer) y Jane Street: **el tipo correcto hace imposible el error fiscal**.
+En México se emiten miles de millones de CFDIs (facturas electrónicas) al año. Cada una
+pasa por validación de RFC, cálculo de IVA y verificación de restricciones fiscales —la
+misma clase de reglas que codificas en `reglas_fiscales.pl`. Hacer estas validaciones
+con **tipos fuertes** —de modo que un dato mal formado ni siquiera se pueda construir— es
+la estrategia que usan equipos como los de Meta (Flow, Hack, Infer en OCaml) y Jane Street
+(OCaml en trading): el tipo correcto convierte un error de datos en un error de compilación.
 
-> "El SAT no acepta un CFDI con RFC mal formado. Un tipo `RFC` en Haskell que solo
-> se puede construir via `validarRFC` hace que ese error sea imposible en tiempo de compilación."
+> Un `RFC` modelado como tipo en Haskell que solo se puede construir vía `validarRFC` hace
+> que un RFC mal formado sea imposible *en tiempo de compilación*, no algo que se detecta
+> tarde en tiempo de ejecución. Esa es la ventaja de "hacer estados inválidos
+> irrepresentables".
 
 ---
 
@@ -184,7 +194,16 @@ Presentaciones en clase. El sistema debe correr sin modificaciones en el equipo 
 
 Más allá de los cuatro proyectos de este curso, la siguiente lista documenta dónde
 la industria eligió programación funcional o lógica — y por qué el enfoque imperativo
-no era suficiente. Organizada por sector, con escala verificable y justificación técnica.
+no era suficiente. Organizada por sector, con justificación técnica.
+
+> **Nota sobre el rigor de estas afirmaciones.** Las cifras (usuarios, transacciones,
+> uptime) son aproximadas y provienen de blogs de ingeniería, charlas y publicaciones de
+> las propias empresas; cita la fuente primaria antes de usarlas en un trabajo formal.
+> Distingue dos cosas distintas: cuando un lenguaje es **la base de un sistema completo**
+> (Erlang en WhatsApp, Clojure en Nubank) y cuando es **un motor de razonamiento o capa
+> declarativa** dentro de un sistema mayor (Datalog en CodeQL, Prolog en un planificador).
+> Para la lista corta de casos **verificados y mejor documentados**, usa
+> [`casos_reales_mundo_real.md`](../casos_reales_mundo_real.md).
 
 ---
 
@@ -211,10 +230,13 @@ aunque el proceso que la gestiona muera — "let it crash" hace que la recuperac
 automática en < 1 ms.
 
 **Ericsson AXD301 — Erlang**
-Switch de telecomunicaciones con 99.9999999 % uptime (nueve nueves = menos de
-32 ms de downtime por año). Erlang fue creado por Joe Armstrong en Ericsson en 1986
-precisamente para este hardware. Sigue en producción 38 años después. Es el argumento
-más sólido del ROI de un paradigma en la historia de la ingeniería de software.
+Switch de telecomunicaciones para el que se diseñó Erlang (Joe Armstrong y su equipo,
+Ericsson, finales de los 80). Se le atribuye una disponibilidad de "nueve nueves"
+(99.9999999 %, ~32 ms de downtime al año); conviene presentarlo con matiz: la cifra es
+**frecuentemente citada pero anecdótica** —proviene del reporte de un cliente sobre un
+sistema de 11 nodos— y la confiabilidad real combina Erlang con redundancia de hardware
+y código en C. Aun con ese matiz, sigue siendo uno de los casos clásicos sobre el ROI de
+elegir un paradigma orientado a tolerancia a fallos.
 
 **Klarna — Erlang**
 150 millones de consumidores, 500 000 transacciones diarias. Fintech sueco líder en
@@ -315,11 +337,15 @@ AWS lo usa en re:Inforce para verificar políticas IAM. Datalog expresa
 "una variable fluye desde una fuente externa hasta un sink SQL" como una regla recursiva;
 el motor la evalúa en paralelo sin que el programador gestione la concurrencia.
 
-**NASA SPIKE — Prolog (Mars Pathfinder, Spirit, Opportunity)**
-El sistema de planificación de secuencias de comandos para los Mars Rovers usa Prolog.
-Las restricciones de misión son relaciones lógicas (recursos, tiempos, dependencias
-entre operaciones). Prolog hace backtracking automático sobre miles de restricciones;
-el equivalente imperativo requeriría un solver dedicado de miles de líneas.
+**NASA / STScI SPIKE — planificación basada en restricciones**
+SPIKE es el sistema de planificación de observaciones del Telescopio Espacial Hubble
+(desarrollado por el STScI, en operación desde 1990) y reutilizado después para otras
+misiones de observación. Es un planificador basado en IA y restricciones: las reglas de
+misión —recursos, tiempos, dependencias entre operaciones— se modelan como restricciones
+y el sistema busca una asignación válida. Es el mismo tipo de problema (CSP) que resuelves
+con CLP(FD) en Prolog, aunque SPIKE no está implementado en Prolog (usó técnicas de IA
+sobre Lisp y enfoques de reglas y redes neuronales). El valor didáctico está en el
+**modelo declarativo de restricciones**, no en el lenguaje exacto.
 
 **Ericsson — configuración declarativa de red con Prolog**
 Los requisitos de red son naturalmente relacionales: "el nodo A debe tener ruta al nodo B
@@ -419,12 +445,14 @@ OCaml             →  Meta Flow, Meta Hack, Meta Infer, Jane Street Capital
 Haskell           →  Cardano/Plutus, Pandoc, GHC, GitHub Semantic, Standard Chartered
 Clojure           →  Nubank, Datomic
 Scala             →  Apache Spark, Apache Kafka, Twitter/Finagle, Apache Flink
-SWI-Prolog        →  IBM Watson, NASA SPIKE, Ericsson configuración de red
+Prolog / lógica   →  IBM Watson (análisis de lenguaje), motores de reglas y sistemas expertos
+CSP / restricc.   →  STScI SPIKE (Hubble), Google OR-Tools, planificación industrial
 Datalog/Soufflé   →  Meta APK analysis, AWS IAM policy verification
 OWL/SPARQL        →  Google Knowledge Graph, Wikidata, DBpedia
 ASP/Clingo        →  diseño de fármacos, bioinformática, planificación robótica
 Coq/Isabelle      →  Airbus software crítico, CompCert compilador certificado
 ```
 
-> Ninguno de estos sistemas existe en un laboratorio.
-> Todos están procesando datos reales mientras lees esto.
+> La mayoría de estos sistemas opera con datos reales en producción hoy. Antes de citar
+> una cifra o un caso concreto en un trabajo formal, verifica la fuente primaria: el
+> objetivo del curso es que aprendas a sostener afirmaciones, no solo a repetirlas.

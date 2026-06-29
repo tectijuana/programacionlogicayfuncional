@@ -18,12 +18,20 @@
 
 Estudio de los paradigmas de programación lógica y funcional como alternativas al modelo imperativo. El estudiante aprende a declarar *qué* se quiere computar en lugar de *cómo* hacerlo, desarrollando una base sólida para diseñar sistemas concurrentes, tolerantes a fallas y con garantías en tiempo de compilación.
 
-Los lenguajes del curso tienen presencia directa en producción a escala mundial:
-- **Erlang/OTP** → WhatsApp (2 mil millones de usuarios), RabbitMQ
-- **Elixir/Phoenix** → Discord (150 millones de usuarios)
+Los lenguajes del curso tienen presencia documentada en producción a escala mundial
+(cifras aproximadas, según publicaciones de las propias empresas):
+- **Erlang/OTP** → WhatsApp (≈2 mil millones de usuarios), RabbitMQ
+- **Elixir/Phoenix** → Discord (cientos de millones de usuarios)
 - **Haskell/GHC** → Pandoc, xmonad, GitHub Semantic
-- **Clojure** → Nubank (el banco digital más grande de América Latina)
-- **SWI-Prolog** → IBM Watson Knowledge Graph, sistemas expertos médicos
+- **Clojure** → Nubank (uno de los bancos digitales más grandes de América Latina)
+- **SWI-Prolog** → análisis de lenguaje en IBM Watson, motores de reglas y sistemas expertos
+
+> **Lenguajes centrales vs. complementarios.** No los seis pesan igual. Concéntrate en
+> **Prolog, Erlang y Haskell** (centrales); **Clojure** y **Elixir** son complementarios y
+> **Python** aparece solo como contraste imperativo. Ver la tabla completa en el
+> [README](README.md#qué-lenguajes-vas-a-usar-y-en-cuáles-concentrarte). Para usar estos
+> casos de industria en trabajos formales, revisa antes la guía de afirmaciones verificables:
+> [`casos_reales_mundo_real.md`](casos_reales_mundo_real.md).
 
 ---
 
