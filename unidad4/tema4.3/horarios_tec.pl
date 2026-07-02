@@ -63,7 +63,7 @@ construir_asignacion(materia(ID, Nombre, _), hora_salon(H, S),
 %% aplicar_restricciones/2 — det
 %% Aplica todas las restricciones del CSP
 %% ============================================================
-aplicar_restricciones(Materias, Vars) :-
+aplicar_restricciones(_Materias, Vars) :-
     % Restricción 1: no dos materias en el mismo salón a la misma hora
     pares(Vars, Pares),
     maplist(no_conflicto, Pares),

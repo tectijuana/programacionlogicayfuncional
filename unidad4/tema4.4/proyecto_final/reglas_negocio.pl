@@ -18,7 +18,6 @@
 %%   - Promedio: hasta 50 puntos (promedio*5, máximo 10.0*5=50)
 %%   - Créditos: hasta 30 puntos (min(creditos/8, 30))
 %%   - Sin adeudo: 20 puntos adicionales
-%%   - Beca penaliza a alumnos con promedio muy alto (ya tienen recursos)
 %% ============================================================
 prioridad_tramite(AlumnoID, Tramite, Puntaje) :-
     alumno(AlumnoID, Promedio, Creditos, Adeudo),

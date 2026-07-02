@@ -182,6 +182,9 @@ main = do
     Left err -> putStrLn $ "Alumno inválido: " ++ show err
     Right _  -> putStrLn "Válido (inesperado)"
 
-  case validarAlumno (head alumnosTecNM) of
-    Left _  -> putStrLn "Inválido (inesperado)"
-    Right a -> putStrLn $ "Alumno válido: " ++ nombre a
+  -- pattern matching en vez de `head` (función parcial — estándar del curso)
+  case alumnosTecNM of
+    []          -> putStrLn "Sin alumnos de ejemplo"
+    (primero:_) -> case validarAlumno primero of
+      Left _  -> putStrLn "Inválido (inesperado)"
+      Right a -> putStrLn $ "Alumno válido: " ++ nombre a

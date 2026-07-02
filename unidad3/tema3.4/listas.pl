@@ -152,9 +152,9 @@ mi_sum_list([H|T], Acc, Suma) :-
 :- begin_tests(listas).
 
 % mi_member
-test(member_encontrado) :- mi_member(2, [1,2,3]).
-test(member_primero)    :- mi_member(1, [1,2,3]).
-test(member_ultimo)     :- mi_member(3, [1,2,3]).
+test(member_encontrado, [nondet]) :- mi_member(2, [1,2,3]).
+test(member_primero, [nondet])    :- mi_member(1, [1,2,3]).
+test(member_ultimo, [nondet])     :- mi_member(3, [1,2,3]).
 test(member_no_esta, [fail]) :- mi_member(5, [1,2,3]).
 test(member_genera_todos) :-
     findall(X, mi_member(X, [a,b,c]), Xs),
@@ -202,8 +202,8 @@ test(flatten_vacia) :-
     mi_flatten([], F), F == [].
 
 % mi_max_list
-test(max_lista) :- mi_max_list([3,1,9,2,6], 9).
-test(max_uno)   :- mi_max_list([42], 42).
+test(max_lista, [nondet]) :- mi_max_list([3,1,9,2,6], 9).
+test(max_uno, [nondet]) :- mi_max_list([42], 42).
 test(max_vacia, [fail]) :- mi_max_list([], _).
 
 % mi_sum_list

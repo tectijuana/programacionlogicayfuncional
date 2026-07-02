@@ -86,9 +86,10 @@ test(puntaje_mayor_cero) :-
     prioridad_tramite(ramos_torres, beca, P),
     P > 0.
 
-test(ramos_prioritario_beca) :-
-    % ramos_torres tiene el mejor perfil para beca
-    alumno_prioritario(beca, ramos_torres).
+test(mendoza_prioritaria_beca) :-
+    % mendoza_ibarra: 240 créditos (30 pts, tope) + promedio 8.0 (40 pts)
+    % + sin adeudo (20 pts) = 90, el puntaje más alto entre los elegibles
+    alumno_prioritario(beca, mendoza_ibarra).
 
 test(ordenar_candidatos_beca) :-
     ordenar_solicitudes(beca,

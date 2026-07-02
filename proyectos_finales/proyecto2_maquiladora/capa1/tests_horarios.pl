@@ -27,17 +27,17 @@ test(no_asigna_bloque_descanso) :-
     forall(member(asig(_, _, Inicio, Fin), A),
            (Inicio =\= 7, Fin =\= 7)).
 
-test(pcb_en_estacion_especializada) :-
+test(pcb_en_estacion_especializada, [nondet]) :-
     asignar_turno(A),
     member(asig(ensamble_pcb, Est, _, _), A),
     (Est == est_pcb ; Est == est_soldadura).
 
-test(soldadura_en_estacion_especializada) :-
+test(soldadura_en_estacion_especializada, [nondet]) :-
     asignar_turno(A),
     member(asig(soldadura, Est, _, _), A),
     (Est == est_pcb ; Est == est_soldadura).
 
-test(puesto_basico_no_en_especializada) :-
+test(puesto_basico_no_en_especializada, [nondet]) :-
     asignar_turno(A),
     member(asig(empaque, Est, _, _), A),
     \+ (Est == est_pcb),

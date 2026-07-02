@@ -148,7 +148,7 @@ mi_unify(T1, T2) :-
 %% demo_occurs_check/0 — det
 demo_occurs_check :-
     writeln("=== Occurs Check ==="),
-    (   mi_unify(_X, f(_X))
+    (   mi_unify(X, f(X))
     ->  writeln("  mi_unify(X, f(X)) → unifica (¡peligroso!)")
     ;   writeln("  mi_unify(X, f(X)) → false (occurs check correcto)")
     ),
@@ -200,10 +200,10 @@ test(mi_unify_basico) :-
 test(mi_unify_occurs_check, [fail]) :-
     mi_unify(X, f(X)).
 
-test(ancestro_directo) :-
+test(ancestro_directo, [nondet]) :-
     ancestro(don_aurelio, carlos).
 
-test(ancestro_indirecto) :-
+test(ancestro_indirecto, [nondet]) :-
     ancestro(don_aurelio, pedro).
 
 test(no_ancestro, [fail]) :-

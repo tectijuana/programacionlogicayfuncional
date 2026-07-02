@@ -1,6 +1,7 @@
 :- use_module(validador_imss).
 :- use_module(restricciones).
 :- use_module(library(plunit)).
+:- use_module(library(clpfd)).  % operador `in` usado en los tests de restricciones
 
 :- begin_tests(imss).
 

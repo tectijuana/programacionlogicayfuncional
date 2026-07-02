@@ -1,4 +1,5 @@
-:- module(planificador, [asignar_turno/1, imprimir_turno/1, sin_conflictos/1]).
+:- module(planificador, [asignar_turno/1, imprimir_turno/1, sin_conflictos/1,
+                         puesto/3]).
 :- use_module(library(clpfd)).
 
 %% ============================================================

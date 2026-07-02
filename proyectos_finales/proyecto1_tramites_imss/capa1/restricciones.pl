@@ -1,4 +1,5 @@
-:- module(restricciones, [semanas_validas/1, edad_pension/1, monto_prestamo/2]).
+:- module(restricciones, [semanas_validas/1, edad_pension/1, monto_prestamo/2,
+                          semanas_para_pension/2]).
 :- use_module(library(clpfd)).
 
 %% semanas_validas/1 — semanas_validas(?S) is nondet
