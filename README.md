@@ -180,7 +180,8 @@ El código base (starter code) ya está en el repositorio.
 Una guía corta para aprovechar el material, pensada para ti como estudiante:
 
 1. **Instala el entorno la primera semana.** No dejes la instalación para el día de la entrega.
-   Sigue [`SYLLABUS.md`](SYLLABUS.md#instalación-del-entorno-de-desarrollo); si tu equipo es
+   Sigue las guías paso a paso de [`instalacion/`](instalacion/) (AWS Academy + Ubuntu ARM64,
+   una guía independiente por software, y script para Raspberry Pi Zero 2W); si tu equipo es
    Windows, usa WSL2 o GitHub Codespaces.
 2. **Lee el `README.md` de cada unidad antes de la clase.** Cada uno trae el objetivo, los
    temas y la regla de entrega. Llegar con el entorno listo y el código clonado vale tiempo.
@@ -220,6 +221,7 @@ Una guía corta para aprovechar el material, pensada para ti como estudiante:
 ### Cómputo en la nube
 
 - **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login):** Crédito de $100 USD por semestre para desplegar aplicaciones Erlang/Elixir/Haskell en EC2.
+- **[`instalacion/`](instalacion/):** Guías de instalación del entorno completo — nodo EC2 ARM64 desde CloudShell, SWI-Prolog, Erlang/OTP, GHC, Clojure, Elixir, OCaml y Raspberry Pi Zero 2W.
 
 ### Otros recursos
 
