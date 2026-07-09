@@ -40,10 +40,10 @@ de estado del turno con Clojure.
 ## Arquitectura
 
 ```
-capa1/planificador.pl        ← CLP(FD): asignación estación+bloque sin conflictos
-capa1/tests_maquiladora.pl   ← plunit: verificar ausencia de conflictos
+capa1/planificador.pl     ← CLP(FD): asignación estación+bloque sin conflictos
+capa1/tests_horarios.pl   ← plunit: verificar ausencia de conflictos
 
-capa2/maquiladora_server.clj ← atom: estado del turno; historial de asignaciones
+capa2/horario_server.clj  ← atom: estado del turno; historial de asignaciones
 ```
 
 ---
@@ -55,10 +55,10 @@ capa2/maquiladora_server.clj ← atom: estado del turno; historial de asignacion
 swipl -g "use_module(capa1/planificador), asignar_turno(A), imprimir_turno(A), halt"
 
 # Capa 1 — tests
-swipl -g "run_tests(maquiladora), halt" -l capa1/tests_maquiladora.pl
+swipl -g "run_tests(maquiladora), halt" -l capa1/tests_horarios.pl
 
 # Capa 2 — demo Clojure
-clj capa2/maquiladora_server.clj
+clojure -M capa2/horario_server.clj
 ```
 
 ---
@@ -77,6 +77,6 @@ Lo que construyes en `planificador.pl` es el núcleo de esos sistemas.
 ## Entregables
 
 1. `capa1/planificador.pl` — encuentra asignación válida en < 5 segundos
-2. `capa1/tests_maquiladora.pl` — todos los tests pasando
-3. `capa2/maquiladora_server.clj` — estado del turno con historial inmutable
+2. `capa1/tests_horarios.pl` — todos los tests pasando
+3. `capa2/horario_server.clj` — estado del turno con historial inmutable
 4. README actualizado con la asignación encontrada (tabla impresa)

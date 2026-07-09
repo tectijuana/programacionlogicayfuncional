@@ -2,23 +2,29 @@
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.3
 %%
 %% Ejecutar:
-%%   swipl -g "sudoku_facil(P), resolver_sudoku(P), imprimir_sudoku(P), halt" -l sudoku.pl
-%%   swipl -g "sudoku_dificil(P), resolver_sudoku(P), imprimir_sudoku(P), halt" -l sudoku.pl
+%%   swipl -g "sudoku_facil(P), resolver_sudoku(P, S), imprimir_sudoku(S), halt" -l sudoku.pl
+%%   swipl -g "sudoku_dificil(P), resolver_sudoku(P, S), imprimir_sudoku(S), halt" -l sudoku.pl
 
 :- use_module(library(clpfd)).
 
 %% ============================================================
-%% resolver_sudoku/1 — det
-%% resolver_sudoku(+Filas)
-%% Filas: lista de 9 listas de 9 elementos (0 = celda vacía a rellenar)
+%% resolver_sudoku/2 — det
+%% resolver_sudoku(+Puzzle, -Filas)
+%% Puzzle: lista de 9 listas de 9 elementos (0 = celda vacía a rellenar)
+%% Filas:  la misma cuadrícula con cada 0 sustituido por su valor resuelto
 %%
 %% El poder de CLP(FD): describimos las restricciones del Sudoku
 %% y el motor encuentra la solución sin que nosotros programemos la búsqueda.
+%% Nota: los 0 se convierten en variables frescas ANTES de declarar los
+%% dominios — un 0 literal no pertenece a 1..9 y haría fallar `ins`.
 %% ============================================================
-resolver_sudoku(Filas) :-
+resolver_sudoku(Puzzle, Filas) :-
     % Estructura: 9 filas de 9 elementos
-    length(Filas, 9),
-    maplist(length_(9), Filas),
+    length(Puzzle, 9),
+    maplist(length_(9), Puzzle),
+
+    % Cada 0 del puzzle se vuelve una variable a resolver
+    maplist(maplist(celda_var), Puzzle, Filas),
 
     % Aplanar todas las celdas en una lista
     append(Filas, Celdas),
@@ -41,6 +47,12 @@ resolver_sudoku(Filas) :-
 
 %% length_/2 — det (auxiliar para maplist)
 length_(N, Lista) :- length(Lista, N).
+
+%% celda_var/2 — det
+%% celda_var(+Celda, -Var)
+%% 0 (celda vacía) → variable fresca; cualquier otro valor se conserva.
+celda_var(0, _) :- !.
+celda_var(V, V).
 
 %% bloques/1 — det
 %% Extrae los 9 bloques 3×3 y aplica all_distinct a cada uno
@@ -134,18 +146,18 @@ demo_sudoku :-
     writeln("Resolviendo puzzle fácil..."),
     sudoku_facil(P1),
     statistics(walltime, [T0|_]),
-    resolver_sudoku(P1),
+    resolver_sudoku(P1, S1),
     statistics(walltime, [T1|_]),
     Tiempo is T1 - T0,
-    imprimir_sudoku(P1),
+    imprimir_sudoku(S1),
     format("Resuelto en ~wms~n", [Tiempo]),
     nl,
     writeln("Resolviendo puzzle difícil (el más difícil del mundo según The Telegraph)..."),
     sudoku_dificil(P2),
     statistics(walltime, [T2|_]),
-    resolver_sudoku(P2),
+    resolver_sudoku(P2, S2),
     statistics(walltime, [T3|_]),
     Tiempo2 is T3 - T2,
-    imprimir_sudoku(P2),
+    imprimir_sudoku(S2),
     format("Resuelto en ~wms~n~n", [Tiempo2]),
     writeln("CLP(FD) usa propagación de restricciones, no backtracking ciego.").

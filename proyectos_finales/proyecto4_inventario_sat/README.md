@@ -31,11 +31,10 @@ capa1/productos.pl          ← base de hechos: productos y categorías fiscales
 capa1/tests_sat.pl          ← plunit
 
 capa2/inventario_server.erl ← GenServer: stock, movimientos, alertas de mínimo
-capa2/factura_server.erl    ← GenServer: cola de facturas pendientes
+capa2/factura_server.erl    ← GenServer: cola de facturas pendientes (LO IMPLEMENTAS TÚ — 2º GenServer requerido)
 capa2/sat_sup.erl           ← Supervisor
 
 capa3/Factura.hs            ← tipos CFDI, validación, serialización
-capa3/Factura.mli           ← (alternativa OCaml)
 ```
 
 ---

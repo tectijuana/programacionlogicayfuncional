@@ -29,7 +29,7 @@ capa1/reglas_alerta.pl     ← reglas: normal/alerta/critico según lectura
 capa1/tests_monitor.pl     ← plunit: verificar clasificación correcta
 
 capa2/sensor_server.erl    ← GenServer: un proceso por sensor
-capa2/agregador.erl        ← GenServer: promedio y estado global
+capa2/agregador.erl        ← GenServer: promedio y estado global (LA IMPLEMENTAS TÚ — 2º GenServer requerido)
 capa2/monitor_sup.erl      ← DynamicSupervisor: reinicio automático
 
 capa3/dashboard.exs        ← Elixir Stream: pipeline de lectura y reporte

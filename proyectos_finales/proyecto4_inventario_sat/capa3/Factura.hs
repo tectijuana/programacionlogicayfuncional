@@ -1,9 +1,10 @@
-module Factura (
+module Main (
     RFC(..), TipoPersona(..), ZonaFiscal(..),
     Producto(..), CategoriaFiscal(..),
     Factura(..), ItemFactura(..),
     crearFactura, calcularTotales, serializar,
-    validarRFC, tasaIVA
+    validarRFC, tasaIVA,
+    main
 ) where
 
 import Data.List (intercalate)

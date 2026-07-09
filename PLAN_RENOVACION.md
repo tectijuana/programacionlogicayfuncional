@@ -506,7 +506,7 @@ horario(Materia, Salon, Hora) :-
 
 ### Sistema Integrado: Validación + Estado + Resiliencia
 
-El código base de cada proyecto está en [`proyectos_finales/`](repo/proyectos_finales/).
+El código base de cada proyecto está en [`proyectos_finales/`](proyectos_finales/).
 El alumno elige un dominio y completa las tres capas a partir del starter code provisto.
 
 **Capa 1 — Lógica (SWI-Prolog):**
@@ -528,10 +528,10 @@ El alumno elige un dominio y completa las tres capas a partir del starter code p
 
 | # | Dominio | Directorio | Stack |
 |---|---------|------------|-------|
-| 1 | Validación de trámites IMSS | [`proyecto1_tramites_imss/`](repo/proyectos_finales/proyecto1_tramites_imss/) | Prolog + Erlang/OTP + Haskell |
-| 2 | Turnos en línea de ensamble (maquiladora) | [`proyecto2_maquiladora/`](repo/proyectos_finales/proyecto2_maquiladora/) | Prolog CLP(FD) + Clojure |
-| 3 | Monitor de alertas IoT CENAPRED | [`proyecto3_monitor_iot/`](repo/proyectos_finales/proyecto3_monitor_iot/) | Prolog + Erlang/OTP + Elixir |
-| 4 | Inventario con reglas fiscales SAT | [`proyecto4_inventario_sat/`](repo/proyectos_finales/proyecto4_inventario_sat/) | Prolog + Erlang/OTP + Haskell |
+| 1 | Validación de trámites IMSS | [`proyecto1_tramites_imss/`](proyectos_finales/proyecto1_tramites_imss/) | Prolog + Erlang/OTP + Haskell |
+| 2 | Turnos en línea de ensamble (maquiladora) | [`proyecto2_maquiladora/`](proyectos_finales/proyecto2_maquiladora/) | Prolog CLP(FD) + Clojure |
+| 3 | Monitor de alertas IoT CENAPRED | [`proyecto3_monitor_iot/`](proyectos_finales/proyecto3_monitor_iot/) | Prolog + Erlang/OTP + Elixir |
+| 4 | Inventario con reglas fiscales SAT | [`proyecto4_inventario_sat/`](proyectos_finales/proyecto4_inventario_sat/) | Prolog + Erlang/OTP + Haskell |
 
 ---
 

@@ -1,6 +1,7 @@
-module Reporte (
+module Main (
     Tramite(..), TipoTramite(..), Resultado(..),
-    generarReporte, filtrarAprobados, resumen
+    generarReporte, filtrarAprobados, resumen,
+    main
 ) where
 
 import Data.List (intercalate, sortBy)

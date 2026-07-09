@@ -37,7 +37,9 @@ generar_horario(Asignaciones) :-
     aplicar_restricciones(Materias, Vars),
 
     % Etiquetar (buscar valores concretos)
-    maplist(extraer_vars, Vars, VarsPlanas),
+    % extraer_vars produce pares [H,S]; label/1 necesita la lista plana
+    maplist(extraer_vars, Vars, VarsPares),
+    append(VarsPares, VarsPlanas),
     label(VarsPlanas),
 
     % Construir resultado

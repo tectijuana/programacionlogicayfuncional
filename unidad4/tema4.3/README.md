@@ -12,7 +12,7 @@ y usar CLP(FD) para resolver problemas combinatorios de forma eficiente.
 swipl -g "run_tests(clpfd), halt" -l clpfd_basico.pl
 
 # Sudoku
-swipl -g "sudoku_facil(P), resolver_sudoku(P), imprimir_sudoku(P), halt" -l sudoku.pl
+swipl -g "sudoku_facil(P), resolver_sudoku(P, S), imprimir_sudoku(S), halt" -l sudoku.pl
 
 # Horarios TecNM
 swipl -g "generar_horario(H), imprimir_horario(H), halt" -l horarios_tec.pl
