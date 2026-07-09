@@ -541,8 +541,12 @@ El alumno elige un dominio y completa las tres capas a partir del starter code p
 | Rubro | Peso |
 |-------|------|
 | Assignments semanales (código que compila y corre) | 40% |
-| Proyecto integrador de unidad | 40% |
+| Proyecto integrador / examen de la unidad | 40% |
 | Exposición técnica (10-15 min) | 20% |
+
+Instrumento del rubro central por unidad (ver [SYLLABUS](SYLLABUS.md#evaluación)):
+U1 → validador CURP (1.3) · U2 → sistema OTP (2.5) + Examen Parcial 1, promediados ·
+U3 → sistema experto (3.5) · U4 → proyecto CLP (4.4) + Examen Parcial 2, promediados.
 
 ### Semestral:
 | Rubro | Peso |

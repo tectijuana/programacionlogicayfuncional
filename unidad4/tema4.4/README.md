@@ -9,7 +9,7 @@ solicitudes de trámites estudiantiles del TecNM:
 
 - **Programación Lógica (Prolog):** validación declarativa de reglas de negocio
 - **Programación Funcional (Erlang/OTP o Clojure):** procesamiento y supervisión
-- **Tipos estáticos (Haskell u OCaml):** generación de reportes con garantías de tipo
+- **Tipos estáticos o streams (Haskell o Elixir):** generación de reportes con garantías de tipo
 
 ### Arquitectura
 

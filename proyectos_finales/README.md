@@ -87,7 +87,7 @@ real que use cada paradigma donde tiene ventaja natural:
 |------|-----------|--------------|
 | Validación de reglas de negocio | **Lógico** (SWI-Prolog) | Declarar *qué* es válido, backtracking gratis, CLP(FD) para restricciones numéricas |
 | Estado, concurrencia y resiliencia | **Funcional** (Erlang/OTP o Clojure) | Inmutabilidad + supervisión automática + sin race conditions por diseño |
-| Reportes y pipeline de datos | **Funcional con tipos** (Haskell u OCaml) | El tipo es la documentación; imposible generar un reporte mal formado |
+| Reportes y pipeline de datos | **Funcional con tipos o streams** (Haskell o Elixir, según el proyecto) | El tipo es la documentación; imposible generar un reporte mal formado |
 
 ---
 
@@ -135,8 +135,8 @@ La diferencia está en el dominio del problema.
 ## Requisitos mínimos para aprobar
 
 1. **Capa 1 completa:** `run_tests.` pasa sin fallos en SWI-Prolog
-2. **Capa 2 completa:** al menos 2 GenServers + 1 Supervisor iniciando sin error
-3. **Capa 3 completa:** programa Haskell u OCaml que compila y genera reporte
+2. **Capa 2 completa:** P1/P3/P4: al menos 2 GenServers + 1 Supervisor iniciando sin error; P2: estado del turno en Clojure (`atom`) con historial inmutable
+3. **Capa 3 completa:** programa Haskell (P1, P4) o Elixir (P3) que compila y genera el reporte — no aplica en P2 (ver rúbrica)
 4. **Integración:** al menos un punto de conexión entre capas documentado
 5. **Demostración en vivo:** el sistema corre sin modificaciones en el equipo del profesor
 
@@ -150,10 +150,14 @@ La diferencia está en el dominio del problema.
 |----------|------|
 | Capa 1: tests `plunit` pasando, CLP(FD) usado | 25% |
 | Capa 2: OTP/Clojure arrancando, supervisión demostrada | 25% |
-| Capa 3: Haskell/Elixir compilando con tipos correctos | 20% |
+| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos correctos | 20% |
 | Integración entre capas documentada y funcional | 10% |
 | Exposición técnica (10–15 min, demostración en vivo) | 10% |
 | Evidencia de ejecución: asciinema (CLI) + LOOM (UI si aplica) | 10% |
+
+> **Proyecto 2 (maquiladora):** tiene solo dos capas por diseño; el 20 % de la Capa 3 se
+> suma a la Capa 2 (Clojure, que entonces vale 45 %) y esta debe incluir la impresión o
+> exportación del reporte del turno.
 
 ---
 

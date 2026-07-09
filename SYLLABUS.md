@@ -24,7 +24,7 @@ Los lenguajes del curso tienen presencia documentada en producción a escala mun
 - **Elixir/Phoenix** → Discord (cientos de millones de usuarios)
 - **Haskell/GHC** → Pandoc, xmonad, GitHub Semantic
 - **Clojure** → Nubank (uno de los bancos digitales más grandes de América Latina)
-- **SWI-Prolog** → análisis de lenguaje en IBM Watson, motores de reglas y sistemas expertos
+- **SWI-Prolog** → motores de reglas, sistemas expertos y CLP(FD). (Dato histórico: IBM Watson usó Prolog —un dialecto interno de IBM, no SWI— para el análisis de preguntas en Jeopardy!, 2011; fuente: Lally et al., *IBM Journal of R&D*, 2012)
 
 > **Lenguajes centrales vs. complementarios.** No los seis pesan igual. Concéntrate en
 > **Prolog, Erlang y Haskell** (centrales); **Clojure** y **Elixir** son complementarios y
@@ -78,15 +78,33 @@ El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas más una s
 
 ## Evaluación
 
+### Calificación semestral
+
+| Rubro | Peso |
+|-------|------|
+| Promedio de las 4 unidades | 70 % |
+| Proyecto Final multi-paradigma (sem. 17) | 25 % |
+| Participación en sesiones de REPL en vivo | 5 % |
+
 ### Desglose por Unidad
 
-Cada unidad se evalúa independientemente:
+Cada unidad se evalúa independientemente con el mismo esquema:
 
 | Rubro | Porcentaje |
 |-------|-----------|
 | Prácticas de laboratorio | 40 % |
-| Proyecto integrador | 40 % |
+| Proyecto integrador / examen de la unidad | 40 % |
 | Exposición / defensa oral | 20 % |
+
+El instrumento del rubro central (40 %) varía por unidad — los **exámenes parciales**
+del calendario pertenecen a este rubro:
+
+| Unidad | Instrumento del 40 % |
+|--------|----------------------|
+| U1 | Validador CURP en 3 paradigmas (tema 1.3) |
+| U2 | Promedio de: sistema OTP con supervisión (tema 2.5) y **Examen Parcial 1** (U1–U2, sem. 8) |
+| U3 | Sistema experto médico (tema 3.5) |
+| U4 | Promedio de: proyecto CLP multi-módulo (tema 4.4) y **Examen Parcial 2** (U3–U4, sem. 15) |
 
 ### Prácticas de laboratorio
 
@@ -111,16 +129,21 @@ Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](p
 | [P3](proyectos_finales/proyecto3_monitor_iot/) | Monitor de alertas IoT CENAPRED | Ingeniería de sistemas | Prolog | Erlang/OTP | Elixir |
 | [P4](proyectos_finales/proyecto4_inventario_sat/) | Inventario con reglas fiscales SAT | Contabilidad / CFDI | Prolog | Erlang/OTP | Haskell |
 
-**Rúbrica del Proyecto Final:**
+**Rúbrica del Proyecto Final** (idéntica a la de [`proyectos_finales/`](proyectos_finales/)):
 
 | Criterio | Peso |
 |----------|------|
-| Capa 1: tests `plunit` pasando, CLP(FD) aplicado | 30% |
-| Capa 2: OTP/Clojure arrancando, supervisión demostrada con `kill` | 30% |
-| Capa 3: Haskell/Elixir compilando con tipos o Stream correctos | 20% |
+| Capa 1: tests `plunit` pasando, CLP(FD) aplicado | 25% |
+| Capa 2: OTP/Clojure arrancando, supervisión demostrada con `kill` | 25% |
+| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos o Stream correctos | 20% |
 | Integración entre capas documentada y funcional | 10% |
 | Exposición técnica (10–15 min, demostración en vivo, sem. 17) | 10% |
+| Evidencia de ejecución: asciinema (CLI) + LOOM (UI si aplica) | 10% |
 
+> **Proyecto 2 (maquiladora):** tiene solo dos capas; el 20 % de la Capa 3 se suma a la
+> Capa 2 (Clojure, que entonces vale 45 %) y esta debe incluir la impresión o exportación
+> del reporte del turno.
+>
 > Código que no compila = 0 en esa capa. La demostración debe correr sin modificaciones en el equipo del profesor.
 
 ---

@@ -28,6 +28,13 @@ sudo apt install swi-prolog
 swipl --version
 ```
 
+## Evaluación
+
+Esquema global del [sílabo](../SYLLABUS.md#evaluación): prácticas 40 % ·
+proyecto integrador 40 % · exposición 20 %. En esta unidad el proyecto
+integrador es el **sistema experto médico (tema 3.5)**; el contenido de la
+unidad también se evalúa en el **Examen Parcial 2** (U3–U4, sem. 15).
+
 ## Modo de entrega
 
 Todos los predicados deben:

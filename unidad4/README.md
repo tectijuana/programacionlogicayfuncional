@@ -32,10 +32,12 @@ proyectos multi-paradigma que integran todo lo aprendido en el semestre.
 
 ## Evaluación de la unidad
 
+Esquema global del [sílabo](../SYLLABUS.md#evaluación):
+
 | Rubro | Peso |
 |-------|------|
 | Assignments 4.1–4.3 (código que compila y corre) | 40% |
-| Proyecto final 4.4 | 40% |
+| Proyecto CLP 4.4 y **Examen Parcial 2** (U3–U4, sem. 15), promediados | 40% |
 | Exposición técnica (15 min) | 20% |
 
 **Regla de oro: código que no compila = 0. No existe pseudocódigo.**

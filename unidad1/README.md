@@ -27,11 +27,13 @@ y qué ventaja concreta ofrece cada paradigma.
 
 ## Evaluación
 
-| Rubro | Peso |
-|-------|------|
-| Tarea 1.1 — Hola Paradigma (3 lenguajes funcionando) | 25% |
-| Tarea 1.2 — Investigación de sistema de producción | 25% |
-| Tarea 1.3 — Validador CURP (3 paradigmas + análisis) | 40% |
-| Participación en demostraciones en clase | 10% |
+Esta unidad sigue el esquema global del [sílabo](../SYLLABUS.md#evaluación)
+(prácticas 40 % · proyecto integrador 40 % · exposición 20 %):
+
+| Rubro | Peso | Instrumento |
+|-------|------|-------------|
+| Prácticas de laboratorio | 40% | Tarea 1.1 — Hola Paradigma (20 %) + Tarea 1.2 — Investigación de sistema de producción (20 %) |
+| Proyecto integrador de la unidad | 40% | Tarea 1.3 — Validador CURP (3 paradigmas + análisis) |
+| Exposición / defensa oral | 20% | Participación en demostraciones en clase |
 
 **Regla sin excepciones:** código que no compila = 0 en ese ítem.
