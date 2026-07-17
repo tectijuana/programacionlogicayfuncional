@@ -68,6 +68,10 @@ __pycache__/
 *.swo
 *~
 
+# ===== Claude Code =====
+CLAUDE.md
+.claude/
+
 # ===== Temporales =====
 *.log
 *.tmp
