@@ -92,3 +92,13 @@ Si **un** hijo cae, solo **ese hijo** se reinicia. Los demás sensores continúa
 2. El `sensor_server` tiene un `send_after` que genera lecturas automáticas. ¿Por qué esto es más seguro que usar un thread separado en Java?
 3. Si el sensor falla 10 veces en 1 segundo, el supervisor lo deja caer permanentemente (parámetros `MaxRestarts` y `MaxTime`). ¿Por qué esto es mejor que reiniciar infinitamente?
 4. ¿Cómo escalarías este sistema para manejar 10,000 sensores? ¿Qué cambiarías?
+
+---
+
+## Lectura de actualización — OTP en la era de los LLM
+
+Los mismos patrones de este tema (gen_server, supervisor, "let it crash") son hoy
+la base de arquitecturas que orquestan modelos de lenguaje grandes en producción:
+timeouts, reintentos, aislamiento de fallos y colas de trabajo alrededor de una API
+de LLM son problemas OTP clásicos. Ver el anexo de investigación del curso:
+[Erlang/OTP y LLMs: arquitectura tolerante a fallos](../../research/Gateway%20LLM%20tolerante%20a%20fallos%20con%20Erlang/README.md).

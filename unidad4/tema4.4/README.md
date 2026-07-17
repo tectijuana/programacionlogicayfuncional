@@ -65,3 +65,13 @@ swipl -l proyecto_final/validador.pl
 
 Última semana del semestre — demostración en vivo en clase.
 El sistema debe correr sin modificaciones en el equipo del profesor.
+
+---
+
+## Lectura de actualización
+
+La validación declarativa que construyes aquí es la mitad simbólica de las
+arquitecturas neuro-simbólicas actuales: un LLM interpreta la solicitud en
+lenguaje natural y un motor Prolog como el tuyo decide, con reglas trazables,
+si el trámite procede. Ver el anexo de investigación del curso:
+[Prolog y LLMs: aproximación neuro-simbólica](../../research/Prolog%20large%20language%20models%20neuro-symbolic/readme.md).

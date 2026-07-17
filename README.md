@@ -175,6 +175,23 @@ El código base (starter code) ya está en el repositorio.
 
 ---
 
+## Investigación y actualización continua
+
+Este curso no está congelado en el temario: se renueva con investigación propia
+sobre la intersección entre los paradigmas declarativos y los modelos de lenguaje
+grandes (LLM). Los anexos completos están en [`research/`](research/):
+
+| Anexo | Pregunta que responde | Lo conecta con |
+|-------|----------------------|----------------|
+| [Prolog + LLM neuro-simbólico](research/Prolog%20large%20language%20models%20neuro-symbolic/readme.md) | ¿Existe un "Prolog con LLM"? El LLM conversa; Prolog verifica reglas de forma trazable | Temas 3.5 y 4.4 |
+| [Gateway LLM tolerante a fallos con Erlang](research/Gateway%20LLM%20tolerante%20a%20fallos%20con%20Erlang/README.md) | ¿Existe un "Erlang con LLM"? OTP como infraestructura de supervisión, timeouts y reintentos alrededor de un LLM | Tema 2.5 |
+
+La lección transversal: los LLM generan con fluidez, pero **no garantizan** corrección
+ni disponibilidad — los paradigmas de este curso aportan exactamente eso (razonamiento
+verificable con Prolog, resiliencia con Erlang/OTP).
+
+---
+
 ## Cómo estudiar este curso
 
 Una guía corta para aprovechar el material, pensada para ti como estudiante:

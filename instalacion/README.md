@@ -28,10 +28,11 @@ una instancia EC2 Graviton (AWS Academy) o en hardware físico (Raspberry Pi).
 
 ## ¿Qué software usa cada parte del curso?
 
-- **Unidad 1–2** (fundamentos, Clojure): SWI-Prolog, Clojure
-- **Unidad 3** (funcional tipado): GHC/Haskell, OCaml
-- **Unidad 4** (lógico + concurrencia): SWI-Prolog 9.x, Erlang/OTP 26+
-- **Proyectos finales**: combinan al menos 3 paradigmas — normalmente Prolog + Erlang/OTP o Clojure + Haskell
+- **Unidad 1** (conceptos fundamentales): Python (contraste imperativo), Erlang/OTP 26+, SWI-Prolog 9.x
+- **Unidad 2** (modelo funcional): Erlang/OTP 26+, Clojure, GHC/Haskell 9.x, Elixir 1.14+
+- **Unidades 3–4** (programación lógica): SWI-Prolog 9.x, incluyendo CLP(FD) y plunit
+- **OCaml**: solo para el demo del tema 1.2 — no es lenguaje evaluable del curso
+- **Proyectos finales**: combinan al menos 3 paradigmas — Prolog + (Erlang/OTP o Clojure) + (Haskell o Elixir)
 
 ## Verificación rápida (todo instalado)
 

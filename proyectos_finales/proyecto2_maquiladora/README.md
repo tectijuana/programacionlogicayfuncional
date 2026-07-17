@@ -65,18 +65,22 @@ clojure -M capa2/horario_server.clj
 
 ## Conexión con la industria
 
-Las plantas maquiladoras en Baja California resuelven este problema cada turno:
-- **Samsung Tijuana** — 3 turnos × ~2,000 operadores × 150+ estaciones
-- **Honeywell Mexicali** — asignación de técnicos certificados a líneas de sensores
-- **Herramientas industriales equivalentes:** Google OR-Tools, IBM CP Optimizer, SAP APO
+Las plantas maquiladoras en Baja California enfrentan este problema cada turno —
+a la escala de **Samsung Tijuana** (3 turnos × ~2,000 operadores × 150+ estaciones)
+o **Honeywell Mexicali** (técnicos certificados asignados a líneas de sensores).
 
-Lo que construyes en `planificador.pl` es el núcleo de esos sistemas.
+Este proyecto no es una fantasía académica: modela un tipo de problema que en la
+industria se resuelve con programación declarativa y de restricciones — con
+herramientas como **Google OR-Tools, IBM CP Optimizer o SAP APO** (el stack exacto
+de cada planta no es público; ver [`casos_reales_mundo_real.md`](../../casos_reales_mundo_real.md)).
+Lo que construyes en `planificador.pl` es una versión simplificada de ese núcleo declarativo.
 
 ---
 
 ## Entregables
 
 1. `capa1/planificador.pl` — encuentra asignación válida en < 5 segundos
-2. `capa1/tests_horarios.pl` — todos los tests pasando
+2. `capa1/tests_horarios.pl` — todos los tests pasando (el starter incluye 8;
+   tu entrega debe ampliar la suite a **al menos 15**, como exige la rúbrica de la capa 1)
 3. `capa2/horario_server.clj` — estado del turno con historial inmutable
 4. README actualizado con la asignación encontrada (tabla impresa)

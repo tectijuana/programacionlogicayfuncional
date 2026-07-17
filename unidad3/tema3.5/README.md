@@ -49,3 +49,14 @@ interfaz.pl          ← entrada/salida, flujo de conversación
 3. Exportar historial del paciente a archivo con `open/3`, `write/2`
 4. Agregar más condiciones: COVID-19, dengue, chikungunya
 5. Integrar con base de datos SQL usando el predicado ODBC de SWI-Prolog
+
+---
+
+## Lectura de actualización — sistemas expertos en la era de los LLM
+
+Un LLM puede conversar con el paciente con más fluidez que `read/1`, pero no
+garantiza que su diagnóstico siga reglas verificables — puede inventar. La línea
+de investigación neuro-simbólica combina ambos: el LLM como interfaz de lenguaje
+natural y Prolog como motor de razonamiento trazable, exactamente el rol de
+`diagnostico.pl` en este tema. Ver el anexo de investigación del curso:
+[Prolog y LLMs: aproximación neuro-simbólica](../../research/Prolog%20large%20language%20models%20neuro-symbolic/readme.md).

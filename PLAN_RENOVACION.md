@@ -47,7 +47,7 @@
 - 2009: WhatsApp elige Erlang — un equipo de 50 ingenieros atiende 900M usuarios
 - 2013: Meta lanza Flow y Hack — ambos escritos en OCaml
 - 2013: Nubank funda su stack en Clojure — hoy procesa millones de transacciones SPEI-equivalentes
-- 2023: Boris Cherny (Meta/Flow en OCaml) crea Claude Code en Anthropic
+- 2025: Boris Cherny (Meta/Flow en OCaml) crea Claude Code en Anthropic
 
 **Tarea 1.2:** Investigación documentada — elegir un sistema de producción,
 identificar el paradigma que usa y por qué fue esa la elección de ingeniería.
@@ -326,7 +326,8 @@ Consultar sobre 20 alumnos ficticios con datos variados.
 ```
 
 **Tarea 3.3:** Trazar manualmente el árbol de resolución para 5 consultas
-distintas sobre la base de datos de películas (`movies.pl` ya en el repo).
+distintas sobre la base de conocimiento de relaciones familiares de
+[`unidad3/tema3.3/unificacion.pl`](unidad3/tema3.3/unificacion.pl) (ya en el repo).
 Identificar: puntos de backtracking, cuts útiles, consultas que no terminan.
 
 ---
@@ -491,9 +492,13 @@ horario(Materia, Salon, Hora) :-
 ### Tema 4.4 — Proyectos prácticos y casos de estudio (sesión 4 + proyecto final)
 
 **Casos de estudio reales con Prolog:**
-- IBM Watson usó lógica de predicados para Jeopardy!
-- Sistemas de configuración de telecomunicaciones (Ericsson) — Prolog en producción
-- Análisis legal y contratos inteligentes — reglas como Prolog facts
+- IBM Watson usó Prolog (un dialecto interno de IBM, no SWI) para el análisis de
+  preguntas en Jeopardy!, 2011 (fuente: Lally et al., *IBM Journal of R&D*, 2012)
+- Ericsson: la primera implementación de Erlang (1986) fue escrita en Prolog —
+  el paradigma lógico como herramienta de prototipado de lenguajes
+- Reglas de negocio y análisis declarativo: el patrón "reglas como hechos" aparece
+  en producción vía motores tipo Datalog (CodeQL, Soufflé, LogicBlox) —
+  ver [`casos_reales_mundo_real.md`](casos_reales_mundo_real.md)
 
 **Integración multi-paradigma — el cierre del semestre:**
 - Llamar SWI-Prolog desde Elixir con `:erlport` o interfaz de puertos
