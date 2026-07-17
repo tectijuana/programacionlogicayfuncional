@@ -75,3 +75,22 @@ Consulta: ?- ancestro(abuelo, nieto).
 4. Si agregas la cláusula `padre(abuelo, tio).`, ¿cuántas soluciones produce `?- ancestro(abuelo, X).`? Traza el árbol.
 
 5. ¿Por qué `?- X = f(X).` no termina en Prolog estándar? ¿Y con `unify_with_occurs_check/2`?
+
+---
+
+## Tarea 3.3 — Trazas SLD sobre `movies.pl`
+
+La base de datos de cine mexicano está en [`movies.pl`](movies.pl) (15 tests plunit).
+Traza manualmente el árbol de resolución de estas 5 consultas — cada una ejercita
+un fenómeno distinto:
+
+| # | Consulta | Fenómeno a identificar |
+|---|----------|------------------------|
+| 1 | `?- colaboro_con(gael_garcia, D).` | Puntos de backtracking (dos soluciones) |
+| 2 | `?- companeros(doug_jones, X).` | Backtracking con `\=` |
+| 3 | `?- epoca(nosotros_los_pobres, E).` | Cut **verde** — misma respuesta sin él |
+| 4 | `?- primer_exito(guillermo_del_toro, P).` | Cut **rojo** + negación como falla |
+| 5 | `?- conectado(gael_garcia, pedro_infante).` | **No termina** — traza las primeras ~6 resoluciones y explica el ciclo |
+
+Verifica tu explicación de la consulta 5 con la versión segura:
+`?- conectado_seguro(gael_garcia, pedro_infante).` → `false` (termina gracias a la lista de visitados).

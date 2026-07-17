@@ -326,8 +326,9 @@ Consultar sobre 20 alumnos ficticios con datos variados.
 ```
 
 **Tarea 3.3:** Trazar manualmente el árbol de resolución para 5 consultas
-distintas sobre la base de conocimiento de relaciones familiares de
-[`unidad3/tema3.3/unificacion.pl`](unidad3/tema3.3/unificacion.pl) (ya en el repo).
+distintas sobre la base de datos de cine mexicano
+([`unidad3/tema3.3/movies.pl`](unidad3/tema3.3/movies.pl) — incluye las 5
+consultas sugeridas y 15 tests plunit).
 Identificar: puntos de backtracking, cuts útiles, consultas que no terminan.
 
 ---
