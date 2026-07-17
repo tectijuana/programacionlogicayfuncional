@@ -1,5 +1,5 @@
 :- module(planificador, [asignar_turno/1, imprimir_turno/1, sin_conflictos/1,
-                         puesto/3]).
+                         puesto/3, estacion/2]).
 :- use_module(library(clpfd)).
 
 %% ============================================================
@@ -39,9 +39,9 @@ asignar_puesto(Puesto, Estacion, Inicio, Fin) :-
     Inicio in 0..15,
     Fin    #= Inicio + Horas - 1,
     Fin    #=< 15,
-    Inicio #\= 7,
-    Fin    #\= 7,
-    (Inicio #< 7 #\/ Inicio #> 7).
+    %% Descanso obligatorio: el bloque de trabajo completo debe quedar
+    %% antes o después del bloque 7 — no basta excluir los extremos.
+    (Fin #< 7 #\/ Inicio #> 7).
 
 elegir_estacion(si, est_pcb).
 elegir_estacion(si, est_soldadura).

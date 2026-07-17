@@ -80,7 +80,8 @@ Lo que construyes en `planificador.pl` es una versión simplificada de ese núcl
 ## Entregables
 
 1. `capa1/planificador.pl` — encuentra asignación válida en < 5 segundos
-2. `capa1/tests_horarios.pl` — todos los tests pasando (el starter incluye 8;
-   tu entrega debe ampliar la suite a **al menos 15**, como exige la rúbrica de la capa 1)
+2. `capa1/tests_horarios.pl` — todos los tests pasando (el starter incluye 16,
+   ya sobre el mínimo de 15 de la rúbrica; agrega tests para cada restricción
+   nueva que introduzcas)
 3. `capa2/horario_server.clj` — estado del turno con historial inmutable
 4. README actualizado con la asignación encontrada (tabla impresa)
