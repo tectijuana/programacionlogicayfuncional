@@ -66,12 +66,13 @@ lsb_release -ds # → Ubuntu 24.04.x LTS
 
 Ya dentro de la instancia, sigue las guías independientes:
 
-- [01_prolog.md](01_prolog.md) — SWI-Prolog 9.x
-- [02_erlang.md](02_erlang.md) — Erlang/OTP 26+
-- [03_haskell.md](03_haskell.md) — GHC 9.x
-- [04_clojure.md](04_clojure.md) — Clojure
-- [05_elixir.md](05_elixir.md) — Elixir
-- [06_ocaml.md](06_ocaml.md) — OCaml
+- [01_asciinema.md](01_asciinema.md) — asciinema (instalar, usar y grabar tus prácticas)
+- [02_prolog.md](02_prolog.md) — SWI-Prolog 9.x
+- [03_erlang.md](03_erlang.md) — Erlang/OTP 26+
+- [04_haskell.md](04_haskell.md) — GHC 9.x
+- [05_clojure.md](05_clojure.md) — Clojure
+- [06_elixir.md](06_elixir.md) — Elixir
+- [07_ocaml.md](07_ocaml.md) — OCaml
 
 ## Notas operativas
 
@@ -79,7 +80,7 @@ Ya dentro de la instancia, sigue las guías independientes:
 |-----------|-----------|
 | La IP cambió tras reiniciar el lab | `aws ec2 describe-instances --query "Reservations[].Instances[].PublicIpAddress"` en CloudShell |
 | Perdiste `llavesita.pem` | Vuelve a correr el script: detecta la key huérfana y la recrea |
-| `t4g.micro` (1 GB RAM) se queda corto al compilar | Agrega swap (ver [02_erlang.md](02_erlang.md)) o usa `t4g.small` editando `INSTANCE_TYPE` en el script |
+| `t4g.micro` (1 GB RAM) se queda corto al compilar | Agrega swap (ver [03_erlang.md](03_erlang.md)) o usa `t4g.small` editando `INSTANCE_TYPE` en el script |
 | Terminaste la sesión | **End Lab** en Learner Lab; la instancia queda detenida, no borrada |
 
 > 💰 AWS Academy te da un presupuesto limitado (~$50–100 USD). `t4g.micro`

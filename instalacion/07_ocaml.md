@@ -1,4 +1,4 @@
-# 6 · OCaml — Ubuntu 24.04 ARM64
+# 7 · OCaml — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso usa OCaml en la unidad 3 (sistema de módulos,
 firmas `.mli`, inferencia de tipos — el lenguaje detrás de Hack, Flow e Infer
@@ -73,4 +73,4 @@ dune exec ./main.exe
 |---------|------------------|
 | `opam init` falla con sandbox | Agrega `--disable-sandboxing` (común en contenedores) |
 | `ocaml: command not found` | `eval $(opam env)` o reabre la sesión |
-| Compilación lenta de opam en 1 GB RAM | Agrega swap (ver [02_erlang.md](02_erlang.md) §B.1) |
+| Compilación lenta de opam en 1 GB RAM | Agrega swap (ver [03_erlang.md](03_erlang.md) §B.1) |

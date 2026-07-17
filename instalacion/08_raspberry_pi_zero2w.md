@@ -1,4 +1,4 @@
-# 7 · Raspberry Pi Zero 2W — Prolog + Erlang con un script
+# 8 · Raspberry Pi Zero 2W — Prolog + Erlang con un script
 
 Guía autocontenida para montar un nodo físico ARM64 del curso en una
 **Raspberry Pi Zero 2W** (quad-core Cortex-A53, 512 MB RAM) — el mismo
@@ -41,7 +41,7 @@ El curso pide OTP 26+ para el proyecto final, pero **compilar OTP 26 en la
 Zero 2W (512 MB RAM) toma varias horas** y no vale la pena: el OTP 25 de apt
 ejecuta sin cambios todo el material de GenServer/supervisores del curso.
 
-- Para el trabajo con OTP 26+ usa la instancia EC2 ([02_erlang.md](02_erlang.md)).
+- Para el trabajo con OTP 26+ usa la instancia EC2 ([03_erlang.md](03_erlang.md)).
 - La Pi es ideal como **nodo remoto de demostración**: p. ej., un nodo Erlang
   distribuido (`erl -name pi@<ip> -setcookie curso`) monitoreado desde EC2,
   o el sensor físico del proyecto 3 (monitor IoT).

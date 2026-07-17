@@ -1,4 +1,4 @@
-# 4 · Clojure — Ubuntu 24.04 ARM64
+# 5 · Clojure — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso usa **Clojure CLI** (unidad 2: estructuras
 persistentes, `atom`, `ref`/`dosync`, transducers).

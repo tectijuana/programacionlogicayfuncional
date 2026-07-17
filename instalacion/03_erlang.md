@@ -1,4 +1,4 @@
-# 2 · Erlang/OTP 26+ — Ubuntu 24.04 ARM64
+# 3 · Erlang/OTP 26+ — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso requiere **Erlang/OTP 26 o superior** (unidad 4:
 GenServer, supervisores; proyectos finales: capa de concurrencia).

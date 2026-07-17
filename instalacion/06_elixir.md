@@ -1,10 +1,10 @@
-# 5 · Elixir — Ubuntu 24.04 ARM64
+# 6 · Elixir — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso usa Elixir en ejemplos de la unidad 2/4
 (pipe operator, GenServer con sintaxis moderna).
 
 Elixir corre sobre la BEAM: **requiere Erlang** instalado primero
-(ver [02_erlang.md](02_erlang.md)).
+(ver [03_erlang.md](03_erlang.md)).
 
 ## Opción A — apt (rápida: Erlang 25 + Elixir empaquetado)
 
@@ -20,7 +20,7 @@ como dependencia.
 
 ## Opción B — Precompilado oficial sobre tu OTP 26 de kerl
 
-Si ya compilaste OTP 26 con kerl ([02_erlang.md](02_erlang.md) Opción B), usa
+Si ya compilaste OTP 26 con kerl ([03_erlang.md](03_erlang.md) Opción B), usa
 el paquete precompilado de Elixir que corresponde a tu OTP (los `.zip` de
 elixir-lang son bytecode BEAM — independientes de la arquitectura):
 

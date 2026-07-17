@@ -1,4 +1,4 @@
-# 1 · SWI-Prolog 9.x — Ubuntu 24.04 ARM64
+# 2 · SWI-Prolog 9.x — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso requiere **SWI-Prolog 9.x** (unidad 1, unidad 4 y
 proyectos finales usan CLP(FD), que viene incluido).

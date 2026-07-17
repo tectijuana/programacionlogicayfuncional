@@ -1,4 +1,4 @@
-# 3 · GHC 9.x (Haskell) — Ubuntu 24.04 ARM64
+# 4 · GHC 9.x (Haskell) — Ubuntu 24.04 ARM64
 
 Guía autocontenida. El curso requiere **GHC 9.x** (unidad 3: tipos algebraicos,
 `Maybe`/`Either`, evaluación perezosa).
@@ -73,7 +73,7 @@ runghc /tmp/prueba.hs
 - GHCup descarga binarios precompilados — **no compila GHC**, así que 1 GB
   alcanza para instalarlo.
 - Compilar programas grandes con muchas dependencias de cabal sí puede agotar
-  la RAM; agrega swap (ver [02_erlang.md](02_erlang.md) §B.1) o usa
+  la RAM; agrega swap (ver [03_erlang.md](03_erlang.md) §B.1) o usa
   `runghc`/`ghci` para los ejercicios del curso.
 
 ## Solución de problemas

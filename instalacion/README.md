@@ -11,13 +11,14 @@ una instancia EC2 Graviton (AWS Academy) o en hardware físico (Raspberry Pi).
 | # | Documento | Software | Versión objetivo del curso |
 |---|-----------|----------|---------------------------|
 | 0 | [00_aws_academy_cloudshell.md](00_aws_academy_cloudshell.md) | AWS Academy + CloudShell + EC2 ARM64 | Ubuntu 24.04 ARM64 (t4g) |
-| 1 | [01_prolog.md](01_prolog.md) | SWI-Prolog | 9.x |
-| 2 | [02_erlang.md](02_erlang.md) | Erlang/OTP | 26+ |
-| 3 | [03_haskell.md](03_haskell.md) | GHC (Haskell) | 9.x |
-| 4 | [04_clojure.md](04_clojure.md) | Clojure (+ JDK) | CLI oficial |
-| 5 | [05_elixir.md](05_elixir.md) | Elixir | 1.14+ |
-| 6 | [06_ocaml.md](06_ocaml.md) | OCaml (opam) | 5.x |
-| 7 | [07_raspberry_pi_zero2w.md](07_raspberry_pi_zero2w.md) | Prolog + Erlang en Raspberry Pi Zero 2W | script automatizado |
+| 1 | [01_asciinema.md](01_asciinema.md) | asciinema (instalar, usar y grabar) | última estable |
+| 2 | [02_prolog.md](02_prolog.md) | SWI-Prolog | 9.x |
+| 3 | [03_erlang.md](03_erlang.md) | Erlang/OTP | 26+ |
+| 4 | [04_haskell.md](04_haskell.md) | GHC (Haskell) | 9.x |
+| 5 | [05_clojure.md](05_clojure.md) | Clojure (+ JDK) | CLI oficial |
+| 6 | [06_elixir.md](06_elixir.md) | Elixir | 1.14+ |
+| 7 | [07_ocaml.md](07_ocaml.md) | OCaml (opam) | 5.x |
+| 8 | [08_raspberry_pi_zero2w.md](08_raspberry_pi_zero2w.md) | Prolog + Erlang en Raspberry Pi Zero 2W | script automatizado |
 
 ## Scripts
 
