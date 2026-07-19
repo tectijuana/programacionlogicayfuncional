@@ -22,7 +22,7 @@
 - Demo: la misma lógica en Erlang — imposible el race condition por diseño
 - Taxonomía de paradigmas: imperativo → OOP → funcional → lógico → declarativo
 - Primer contacto con los 4 lenguajes del semestre: SWI-Prolog, Erlang, Haskell, Clojure
-- Herramienta del día: GitHub Codespaces — ambiente unificado sin instalación local
+- Herramienta del día: AWS Academy (CloudShell + nodo EC2 remoto) — ambiente unificado sin instalación local, accesible desde PC o celular; se entregan los $50 USD de crédito del semestre
 
 **Tarea 1.1:** "Hola Paradigma" — imprimir una lista de números en 4 lenguajes
 (bucle imperativo en Python vs. recursión en Erlang vs. list comprehension en Haskell vs. `map` en Clojure)
@@ -571,7 +571,8 @@ U3 → sistema experto (3.5) · U4 → proyecto CLP (4.4) + Examen Parcial 2, pr
 | Herramienta | Propósito |
 |-------------|-----------|
 | GitHub Classroom | Entrega de todos los assignments |
-| GitHub Codespaces | Ambiente con todos los lenguajes preinstalados |
+| AWS Academy (CloudShell + EC2) | Nodo remoto con todos los lenguajes — $50 USD de crédito por semestre, vencen al cierre |
+| GitHub CLI (`gh`) + Gist | PRs, clonado y snippets desde la terminal del nodo |
 | asciinema | Evidencia de sesiones de terminal |
 | SWI-Prolog WASM | Prolog en navegador para demos rápidas |
 | Exercism.io | Práctica adicional guiada en cada lenguaje |

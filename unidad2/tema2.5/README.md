@@ -21,9 +21,10 @@ Construir un sistema de monitoreo de sensores que demuestre la filosofía **"let
 ```
 sensor_supervisor/
 ├── src/
+│   ├── sensor_app.app     ← Recursos de la aplicación OTP (sin él, application:start falla)
 │   ├── sensor_app.erl     ← Application behaviour (punto de entrada OTP)
 │   ├── sensor_sup.erl     ← Supervisor con estrategia one_for_one
-│   └── sensor_server.erl  ← GenServer: un proceso por sensor
+│   └── sensor_server.erl  ← GenServer: un proceso por sensor (temperatura, humedad, presion)
 └── Makefile
 ```
 
@@ -54,9 +55,10 @@ Una vez corriendo el sistema, abre una consola Erlang y prueba:
 %% 1. Ver los procesos activos del supervisor
 supervisor:which_children(sensor_sup).
 
-%% 2. Obtener el PID de un sensor
-{ok, Pid} = sensor_server:leer(temperatura),
-io:format("PID sensor temperatura: ~p~n", [Pid]).
+%% 2. Leer el sensor y obtener su PID registrado
+{ok, Lectura} = sensor_server:leer(temperatura),
+Pid = whereis(temperatura),
+io:format("sensor temperatura: ~p (PID ~p)~n", [Lectura, Pid]).
 
 %% 3. Matar el proceso abruptamente — simula un crash real
 exit(whereis(temperatura), kill).

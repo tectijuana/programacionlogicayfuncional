@@ -54,7 +54,9 @@ test(prestamo_cumple_requisitos) :-
 test(prestamo_con_adeudo) :-
     puede_tramitar('34567890123', prestamo_imss, error(vigencia_inactiva)).
 
-test(prestamo_pocas_semanas) :-
+%% nondet: puede_tramitar/3 deja un punto de elección al fallar por semanas;
+%% lo declaramos para que plunit no lo reporte como advertencia.
+test(prestamo_pocas_semanas, [nondet]) :-
     puede_tramitar('23456789012', prestamo_imss,
                    error(semanas_insuficientes(38, minimo_52))).
 

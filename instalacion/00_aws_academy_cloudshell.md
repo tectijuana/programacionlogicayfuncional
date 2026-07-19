@@ -83,5 +83,7 @@ Ya dentro de la instancia, sigue las guías independientes:
 | `t4g.micro` (1 GB RAM) se queda corto al compilar | Agrega swap (ver [03_erlang.md](03_erlang.md)) o usa `t4g.small` editando `INSTANCE_TYPE` en el script |
 | Terminaste la sesión | **End Lab** en Learner Lab; la instancia queda detenida, no borrada |
 
-> 💰 AWS Academy te da un presupuesto limitado (~$50–100 USD). `t4g.micro`
-> cuesta ≈ $0.0084/hora — apaga el lab al terminar.
+> 💰 Tu presupuesto es de **$50 USD**, asignados por el docente al inicio del
+> semestre. `t4g.micro` cuesta ≈ $0.0084/hora — apaga el lab al terminar.
+> ⚠️ Los créditos **vencen al concluir el semestre** y no se acumulan: respalda
+> tu código en GitHub (usa `gh` y Gist) antes del cierre del curso.
