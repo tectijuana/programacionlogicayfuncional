@@ -116,10 +116,23 @@ https://asciinema.org/a/abcdefghijklmnop
 > así obtienes la URL — cópiala de inmediato porque no podrás recuperarla
 > desde tu cuenta después.
 
-## Paso 5 — Completar título y descripción en asciinema.org
+> ⚠️ **Regla de los 7 días:** una grabación subida sin reclamar (no asociada a
+> una cuenta) **se elimina de asciinema.org a los 7 días**. Reclámala de
+> inmediato: corre `asciinema auth` antes del upload, o abre la URL con tu
+> sesión iniciada y asóciala a tu cuenta. Una evidencia borrada = entrega sin
+> evidencia (0 en el criterio de demostración).
+
+## Paso 5 — Reclamar, documentar y elegir visibilidad en asciinema.org
 
 Una vez publicado, entra a la URL del cast (con tu sesión iniciada) y pulsa
-**Edit**. Completa:
+**Edit**. Ahí también eliges la **visibilidad** del enlace:
+
+- **Público** — aparece listado en tu perfil de asciinema.org (útil como portafolio).
+- **Privado / unlisted** — solo lo ve quien tenga el enlace; suficiente para el
+  curso, pues la URL va en la descripción de tu Pull Request.
+
+Cualquiera de las dos es válida como evidencia. Después **documenta
+profesionalmente qué estás demostrando**:
 
 - **Title**: identifica sesión y software, p.ej. `Prolog 9.x — instalación y prueba CLP(FD) (Equipo 3)`
 - **Description**: agrega contexto que no cabe en el terminal:
@@ -163,5 +176,6 @@ asciinema cat archivo.cast              # reimprime la sesión sin timing (como 
 | `asciinema: command not found` | Repite instalación (Opción A o B); si usaste `pipx`, corre `pipx ensurepath` y reabre la sesión |
 | `upload` falla con error de red | La instancia EC2 necesita salida a internet (verifica el Security Group del Paso 3 en [00_aws_academy_cloudshell.md](00_aws_academy_cloudshell.md)) |
 | El cast quedó anónimo y ya no lo encuentras | No había `asciinema auth` previo; guarda la URL apenas hagas `upload`, no se puede recuperar por cuenta después |
+| La URL de la grabación ya no existe | No se reclamó dentro de los **7 días** — asciinema.org la eliminó; vuelve a grabar y esta vez corre `asciinema auth` antes de subir |
 | El archivo `.cast` es enorme | Evita `cat` de archivos grandes o procesos interactivos largos (`htop`, `top`) durante la grabación; usa `-i 2` |
 | Quiero borrar una grabación pública | Solo si estás autenticado: entra a la URL → **Edit** → **Delete** |

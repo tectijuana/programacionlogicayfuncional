@@ -9,6 +9,22 @@ sin instalar nada en tu computadora.
 - Cuenta de **AWS Academy Learner Lab** (te la asigna tu profesor)
 - Navegador web — no necesitas AWS CLI local, CloudShell ya lo trae
 
+## Paso 0 — Acepta la invitación de AWS Academy
+
+Antes del inicio del semestre, el docente gestiona ante AWS Academy la beca de
+créditos del grupo ($50 USD por estudiante). Cuando se aprueba:
+
+1. **AWS Academy te envía una invitación por correo** (revisa tu correo
+   institucional `@tectijuana.edu.mx`, incluida la carpeta de spam) con asunto
+   tipo *"Course Invitation — AWS Academy Learner Lab"*.
+2. Abre el enlace **Get Started** de ese correo y crea tu cuenta de Canvas
+   usando **el mismo correo donde recibiste la invitación**.
+3. Al entrar verás el curso *AWS Academy Learner Lab* en tu tablero — ahí viven
+   tus créditos.
+
+> Sin este paso no existe el Learner Lab: si no te llegó la invitación,
+> repórtalo al docente **la primera semana**, no el día de la entrega.
+
 ## Paso 1 — Iniciar el Learner Lab
 
 1. Entra a [awsacademy.instructure.com](https://awsacademy.instructure.com) con tu cuenta.
@@ -62,9 +78,22 @@ uname -m        # → aarch64
 lsb_release -ds # → Ubuntu 24.04.x LTS
 ```
 
-## Paso 5 — Instalar el software del curso
+## Paso 5 — Actualizar el nodo recién creado
 
-Ya dentro de la instancia, sigue las guías independientes:
+Lo **primero** en toda instancia nueva, antes de instalar cualquier herramienta:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+(≈2–3 min la primera vez. Si el kernel se actualizó, un `sudo reboot` y
+reconectas por SSH en ~30 segundos.)
+
+## Paso 6 — Instalar el software del curso
+
+Ya dentro de la instancia, sigue las guías independientes — para la primera
+semana basta **asciinema + SWI-Prolog**; el resto se instala cuando su unidad
+lo pida:
 
 - [01_asciinema.md](01_asciinema.md) — asciinema (instalar, usar y grabar tus prácticas)
 - [02_prolog.md](02_prolog.md) — SWI-Prolog 9.x
