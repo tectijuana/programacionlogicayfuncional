@@ -186,6 +186,44 @@ en la semana 9 y se desarrolla por **hitos escalonados** — no todo al final:
 
 > Un PR sin evidencia (asciinema o LOOM según corresponda) se considera incompleto y recibe 0 en el criterio de demostración.
 
+### Encabezado obligatorio en todo programa
+
+**Todo programa entregado, en cualquier lenguaje del curso, lleva un encabezado
+genérico del programador** y algo de documentación (qué hace y cómo se ejecuta).
+Si la entrega tiene asciinema, **la URL de la grabación va en el encabezado**:
+
+```prolog
+%% =====================================================================
+%% Programa:    validador_curp.pl
+%% Autor:       <Nombre Apellidos> — No. de control <XXXXXXXX>
+%% Curso:       Programación Lógica y Funcional — Horario <999>
+%% Actividad:   <Práctica N / Tema X.Y / Proyecto Final capa N>
+%% Fecha:       <AAAA-MM-DD>
+%% Descripción: <qué hace el programa y cómo ejecutarlo, 1–3 líneas>
+%% Evidencia:   https://asciinema.org/a/<id>
+%% IA:          Generado con <herramienta>, verificado y modificado por <No. de control>
+%% =====================================================================
+```
+
+Mismo contenido, cambiando solo el prefijo de comentario según el lenguaje:
+`%` Prolog · `%%` Erlang · `--` Haskell · `;;` Clojure · `#` Elixir y Python.
+
+**Un programa sin encabezado se considera entrega incompleta** (mismo criterio
+que un PR sin evidencia).
+
+### Identificación obligatoria al inicio de todo asciinema
+
+**Toda grabación asciinema inicia identificándose, antes de teclear cualquier
+otro comando:**
+
+```bash
+echo "Programa XYZ, por XXXX de curso YYYY Horario 999 actividad ZZZZ"
+```
+
+Así el revisor sabe desde el segundo 0 quién graba, qué programa demuestra y a
+qué actividad pertenece. Grabación que no abre con su identificación no es
+válida como evidencia. (Detalles en [instalacion/01_asciinema.md](instalacion/01_asciinema.md).)
+
 ---
 
 ## Instalación del Entorno de Desarrollo

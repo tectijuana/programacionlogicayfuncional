@@ -61,7 +61,17 @@ borrarlas después.
 asciinema rec practica-prolog.cast
 ```
 
-- Empieza a escribir tus comandos con normalidad.
+- **Primer comando obligatorio de TODA grabación — identifícate antes de
+  teclear cualquier otra cosa:**
+
+  ```bash
+  echo "Programa XYZ, por XXXX de curso YYYY Horario 999 actividad ZZZZ"
+  ```
+
+  (Sustituye: nombre del programa, tu nombre y no. de control, curso, horario y
+  actividad.) Una grabación que no abre con su identificación **no es válida
+  como evidencia** del curso.
+- Después escribe tus comandos con normalidad.
 - Para **terminar la grabación**: `Ctrl+D` o escribe `exit`.
 - El archivo `.cast` queda guardado localmente en el directorio actual.
 

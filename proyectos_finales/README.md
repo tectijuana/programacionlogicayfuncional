@@ -187,6 +187,11 @@ proyectos_finales/proyectoN_<nombre>/
 | Mockups de interfaz | [Google Stitch](https://stitch.withgoogle.com) | Exportar imagen e incluir en `README.md` |
 
 > Un PR sin los links de evidencia se considera incompleto — 0 en el criterio de demostración.
+>
+> Recuerda las dos reglas generales del curso (ver sílabo): **todo programa
+> lleva el encabezado del programador** (con la URL del asciinema incluida) y
+> **toda grabación abre con el `echo` de identificación** antes de cualquier
+> otro comando.
 
 ---
 
