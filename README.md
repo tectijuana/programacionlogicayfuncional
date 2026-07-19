@@ -146,7 +146,7 @@ Al concluir el curso, el estudiante será capaz de:
 |------|-----------|-----------|
 | [3.1 Fundamentos](unidad3/tema3.1/) | Hechos, consultas, base de datos organizacional TecNM Tijuana | SWI-Prolog |
 | [3.2 Sistemas formales y lógica de predicados](unidad3/tema3.2/) | Reglas, negación como falla (`\+`), elegibilidad para **beca TecNM** | SWI-Prolog |
-| [3.3 Unificación y resolución](unidad3/tema3.3/) | Algoritmo de unificación, traza SLD, occurs check — 15 tests | SWI-Prolog |
+| [3.3 Unificación y resolución](unidad3/tema3.3/) | Algoritmo de unificación, traza SLD, occurs check — 30 tests | SWI-Prolog |
 | [3.4 Introducción a Prolog](unidad3/tema3.4/) | Listas desde cero (`mi_member`, `mi_append`, `mi_flatten`…), aritmética, `entre/3` — 76 tests | SWI-Prolog |
 | [3.5 Aplicaciones](unidad3/tema3.5/) | **Sistema experto médico interactivo** (contexto IMSS): 8 condiciones, `assert`/`retract` | SWI-Prolog |
 
@@ -157,7 +157,7 @@ Al concluir el curso, el estudiante será capaz de:
 | [4.1 Desarrollo de programas lógicos](unidad4/tema4.1/) | Módulos Prolog, firmas explícitas, documentación de aridad y determinismo — validador **CURP** | SWI-Prolog |
 | [4.2 Estrategias de búsqueda](unidad4/tema4.2/) | DFS y BFS sobre grafo **metro CDMX**, cut verde vs. rojo, `findall`/`bagof`/`setof` | SWI-Prolog |
 | [4.3 Optimización / CLP(FD)](unidad4/tema4.3/) | Restricciones sobre enteros, **Sudoku 9×9**, asignación de **horarios TecNM** como CSP | SWI-Prolog + CLP(FD) |
-| [4.4 Proyecto final](unidad4/tema4.4/) | Sistema de **trámites TecNM** multi-módulo con CLP, 33 tests automatizados | SWI-Prolog |
+| [4.4 Proyecto final](unidad4/tema4.4/) | Sistema de **trámites TecNM** multi-módulo con CLP, 19 tests automatizados | SWI-Prolog |
 
 ### Proyectos Finales — Integración Multi-Paradigma
 
@@ -198,8 +198,10 @@ Una guía corta para aprovechar el material, pensada para ti como estudiante:
 
 1. **Instala el entorno la primera semana.** No dejes la instalación para el día de la entrega.
    Sigue las guías paso a paso de [`instalacion/`](instalacion/) (AWS Academy + Ubuntu ARM64,
-   una guía independiente por software, y script para Raspberry Pi Zero 2W); si tu equipo es
-   Windows, usa WSL2 o GitHub Codespaces.
+   una guía independiente por software, y script para Raspberry Pi Zero 2W). La ruta
+   oficial es el **nodo remoto de AWS Academy** ($50 USD de crédito que asigna el docente;
+   se trabaja desde el navegador o SSH, incluso desde el celular); si tu equipo es
+   Windows y prefieres local, usa WSL2.
 2. **Lee el `README.md` de cada unidad antes de la clase.** Cada uno trae el objetivo, los
    temas y la regla de entrega. Llegar con el entorno listo y el código clonado vale tiempo.
 3. **Ejecuta todo el código tú mismo.** El curso es práctico: "código que no compila = 0".
@@ -207,8 +209,9 @@ Una guía corta para aprovechar el material, pensada para ti como estudiante:
 4. **Concentra el esfuerzo en los tres lenguajes centrales** (Prolog, Erlang, Haskell). Clojure
    y Elixir se entienden rápido una vez que dominas las ideas de fondo (inmutabilidad,
    recursión, orden superior, supervisión).
-5. **Empieza el proyecto final temprano.** La capa 1 (Prolog) puedes comenzarla desde la
-   Unidad 3; no esperes a la semana 16.
+5. **Empieza el proyecto final temprano.** El proyecto se elige en la semana 9 y tiene
+   **hitos obligatorios**: capa 1 en la semana 12, capa 2 en la 14, capa 3 + integración
+   en la 16 (ver calendario de hitos en [`proyectos_finales/`](proyectos_finales/README.md)).
 6. **Usa la IA como herramienta, citándola.** Está permitida (ver política de entregas en el
    sílabo): debes entender y poder defender cada línea que entregues.
 
@@ -237,7 +240,7 @@ Una guía corta para aprovechar el material, pensada para ti como estudiante:
 
 ### Cómputo en la nube
 
-- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login):** Crédito de $100 USD por semestre para desplegar aplicaciones Erlang/Elixir/Haskell en EC2.
+- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login):** $50 USD de crédito por semestre (los asigna el docente al inicio) para un nodo EC2 remoto x86/ARM64 (512 MB–8 GB) manejado desde CloudShell. Sesiones de 4 h con disco persistente; **los créditos vencen al terminar el semestre** — respalda todo en GitHub.
 - **[`instalacion/`](instalacion/):** Guías de instalación del entorno completo — nodo EC2 ARM64 desde CloudShell, SWI-Prolog, Erlang/OTP, GHC, Clojure, Elixir, OCaml y Raspberry Pi Zero 2W.
 
 ### Otros recursos

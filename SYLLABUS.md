@@ -57,21 +57,21 @@ El semestre Agosto–Diciembre 2026 comprende **16 semanas** lectivas más una s
 | Sem | Fecha aprox. | Unidad / Tema | Actividad | Entregable |
 |-----|-------------|---------------|-----------|------------|
 | 1 | 10–14 ago | **U1 · Tema 1.1** Introducción a PLF | Encuadre del curso, taxonomía de paradigmas, instalación de entornos (SWI-Prolog, Erlang, GHC, Clojure, Elixir) | — |
-| 2 | 17–21 ago | **U1 · Tema 1.2** Historia y evolución | Línea de tiempo: λ-calculus 1930 → Gleam 2024; lectura de código OCaml real de Meta/Facebook | — |
+| 2 | 17–21 ago | **U1 · Tema 1.2** Historia y evolución *(formato ligero)* | Línea de tiempo λ-calculus 1930 → Gleam 2024 como **lectura en casa** + 1 sesión de discusión. La otra sesión es **onboarding técnico**: entrega de créditos AWS Academy ($50), nodo CloudShell funcionando, `gh` configurado y primer asciinema grabado | Nodo AWS operativo |
 | 3 | 24–28 ago | **U1 · Tema 1.3** Comparación de paradigmas | Validador CURP en 3 paradigmas: Python imperativo, Erlang funcional, Prolog lógico | **Práctica 1** |
 | 4 | 31 ago–4 sep | **U2 · Tema 2.1** Fundamentos FP | Inmutabilidad, transparencia referencial, pattern matching; RFC mexicano en Erlang | — |
 | 5 | 7–11 sep | **U2 · Tema 2.2** Funciones de orden superior | `map`/`filter`/`reduce`, composición, closures; pipeline de alumnos TecNM en Clojure | **Práctica 2** |
 | 6 | 14–18 sep | **U2 · Tema 2.3** Recursión e inmutabilidad | Tail-call optimization, `Maybe`/`Either`, tipos algebraicos en Haskell | — |
 | 7 | 21–25 sep | **U2 · Tema 2.4** Evaluación perezosa | Listas infinitas (Fibonacci, primos), `Stream` sobre registros IMSS en Haskell y Elixir | **Práctica 3** |
-| 8 | 28 sep–2 oct | **U2 · Tema 2.5** Aplicaciones FP / OTP | `application` + `supervisor` + `gen_server`; sistema IoT tipo CENAPRED en Erlang/OTP | **Examen Parcial 1** (U1–U2) |
-| 9 | 5–9 oct | **U3 · Tema 3.1** Fundamentos de PL | Hechos, consultas, base de datos organizacional TecNM en SWI-Prolog | — |
-| 10 | 12–16 oct | **U3 · Tema 3.2** Sistemas formales y lógica de predicados | Reglas, negación como falla (`\+`), eligibilidad para beca TecNM | **Práctica 4** |
-| 11 | 19–23 oct | **U3 · Tema 3.3** Unificación y resolución | Algoritmo MGU, traza SLD, occurs check; 15 tests automatizados | — |
-| 12 | 26–30 oct | **U3 · Tema 3.4** Introducción a Prolog | Listas desde cero, aritmética, `entre/3`; 76 tests plunit | **Práctica 5** |
-| 13 | 2–6 nov | **U3 · Tema 3.5** Aplicaciones de PL | Sistema experto médico interactivo (contexto IMSS); 8 condiciones, `assert`/`retract` | — |
-| 14 | 9–13 nov | **U4 · Temas 4.1–4.2** Módulos y búsqueda | Módulos Prolog con firmas; DFS y BFS sobre grafo metro CDMX; cut verde vs. rojo | **Práctica 6** |
-| 15 | 16–20 nov | **U4 · Tema 4.3** Optimización / CLP(FD) | Restricciones sobre enteros, Sudoku 9×9, asignación de horarios TecNM como CSP | **Examen Parcial 2** (U3–U4) |
-| 16 | 23–27 nov | **U4 · Tema 4.4** Proyecto final | Sistema de trámites TecNM multi-módulo con CLP; última semana de desarrollo | — |
+| 8 | 28 sep–2 oct | **U2 · Tema 2.5** Aplicaciones FP / OTP *(semana completa)* | `application` + `supervisor` + `gen_server`; sistema IoT tipo CENAPRED en Erlang/OTP — sin examen esta semana: OTP es la base de la capa 2 del Proyecto Final | — |
+| 9 | 5–9 oct | **Parcial 1** + **U3 · Tema 3.1** Fundamentos de PL *(tutorial guiado)* | Examen Parcial 1 (U1–U2) al inicio de la semana; después: hechos, consultas, base de datos organizacional TecNM en SWI-Prolog. **Kickoff del Proyecto Final: elección de proyecto (P1–P4)** | **Examen Parcial 1** · Proyecto elegido |
+| 10 | 12–16 oct | **U3 · Tema 3.2** Sistemas formales y lógica de predicados | Reglas, negación como falla (`\+`), eligibilidad para beca TecNM (3.1–3.2 comprimidos: se aprenden rápido con tutorial + Exercism) | **Práctica 4** |
+| 11 | 19–23 oct | **U3 · Tema 3.3** Unificación y resolución | Algoritmo MGU, traza SLD, occurs check; 30 tests automatizados. **Kata de mantenimiento Erlang (30 min):** recompilar y extender el sistema OTP del tema 2.5 | — |
+| 12 | 26–30 oct | **U3 · Tema 3.4** Introducción a Prolog | Listas desde cero, aritmética, `entre/3`; 76 tests plunit | **Práctica 5** · **Hito 1: capa 1 (Prolog) del Proyecto Final con tests pasando** |
+| 13 | 2–6 nov | **U3 · Tema 3.5** Aplicaciones de PL | Sistema experto médico interactivo (contexto IMSS); 8 condiciones, `assert`/`retract`. **Kata de mantenimiento Haskell (30 min):** recompilar los ejemplos de tipos del tema 2.3 | — |
+| 14 | 9–13 nov | **U4 · Temas 4.1–4.2** Módulos y búsqueda | Módulos Prolog con firmas; DFS y BFS sobre grafo metro CDMX; cut verde vs. rojo. Al cierre de la semana: introducción a CLP(FD) | **Práctica 6** · **Hito 2: capa 2 (OTP/Clojure) arrancando** |
+| 15 | 16–20 nov | **U4 · Tema 4.3** Optimización / CLP(FD) *(semana completa)* | Restricciones sobre enteros, Sudoku 9×9, asignación de horarios TecNM como CSP — CLP(FD) es la base de la capa 1 de todos los proyectos | **Examen Parcial 2** (U3–U4) |
+| 16 | 23–27 nov | **U4 · Tema 4.4** Proyecto final | Sistema de trámites TecNM multi-módulo con CLP; integración de capas del Proyecto Final | **Hito 3: capa 3 + integración funcional** |
 | 17 | 30 nov–4 dic | [**Proyectos Finales**](proyectos_finales/) — Presentaciones | Demostración en vivo del sistema multi-paradigma (3 capas); el sistema debe correr sin modificaciones en el equipo del profesor. Proyectos disponibles: [P1 IMSS](proyectos_finales/proyecto1_tramites_imss/) · [P2 Maquiladora](proyectos_finales/proyecto2_maquiladora/) · [P3 IoT](proyectos_finales/proyecto3_monitor_iot/) · [P4 SAT](proyectos_finales/proyecto4_inventario_sat/) | **Proyecto Final** |
 
 ---
@@ -102,7 +102,7 @@ del calendario pertenecen a este rubro:
 | Unidad | Instrumento del 40 % |
 |--------|----------------------|
 | U1 | Validador CURP en 3 paradigmas (tema 1.3) |
-| U2 | Promedio de: sistema OTP con supervisión (tema 2.5) y **Examen Parcial 1** (U1–U2, sem. 8) |
+| U2 | Promedio de: sistema OTP con supervisión (tema 2.5) y **Examen Parcial 1** (U1–U2, sem. 9) |
 | U3 | Sistema experto médico (tema 3.5) |
 | U4 | Promedio de: proyecto CLP multi-módulo (tema 4.4) y **Examen Parcial 2** (U3–U4, sem. 15) |
 
@@ -120,7 +120,16 @@ del calendario pertenecen a este rubro:
 ### Proyecto Final multi-paradigma
 
 El Proyecto Final integra los tres paradigmas del curso en un sistema funcional de dominio real.
-Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](proyectos_finales/):
+Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](proyectos_finales/)
+en la semana 9 y se desarrolla por **hitos escalonados** — no todo al final:
+
+| Semana | Hito | Qué se revisa |
+|--------|------|---------------|
+| 9 | Elección de proyecto (P1–P4) | Registro del proyecto en el PR de inicio |
+| 12 | **Hito 1** — Capa 1 (Prolog) | `run_tests.` pasando; asciinema en el PR |
+| 14 | **Hito 2** — Capa 2 (OTP/Clojure) | Supervisor/estado arrancando sin error |
+| 16 | **Hito 3** — Capa 3 + integración | Sistema completo compilando e integrado |
+| 17 | Presentación en vivo | Demostración sin modificaciones en el equipo del profesor |
 
 | # | Proyecto | Dominio | Capa 1 | Capa 2 | Capa 3 |
 |---|----------|---------|--------|--------|--------|
@@ -133,15 +142,18 @@ Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](p
 
 | Criterio | Peso |
 |----------|------|
-| Capa 1: tests `plunit` pasando, CLP(FD) aplicado | 25% |
-| Capa 2: OTP/Clojure arrancando, supervisión demostrada con `kill` | 25% |
-| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos o Stream correctos | 20% |
-| Integración entre capas documentada y funcional | 10% |
+| Capa 1: tests `plunit` pasando, CLP(FD) aplicado | 20% |
+| Capa 2: OTP/Clojure arrancando, supervisión demostrada con `kill` | 20% |
+| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos o Stream correctos | 15% |
+| **Integración entre capas documentada y funcional** | **25%** |
 | Exposición técnica (10–15 min, demostración en vivo, sem. 17) | 10% |
 | Evidencia de ejecución: asciinema (CLI) + LOOM (UI si aplica) | 10% |
 
-> **Proyecto 2 (maquiladora):** tiene solo dos capas; el 20 % de la Capa 3 se suma a la
-> Capa 2 (Clojure, que entonces vale 45 %) y esta debe incluir la impresión o exportación
+> La integración es el criterio de mayor peso: tres programas que corren por separado
+> pero no se hablan entre sí **no** son un sistema multi-paradigma.
+>
+> **Proyecto 2 (maquiladora):** tiene solo dos capas; el 15 % de la Capa 3 se suma a la
+> Capa 2 (Clojure, que entonces vale 35 %) y esta debe incluir la impresión o exportación
 > del reporte del turno.
 >
 > Código que no compila = 0 en esa capa. La demostración debe correr sin modificaciones en el equipo del profesor.
@@ -178,6 +190,29 @@ Se elige **uno** de los cuatro proyectos disponibles en [`proyectos_finales/`](p
 
 ## Instalación del Entorno de Desarrollo
 
+### Nodo remoto AWS Academy — ruta oficial del curso
+
+Al inicio del semestre el docente asigna a cada estudiante **$50 USD de crédito en
+AWS Academy**. Con ese crédito levantas desde **AWS CloudShell** un nodo EC2 remoto
+(x86 o ARM64, de 512 MB hasta 8 GB de RAM) donde instalas una sola vez todo el
+entorno del curso. Se trabaja por SSH **desde tu PC o incluso desde el celular** —
+no importa qué tan modesta sea tu laptop.
+
+Reglas de operación del Learner Lab:
+
+- Cada sesión da **hasta 4 horas de nodo encendido**; al cerrar el lab la instancia
+  se **detiene pero no se borra** — tu disco y lo instalado **persisten** entre sesiones.
+- La IP pública cambia en cada sesión (la guía [instalacion/00](instalacion/00_aws_academy_cloudshell.md) explica cómo recuperarla en un comando).
+- ⚠️ **Los créditos vencen al terminar el semestre** y no se acumulan: úsalos durante
+  el curso; respalda tu código en GitHub antes del cierre.
+
+Flujo de trabajo esperado en el nodo: **GitHub CLI (`gh`)** para clonar, hacer PRs y
+publicar **Gists** desde la terminal, y **[asciinema.org](https://asciinema.org)** para
+grabar la evidencia de logro de cada ejercicio.
+
+Guías paso a paso en [`instalacion/`](instalacion/). Las rutas locales de abajo son
+alternativas si prefieres instalar en tu propia máquina.
+
 ### macOS
 ```bash
 brew install swi-prolog erlang ghc cabal-install clojure elixir
@@ -191,7 +226,7 @@ sudo apt-get install swi-prolog erlang ghc cabal-install
 ```
 
 ### Windows
-Usar WSL2 con Ubuntu y seguir las instrucciones de Linux, o usar **GitHub Codespaces** (no requiere instalación local).
+Usar WSL2 con Ubuntu y seguir las instrucciones de Linux, o —recomendado— trabajar directamente en el **nodo remoto de AWS Academy** (no requiere instalación local; ver arriba).
 
 ### Verificación de instalación
 ```bash
@@ -241,7 +276,8 @@ Ver: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 | Herramienta | Propósito |
 |-------------|-----------|
 | **GitHub Classroom** | Entrega de todas las prácticas y proyectos vía Pull Request |
-| **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** | Cómputo en la nube — EC2 para ejecutar Erlang/OTP, Haskell, Prolog, Elixir ($100 USD/semestre) |
+| **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** | Nodo EC2 remoto (x86/ARM64, 512 MB–8 GB) vía CloudShell — $50 USD de crédito asignados por el docente; **vencen al terminar el semestre** |
+| **GitHub CLI (`gh`) + [Gist](https://gist.github.com)** | Flujo completo desde la terminal del nodo: clonar, Pull Requests y publicación de snippets |
 | **[asciinema](https://asciinema.org)** | Evidencia obligatoria de sesiones CLI — Prolog, Erlang, Haskell, Clojure |
 | **[LOOM](https://www.loom.com)** | Evidencia de demos con interfaz gráfica o dashboard (máx. 5 min por video) |
 | **[Google Stitch](https://stitch.withgoogle.com)** | Generación de UI con IA — base de mockups y prototipos para el Proyecto Final |
@@ -251,4 +287,4 @@ Ver: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 ## Recursos Institucionales
 
 - **[GitHub Student Pack](https://education.github.com/pack)** — acceso gratuito a herramientas de desarrollo
-- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** — $100 USD de crédito por semestre para desplegar proyectos en la nube
+- **[AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)** — $50 USD de crédito asignados por el docente al inicio del semestre; **vencen al cierre del semestre** y no se acumulan

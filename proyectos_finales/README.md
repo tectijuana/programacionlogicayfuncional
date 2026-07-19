@@ -148,15 +148,18 @@ La diferencia está en el dominio del problema.
 
 | Criterio | Peso |
 |----------|------|
-| Capa 1: tests `plunit` pasando, CLP(FD) usado | 25% |
-| Capa 2: OTP/Clojure arrancando, supervisión demostrada | 25% |
-| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos correctos | 20% |
-| Integración entre capas documentada y funcional | 10% |
+| Capa 1: tests `plunit` pasando, CLP(FD) usado | 20% |
+| Capa 2: OTP/Clojure arrancando, supervisión demostrada | 20% |
+| Capa 3: Haskell o Elixir (según el proyecto) compilando con tipos correctos | 15% |
+| **Integración entre capas documentada y funcional** | **25%** |
 | Exposición técnica (10–15 min, demostración en vivo) | 10% |
 | Evidencia de ejecución: asciinema (CLI) + LOOM (UI si aplica) | 10% |
 
-> **Proyecto 2 (maquiladora):** tiene solo dos capas por diseño; el 20 % de la Capa 3 se
-> suma a la Capa 2 (Clojure, que entonces vale 45 %) y esta debe incluir la impresión o
+> La integración es el criterio de mayor peso: tres programas que corren por separado
+> pero no se hablan entre sí **no** son un sistema multi-paradigma.
+>
+> **Proyecto 2 (maquiladora):** tiene solo dos capas por diseño; el 15 % de la Capa 3 se
+> suma a la Capa 2 (Clojure, que entonces vale 35 %) y esta debe incluir la impresión o
 > exportación del reporte del turno.
 
 ---
@@ -186,6 +189,19 @@ proyectos_finales/proyectoN_<nombre>/
 > Un PR sin los links de evidencia se considera incompleto — 0 en el criterio de demostración.
 
 ---
+
+## Calendario de hitos
+
+El proyecto se elige en la **semana 9** y se desarrolla por hitos escalonados —
+cada hito se entrega como avance en el mismo PR del proyecto:
+
+| Semana | Hito | Qué se revisa |
+|--------|------|---------------|
+| 9 | Elección de proyecto (P1–P4) | Registro del proyecto en el PR de inicio |
+| 12 | **Hito 1** — Capa 1 (Prolog) | `run_tests.` pasando; asciinema en el PR |
+| 14 | **Hito 2** — Capa 2 (OTP/Clojure) | Supervisor/estado arrancando sin error |
+| 16 | **Hito 3** — Capa 3 + integración | Sistema completo compilando e integrado |
+| 17 | Presentación en vivo | Demostración final |
 
 ## Semana de entrega
 

@@ -55,7 +55,7 @@ apt install elixir            # Ubuntu/Debian
 Esquema global del [sílabo](../SYLLABUS.md#evaluación): prácticas 40 % ·
 proyecto integrador 40 % · exposición 20 %. En esta unidad el rubro central
 se compone del **sistema OTP con supervisión (tema 2.5)** y el
-**Examen Parcial 1** (U1–U2, sem. 8), promediados.
+**Examen Parcial 1** (U1–U2, sem. 9), promediados.
 
 ## Regla de entrega
 
