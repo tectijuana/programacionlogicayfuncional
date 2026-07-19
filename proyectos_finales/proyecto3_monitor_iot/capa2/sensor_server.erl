@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    sensor_server.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Proyecto Final P3 — Monitor IoT CENAPRED, capa 2
+%% Fecha:       2026-07-18
+%% Descripción: GenServer: un proceso por sensor simulado
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 -module(sensor_server).
 -behaviour(gen_server).
 

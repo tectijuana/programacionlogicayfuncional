@@ -1,3 +1,12 @@
+-- =====================================================================
+-- Programa:    induccion_estructural.hs
+-- Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+-- Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+-- Actividad:   Tema 2.3 — Recursión e inmutabilidad
+-- Fecha:       2026-07-18
+-- Descripción: Inducción estructural sobre listas y árboles en Haskell
+-- IA:          Generado con Claude Code, verificado y modificado por el docente
+-- =====================================================================
 module InduccionEstructural where
 
 -- Las dos implementaciones que vamos a probar equivalentes

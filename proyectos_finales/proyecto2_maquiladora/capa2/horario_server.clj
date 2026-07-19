@@ -1,3 +1,12 @@
+;; =====================================================================
+;; Programa:    horario_server.clj
+;; Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+;; Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+;; Actividad:   Proyecto Final P2 — Turnos maquiladora, capa 2
+;; Fecha:       2026-07-18
+;; Descripción: Estado del turno con atom e historial inmutable en Clojure
+;; IA:          Generado con Claude Code, verificado y modificado por el docente
+;; =====================================================================
 (ns maquiladora-server
   "Gestión de turnos de planta maquiladora con estado inmutable en Clojure.
    Usa atom para el turno actual y registro append-only de cambios.")

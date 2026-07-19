@@ -1,3 +1,12 @@
+(* ==================================================================
+   Programa:    ocaml_demo.ml
+   Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+   Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+   Actividad:   Tema 1.2 — Historia y evolución
+   Fecha:       2026-07-18
+   Descripción: Demo de OCaml (lenguaje de Flow/Hack/Infer en Meta): tipos inferidos y pattern matching
+   IA:          Generado con Claude Code, verificado y modificado por el docente
+   ================================================================== *)
 (* ============================================================
    Demo OCaml — Semana 2, Tema 1.2
    "El lenguaje detrás de las herramientas de Meta"

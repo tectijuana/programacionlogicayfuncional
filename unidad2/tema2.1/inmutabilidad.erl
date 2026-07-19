@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    inmutabilidad.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Tema 2.1 — Fundamentos FP
+%% Fecha:       2026-07-18
+%% Descripción: Inmutabilidad y transparencia referencial en Erlang
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 -module(inmutabilidad).
 -export([demostrar_inmutabilidad/0, suma_lista/1, suma_lista/2,
          sin_race_condition/0]).

@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    tramite_server.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Proyecto Final P1 — Trámites IMSS, capa 2
+%% Fecha:       2026-07-18
+%% Descripción: GenServer: cola de trámites pendientes
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 -module(tramite_server).
 -behaviour(gen_server).
 

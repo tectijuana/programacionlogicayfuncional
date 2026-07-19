@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    modulos_prolog.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.1 — Desarrollo de programas lógicos
+% Fecha:       2026-07-18
+% Descripción: Módulos Prolog con firmas explícitas: validador CURP modular
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(validador_curp, [
     validar_curp/2,
     extraer_componentes/2,

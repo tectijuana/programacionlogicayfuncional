@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    interfaz.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.5 — Aplicaciones de PL
+% Fecha:       2026-07-18
+% Descripción: Interfaz de texto interactiva del sistema experto (read/write, assert/retract)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% interfaz.pl — Interfaz de texto para el sistema experto de diagnóstico
 %% TecNM — Programación Lógica y Funcional, Unidad 3 Tema 3.5
 %%

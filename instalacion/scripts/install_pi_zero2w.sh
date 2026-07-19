@@ -1,4 +1,13 @@
 #!/bin/bash
+# =====================================================================
+# Programa:    install_pi_zero2w.sh
+# Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+# Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+# Actividad:   Instalación — Raspberry Pi Zero 2W
+# Fecha:       2026-07-18
+# Descripción: Instala SWI-Prolog y Erlang/OTP en Raspberry Pi Zero 2W
+# IA:          Generado con Claude Code, verificado y modificado por el docente
+# =====================================================================
 # ==========================================
 # Script: install_pi_zero2w.sh
 # Curso: Programación Lógica y Funcional — TecNM

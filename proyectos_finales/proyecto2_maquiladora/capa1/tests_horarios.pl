@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    tests_horarios.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P2 — Turnos maquiladora, capa 1
+% Fecha:       2026-07-18
+% Descripción: Suite plunit del planificador (16 tests)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- use_module(planificador).
 :- use_module(library(plunit)).
 

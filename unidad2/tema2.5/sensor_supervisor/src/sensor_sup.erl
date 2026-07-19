@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    sensor_sup.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Tema 2.5 — Aplicaciones FP / OTP
+%% Fecha:       2026-07-18
+%% Descripción: Supervisor one_for_one del sistema de sensores ("let it crash")
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 %% Archivo: sensor_sup.erl
 %% Supervisor raíz del sistema de sensores IoT.
 %%

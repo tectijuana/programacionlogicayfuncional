@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    hechos_consultas.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.1 — Fundamentos de PL
+% Fecha:       2026-07-18
+% Descripción: Hechos y consultas: base de datos organizacional TecNM Tijuana
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 % ============================================================
 % Tema 3.1 — Hechos, consultas y base de conocimiento
 % TecNM Tijuana — Programación Lógica y Funcional

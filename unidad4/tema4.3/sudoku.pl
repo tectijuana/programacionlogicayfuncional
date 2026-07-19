@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    sudoku.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.3 — Optimización / CLP(FD)
+% Fecha:       2026-07-18
+% Descripción: Solver de Sudoku 9×9 con CLP(FD); demo automática al cargar
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% sudoku.pl — Solver de Sudoku 9×9 con CLP(FD)
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.3
 %%

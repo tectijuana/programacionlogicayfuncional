@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    restricciones.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P1 — Trámites IMSS, capa 1
+% Fecha:       2026-07-18
+% Descripción: CLP(FD): límites numéricos de semanas cotizadas y edad
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(restricciones, [semanas_validas/1, edad_pension/1, monto_prestamo/2,
                           semanas_para_pension/2]).
 :- use_module(library(clpfd)).

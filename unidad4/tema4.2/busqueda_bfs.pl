@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    busqueda_bfs.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.2 — Estrategias de búsqueda
+% Fecha:       2026-07-18
+% Descripción: Búsqueda en anchura (BFS) sobre el grafo del metro CDMX
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% busqueda_bfs.pl — Búsqueda en Amplitud (BFS) — garantiza camino mínimo
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.2
 %%

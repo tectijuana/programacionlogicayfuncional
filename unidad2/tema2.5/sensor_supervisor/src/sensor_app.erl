@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    sensor_app.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Tema 2.5 — Aplicaciones FP / OTP
+%% Fecha:       2026-07-18
+%% Descripción: Application behaviour: punto de entrada del sistema OTP de sensores
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 %% Archivo: sensor_app.erl
 %% Punto de entrada de la aplicación OTP.
 %% OTP Application behaviour — gestiona el ciclo de vida del sistema.

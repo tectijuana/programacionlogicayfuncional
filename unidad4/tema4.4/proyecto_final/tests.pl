@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    tests.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.4 — Proyecto integrador U4
+% Fecha:       2026-07-18
+% Descripción: Suite plunit del sistema de trámites (19 tests)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% tests.pl — Suite completa de pruebas del Proyecto Final
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.4
 %%

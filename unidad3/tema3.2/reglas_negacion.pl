@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    reglas_negacion.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.2 — Sistemas formales y lógica de predicados
+% Fecha:       2026-07-18
+% Descripción: Reglas y negación como falla (\+): elegibilidad para beca TecNM
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 % ============================================================
 % Tema 3.2 — Reglas, Negación como Falla y Cut
 % TecNM Tijuana — Programación Lógica y Funcional

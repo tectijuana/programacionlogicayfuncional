@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    horarios_tec.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.3 — Optimización / CLP(FD)
+% Fecha:       2026-07-18
+% Descripción: Asignación de horarios TecNM como problema CSP con CLP(FD)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% horarios_tec.pl — Asignación de horarios TecNM como CSP con CLP(FD)
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.3
 %%

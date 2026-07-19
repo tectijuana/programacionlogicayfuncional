@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    planificador.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P2 — Turnos maquiladora, capa 1
+% Fecha:       2026-07-18
+% Descripción: Asignación de turnos con CLP(FD): estación + bloque horario sin conflictos
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(planificador, [asignar_turno/1, imprimir_turno/1, sin_conflictos/1,
                          puesto/3, estacion/2]).
 :- use_module(library(clpfd)).

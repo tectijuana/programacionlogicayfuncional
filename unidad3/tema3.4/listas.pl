@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    listas.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.4 — Introducción a Prolog
+% Fecha:       2026-07-18
+% Descripción: Listas desde cero: mi_member, mi_append, mi_flatten… (28 tests plunit)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% listas.pl — Implementación propia de predicados de listas en SWI-Prolog
 %% TecNM — Programación Lógica y Funcional, Unidad 3 Tema 3.4
 %%

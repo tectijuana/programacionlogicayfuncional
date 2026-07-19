@@ -1,3 +1,12 @@
+%% =====================================================================
+%% Programa:    patron_matching.erl
+%% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+%% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+%% Actividad:   Tema 2.1 — Fundamentos FP
+%% Fecha:       2026-07-18
+%% Descripción: Pattern matching con RFC mexicano en Erlang
+%% IA:          Generado con Claude Code, verificado y modificado por el docente
+%% =====================================================================
 -module(patron_matching).
 -export([validar_rfc/1, demo/0]).
 

@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    unificacion.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.3 — Unificación y resolución
+% Fecha:       2026-07-18
+% Descripción: Algoritmo de unificación MGU con occurs check y traza SLD (15 tests plunit)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% unificacion.pl — Demostración de unificación y resolución SLD en SWI-Prolog
 %% TecNM — Programación Lógica y Funcional, Unidad 3 Tema 3.3
 %%

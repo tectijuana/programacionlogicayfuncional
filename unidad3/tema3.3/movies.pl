@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    movies.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.3 — Unificación y resolución
+% Fecha:       2026-07-18
+% Descripción: Base de conocimiento de películas: unificación y consultas (15 tests plunit)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% Archivo: movies.pl
 %% Tema 3.3 — Unificación y resolución
 %% Tarea 3.3: trazar manualmente el árbol de resolución SLD para 5 consultas

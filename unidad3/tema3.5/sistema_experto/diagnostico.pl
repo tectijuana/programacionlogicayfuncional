@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    diagnostico.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 3.5 — Aplicaciones de PL
+% Fecha:       2026-07-18
+% Descripción: Sistema experto educativo (contexto IMSS): base de conocimiento y reglas de inferencia
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% diagnostico.pl — Base de conocimiento para sistema experto médico educativo
 %% TecNM — Programación Lógica y Funcional, Unidad 3 Tema 3.5
 %%

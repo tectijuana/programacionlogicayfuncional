@@ -1,3 +1,12 @@
+-- =====================================================================
+-- Programa:    Reporte.hs
+-- Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+-- Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+-- Actividad:   Proyecto Final P1 — Trámites IMSS, capa 3
+-- Fecha:       2026-07-18
+-- Descripción: Tipos algebraicos y generación del reporte de trámites en Haskell
+-- IA:          Generado con Claude Code, verificado y modificado por el docente
+-- =====================================================================
 module Main (
     Tramite(..), TipoTramite(..), Resultado(..),
     generarReporte, filtrarAprobados, resumen,

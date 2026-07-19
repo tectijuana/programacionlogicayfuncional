@@ -1,3 +1,12 @@
+# =====================================================================
+# Programa:    stream.exs
+# Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+# Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+# Actividad:   Tema 2.4 — Evaluación perezosa
+# Fecha:       2026-07-18
+# Descripción: Streams perezosos sobre registros IMSS en Elixir
+# IA:          Generado con Claude Code, verificado y modificado por el docente
+# =====================================================================
 # Archivo: stream.exs
 # Tema 2.4: Streams lazy en Elixir
 #

@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    tests_monitor.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P3 — Monitor IoT CENAPRED, capa 1
+% Fecha:       2026-07-18
+% Descripción: Suite plunit de clasificación de alertas (19 tests)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- use_module(reglas_alerta).
 :- use_module(umbrales).
 :- use_module(library(plunit)).

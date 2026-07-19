@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    reglas_fiscales.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P4 — Inventario SAT, capa 1
+% Fecha:       2026-07-18
+% Descripción: Validación de RFC y cálculo de IVA con CLP(FD)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(reglas_fiscales, [
     rfc_valido/1,
     tasa_iva/3,

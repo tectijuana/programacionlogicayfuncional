@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    tests_sat.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P4 — Inventario SAT, capa 1
+% Fecha:       2026-07-18
+% Descripción: Suite plunit de reglas fiscales (17 tests)
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- use_module(reglas_fiscales).
 :- use_module(productos).
 :- use_module(library(plunit)).

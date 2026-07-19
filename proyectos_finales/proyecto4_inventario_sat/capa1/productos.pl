@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    productos.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P4 — Inventario SAT, capa 1
+% Fecha:       2026-07-18
+% Descripción: Base de hechos: productos y categorías fiscales
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(productos, [producto_exento/1, producto_tasa_cero/1, categoria/2]).
 
 %% producto_tasa_cero/1 — alimentos sin procesar, medicamentos (Art. 2-A LIVA)

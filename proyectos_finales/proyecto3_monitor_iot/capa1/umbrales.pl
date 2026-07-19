@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    umbrales.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Proyecto Final P3 — Monitor IoT CENAPRED, capa 1
+% Fecha:       2026-07-18
+% Descripción: Rangos CLP(FD) y clasificación de umbrales de alerta
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 :- module(umbrales, [
     umbral_alerta/3,
     umbral_critico/3,

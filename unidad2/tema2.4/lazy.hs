@@ -1,3 +1,12 @@
+-- =====================================================================
+-- Programa:    lazy.hs
+-- Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+-- Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+-- Actividad:   Tema 2.4 — Evaluación perezosa
+-- Fecha:       2026-07-18
+-- Descripción: Listas infinitas (Fibonacci, primos) con evaluación perezosa en Haskell
+-- IA:          Generado con Claude Code, verificado y modificado por el docente
+-- =====================================================================
 -- Archivo: lazy.hs
 -- Tema 2.4: Evaluación Perezosa en Haskell
 --

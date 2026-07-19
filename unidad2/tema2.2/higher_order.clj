@@ -1,3 +1,12 @@
+;; =====================================================================
+;; Programa:    higher_order.clj
+;; Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+;; Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+;; Actividad:   Tema 2.2 — Funciones de orden superior
+;; Fecha:       2026-07-18
+;; Descripción: map/filter/reduce, composición y closures: pipeline de alumnos TecNM en Clojure
+;; IA:          Generado con Claude Code, verificado y modificado por el docente
+;; =====================================================================
 (ns tectijuana.higher-order
   "Funciones de orden superior aplicadas a datos de alumnos TecNM.
    Conexión Nubank: el mismo patrón map/filter/reduce procesa

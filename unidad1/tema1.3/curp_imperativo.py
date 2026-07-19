@@ -1,3 +1,12 @@
+# =====================================================================
+# Programa:    curp_imperativo.py
+# Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+# Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+# Actividad:   Tema 1.3 — Comparación de paradigmas
+# Fecha:       2026-07-18
+# Descripción: Validador de CURP en paradigma imperativo/OOP (contraste con Erlang y Prolog)
+# IA:          Generado con Claude Code, verificado y modificado por el docente
+# =====================================================================
 """
 curp_imperativo.py — Validador de CURP mexicana, paradigma OOP/imperativo.
 Cómo correr: python3 curp_imperativo.py

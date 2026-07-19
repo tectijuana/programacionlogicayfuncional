@@ -1,3 +1,12 @@
+% =====================================================================
+% Programa:    estrategias.pl
+% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
+% Actividad:   Tema 4.2 — Estrategias de búsqueda
+% Fecha:       2026-07-18
+% Descripción: Cut verde vs. rojo; findall/bagof/setof
+% IA:          Generado con Claude Code, verificado y modificado por el docente
+% =====================================================================
 %% estrategias.pl — Cut verde/rojo, findall/bagof/setof
 %% TecNM — Programación Lógica y Funcional, Unidad 4 Tema 4.2
 %%
