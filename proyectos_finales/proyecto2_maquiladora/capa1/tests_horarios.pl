@@ -1,6 +1,6 @@
 % =====================================================================
 % Programa:    tests_horarios.pl
-% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Autor:       MC. René Solis R. — Docente, TecNM Campus Tijuana
 % Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
 % Actividad:   Proyecto Final P2 — Turnos maquiladora, capa 1
 % Fecha:       2026-07-18

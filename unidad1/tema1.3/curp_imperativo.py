@@ -1,6 +1,6 @@
 # =====================================================================
 # Programa:    curp_imperativo.py
-# Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+# Autor:       MC. René Solis R. — Docente, TecNM Campus Tijuana
 # Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
 # Actividad:   Tema 1.3 — Comparación de paradigmas
 # Fecha:       2026-07-18

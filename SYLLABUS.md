@@ -6,7 +6,7 @@
 **Período:** Agosto – Diciembre 2026  
 **Modalidad:** Presencial con apoyo en GitHub  
 
-**Docente:** Dr. René Solís Reyes  
+**Docente:** MC. René Solis R.  
 **Departamento:** Sistemas y Computación  
 **Institución:** TecNM Campus Tijuana  
 **Correo:** rene.solis@tectijuana.edu.mx  

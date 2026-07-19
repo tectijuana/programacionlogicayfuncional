@@ -1,6 +1,6 @@
 % =====================================================================
 % Programa:    unificacion.pl
-% Autor:       Dr. René Solís Reyes — Docente, TecNM Campus Tijuana
+% Autor:       MC. René Solis R. — Docente, TecNM Campus Tijuana
 % Curso:       Programación Lógica y Funcional (ISC-2006) — Ago–Dic 2026
 % Actividad:   Tema 3.3 — Unificación y resolución
 % Fecha:       2026-07-18

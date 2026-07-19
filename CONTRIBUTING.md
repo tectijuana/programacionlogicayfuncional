@@ -49,7 +49,7 @@ Toda interacción debe ser respetuosa y constructiva.
 
 ## Contacto
 
-**Dr. René Solís Reyes**
+**MC. René Solis R.**
 Departamento de Sistemas y Computación
 TecNM Campus Tijuana
 rene.solis@tectijuana.edu.mx
