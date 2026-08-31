@@ -51,6 +51,13 @@ Carpeta personal dentro de `research/<nombre-del-tema>/` con:
 - Un Pull Request por estudiante, con commits claros y descriptivos.
 - El PR que altere la estructura del repositorio se **rechaza** sin calificación.
 
+## Ética en el uso de IA
+
+El uso de asistentes de IA se rige por la guía
+[**`AI_GUIDANCE.md`**](../AI_GUIDANCE.md) del repositorio. Es **obligatorio**
+leerla antes de entregar. En resumen: la IA es apoyo, no autora; todo lo
+generado se revisa, se entiende y se cita; y su uso se declara en `anexo.md`.
+
 ## Reglas de contenido (según `CLAUDE.md` y `casos_reales_mundo_real.md`)
 
 - Todo ejemplo de código debe compilar/ejecutar; el pseudocódigo se etiqueta como tal.
@@ -154,12 +161,14 @@ Carpeta personal dentro de `research/<nombre-del-tema>/` con:
   organización sin cita directa): categoría 1 con penalización según gravedad.
 - **Código que no compila/ejecuta** presentado como funcional: penalización en categoría 1.
 - **Alteración de la estructura del repositorio** o de archivos ajenos: PR rechazado (categoría 4 en 0).
-- **Uso de IA no declarado** detectado: categorías 3 y 5 en 0 y reporte de integridad académica.
+- **Uso de IA no declarado** detectado: categorías 3 y 5 en 0 y reporte de
+  integridad académica según [`AI_GUIDANCE.md`](../AI_GUIDANCE.md).
 - **Entrega tardía**: según las políticas del curso.
 
 ---
 
 *Documento del curso Programación Lógica y Funcional (ISC-2006), semestre 2026 "B".
 Bloque 1 de 2: Programación Funcional. El bloque de Programación Lógica se
-publicará por separado. Referencias del curso: `SYLLABUS.md`, `README.md`,
-`casos_reales_mundo_real.md`, `CLAUDE.md`.*
+publicará por separado. Referencias del curso: [`SYLLABUS.md`](../SYLLABUS.md),
+[`README.md`](../README.md), [`AI_GUIDANCE.md`](../AI_GUIDANCE.md),
+[`casos_reales_mundo_real.md`](../casos_reales_mundo_real.md).*
