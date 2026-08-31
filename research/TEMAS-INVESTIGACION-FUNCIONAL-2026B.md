@@ -1,6 +1,6 @@
 ---
 title: "Proyecto de Investigación --- Programación Lógica y Funcional 2026 \"B\""
-subtitle: "Bloque 1: Programación Funcional --- 40 temas de investigación y rúbrica de 5 categorías"
+subtitle: "Bloque 1: Programación Funcional (nivel introductorio) --- 40 temas de investigación y rúbrica de 5 categorías"
 author: "TecNM Campus Tijuana --- Ingeniería en Sistemas Computacionales (ISC-2006)"
 date: "Agosto 2026"
 lang: es
@@ -15,6 +15,11 @@ Lógica y Funcional 2026 "B". Cubre exclusivamente el **paradigma funcional**
 (Erlang/OTP, Elixir, Haskell, OCaml, Clojure, Scala, Gleam). Los temas de
 **programación lógica** (Prolog, Datalog, ASP, CLP(FD)) se publicarán en una
 lista posterior.
+
+Los 40 temas son de **nivel introductorio**: historia y antecedentes del
+paradigma, conceptos fundamentales y primer contacto con los lenguajes. Están
+pensados para las primeras semanas del curso, antes de abordar tipos avanzados,
+mónadas o concurrencia OTP.
 
 Cada estudiante desarrollará **una investigación técnica individual**, la
 publicará mediante el flujo **Fork --- Pull Request** y documentará el uso de
@@ -57,71 +62,68 @@ Carpeta personal dentro de `research/<nombre-del-tema>/` con:
 
 \newpage
 
-# Los 40 temas --- Bloque Funcional (2026 "B")
+# Los 40 temas --- Bloque Funcional introductorio (2026 "B")
 
-## Fundamentos y modelo de evaluación
+## Historia y antecedentes
 
-1. Transparencia referencial y efectos secundarios: cómo razonan el compilador y el programador sobre código puro
-2. Evaluación perezosa frente a estricta: *thunks*, `seq` y control de la fuerza en Haskell
-3. Listas y estructuras infinitas: primos y Fibonacci con evaluación por necesidad
-4. Memoización y programación dinámica en lenguajes puros sin estado mutable
-5. *Space leaks* por pereza: diagnóstico y corrección con perfiles de memoria en GHC
+1. El cálculo lambda de Alonzo Church (1936) como fundamento teórico de la programación funcional
+2. Lisp (John McCarthy, 1958): el primer lenguaje funcional y sus ideas duraderas
+3. De ISWIM a ML: la línea que llevó a los lenguajes funcionales tipados
+4. Historia de Haskell: por qué un comité creó un lenguaje "puro y perezoso" en 1990
+5. Historia de Erlang: cómo Ericsson resolvió la tolerancia a fallos en telefonía (1986)
+6. Miranda, Hope y los lenguajes funcionales de los años ochenta
+7. Línea de tiempo de la programación funcional: de 1930 a Gleam (2024)
+8. John Backus y su conferencia Turing de 1977: "¿Puede liberarse la programación del estilo von Neumann?"
 
-## Sistema de tipos y garantías en tiempo de compilación
+## Conceptos fundamentales
 
-6. Tipos algebraicos de datos y *pattern matching* exhaustivo como sustituto de `null`
-7. *Type classes* en Haskell frente a *traits*/*protocols*: polimorfismo ad hoc resuelto en compilación
-8. Inferencia de tipos Hindley--Milner: el algoritmo W y sus límites
-9. El sistema de módulos de OCaml: funtores y firmas `.mli` (Flow e Infer de Meta)
-10. `Maybe`/`Either` y manejo de errores sin excepciones: comparación con `try/catch`
-11. Gleam: tipado estático sobre la BEAM y comparación con Erlang/Elixir dinámicos
+9. ¿Qué es un paradigma de programación? Imperativo, orientado a objetos, funcional y lógico
+10. Programación declarativa frente a imperativa: describir "qué" en lugar de "cómo"
+11. Funciones puras: definición, ejemplos y contraejemplos
+12. Transparencia referencial y por qué facilita razonar sobre el código
+13. Efectos secundarios: qué son y por qué la programación funcional busca controlarlos
+14. Inmutabilidad: datos que no cambian y qué implica para el programador
+15. Expresiones frente a sentencias: programar evaluando en lugar de ordenar
+16. Ligado de nombres frente a asignación destructiva de variables
+17. El concepto de estado y cómo lo maneja un lenguaje funcional
 
-## Recursión, inmutabilidad y estructuras de datos
+## Funciones como valores
 
-12. Optimización de llamada de cola (TCO): qué garantiza cada *runtime* (BEAM, GHC, JVM)
-13. Trampolines y estilo de paso de continuaciones (CPS) para recursión profunda
-14. Estructuras de datos persistentes: *Hash Array Mapped Trie* (HAMT) en Clojure
-15. *Zippers*: navegación y actualización funcional de árboles
-16. Costo real de la inmutabilidad: *structural sharing* y su medición
+18. Funciones de primera clase: pasar y devolver funciones como cualquier dato
+19. Funciones de orden superior: `map`, `filter` y `reduce` explicadas desde cero
+20. Funciones anónimas y expresiones lambda
+21. Composición de funciones: construir programas encadenando funciones pequeñas
+22. Currificación y aplicación parcial: una introducción con ejemplos
+23. *Closures* (clausuras): funciones que recuerdan su entorno
+24. El operador *pipe* de Elixir (`|>`) y la lectura de izquierda a derecha
 
-## Funciones de orden superior y abstracción
+## Recursión
 
-17. Composición de funciones y estilo *point-free*: legibilidad frente a concisión
-18. Functor, Applicative y Monad: la jerarquía y para qué sirve cada nivel
-19. La mónada `State`: estado explícito sin variables mutables
-20. Transformadores de mónadas y el problema de combinar efectos
-21. Efectos algebraicos y *handlers*: la alternativa moderna a los transformadores
-22. *Free monads* e intérpretes: separar la descripción de un programa de su ejecución
-23. Lentes (*lenses*) y ópticas: actualización componible de estructuras anidadas
+25. Recursión como alternativa a los bucles: caso base y caso recursivo
+26. Factorial, Fibonacci y sumatoria: los ejemplos clásicos paso a paso
+27. Recorrer listas de forma recursiva
+28. Introducción a la recursión de cola y por qué importa
+29. Errores comunes al aprender recursión: falta de caso base y desbordamiento de pila
 
-## Concurrencia y modelo de actores
+## Datos y coincidencia de patrones
 
-24. El planificador de la BEAM: procesos ligeros, *reductions* y expropiación
-25. `gen_server` y `supervisor`: árboles de supervisión y la filosofía "let it crash"
-26. *Backpressure* con GenStage y Flow en Elixir para flujos de datos
-27. `core.async` en Clojure: canales y CSP sobre la JVM
-28. Memoria transaccional por software (STM): `refs`/`dosync` en Clojure y `TVar` en Haskell
-29. Recarga de código en caliente (*hot code reloading*) en Erlang/OTP
+30. Listas enlazadas inmutables: `cons`, cabeza y cola
+31. Tuplas y registros: agrupar datos sin clases
+32. *Pattern matching* (coincidencia de patrones): una introducción
+33. Tipos algebraicos de datos sencillos: enumeraciones y variantes
+34. Representar la ausencia de valor sin `null`: `Maybe`, `Option` y `nil`
 
-## Procesamiento de datos y *streaming*
+## Primer contacto con los lenguajes
 
-30. *Transducers* en Clojure: transformaciones componibles independientes de la colección
-31. `Stream` perezoso para procesar archivos grandes sin cargarlos en memoria
-32. Scala y Spark: el paradigma funcional aplicado a datos distribuidos
-33. *Event sourcing* y CQRS: estado derivado de un registro inmutable de eventos
+35. Primeros pasos en Haskell con GHCi
+36. Primeros pasos en Elixir con IEx y Mix
+37. Primeros pasos en Clojure y la programación dirigida por REPL
+38. Instalación y configuración de entornos funcionales (Erlang, GHC, Elixir, Clojure)
 
-## Metaprogramación y lenguajes de dominio específico
+## Contexto e industria
 
-34. Macros higiénicas en Elixir: `quote`/`unquote` y `macroexpand`
-35. Macros en Clojure y construcción de un DSL interno
-36. Phoenix LiveView: un DSL funcional para interfaces web con estado en el servidor
-
-## Verificación, pruebas y corrección
-
-37. *Property-based testing* con QuickCheck/PropEr: generar casos en vez de escribirlos
-38. Dialyzer y *success typing*: análisis estático de discrepancias en código Erlang
-39. Totalidad y funciones parciales: por qué `head`/`tail` son un riesgo
-40. Introducción a la demostración asistida (Coq/Lean): los tipos como proposiciones
+39. Programación funcional en lenguajes de uso común: JavaScript, Python y Java Streams
+40. Dónde se usa la programación funcional hoy: WhatsApp (Erlang), Discord (Elixir) y Nubank (Clojure) --- panorama introductorio
 
 \newpage
 
