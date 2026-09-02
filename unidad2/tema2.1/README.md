@@ -16,6 +16,12 @@ y dominar el pattern matching como alternativa funcional a los `if`/`switch` imp
 |---------|-----------|
 | `inmutabilidad.erl` | Variables de asignación única, recursión de cola, procesos concurrentes sin locks |
 | `patron_matching.erl` | Validador de RFC mexicano usando solo pattern matching y guards |
+| [`TUTORIAL_ERLANG.md`](TUTORIAL_ERLANG.md) | **Tutorial consolidado básico → intermedio → avanzado** (13 ejemplos verificados en OTP 25 y 26) |
+| [`tutorial_erlang/`](tutorial_erlang/) | Código del tutorial + `verificar.sh` |
+
+> El `TUTORIAL_ERLANG.md` recorre de una sola vez la ruta completa: tipos y
+> pattern matching (nivel 1), procesos y `gen_server` (nivel 2), supervisión,
+> ETS y distribución (nivel 3), y enlaza con `tema2.5` y los proyectos finales.
 
 ---
 

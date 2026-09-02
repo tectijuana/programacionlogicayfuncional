@@ -17,7 +17,7 @@ una instancia EC2 Graviton (AWS Academy) o en hardware físico (Raspberry Pi).
 | 4 | [04_haskell.md](04_haskell.md) | GHC (Haskell) | 9.x |
 | 5 | [05_clojure.md](05_clojure.md) | Clojure (+ JDK) | CLI oficial |
 | 6 | [06_elixir.md](06_elixir.md) | Elixir | 1.14+ |
-| 7 | [07_ocaml.md](07_ocaml.md) | OCaml (opam) | 5.x |
+| 7 | [07_ocaml.md](07_ocaml.md) | OCaml (opam) | 4.14 (switch default) · 5.x opcional |
 | 8 | [08_raspberry_pi_zero2w.md](08_raspberry_pi_zero2w.md) | Prolog + Erlang en Raspberry Pi Zero 2W | script automatizado |
 
 ## Scripts

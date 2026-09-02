@@ -48,7 +48,9 @@ En la consola de AWS, haz clic en el ícono de terminal **>_ CloudShell**
 
 El script [`scripts/lanzar-nodo-arm64.sh`](scripts/lanzar-nodo-arm64.sh)
 (origen: [gist de @IoTeacher](https://gist.github.com/IoTeacher/c214a55f457d47ba715362f00434b97e))
-automatiza todo: key pair, security group, puerto 22, AMI Ubuntu ARM64 e instancia `t4g.micro`.
+automatiza todo: key pair, security group (SSH + puertos de Erlang distribuido),
+AMI Ubuntu 24.04 ARM64 e instancia `t4g.large` (8 GiB; overrideable con
+`INSTANCE_TYPE=t4g.medium`).
 
 En CloudShell:
 
@@ -249,7 +251,7 @@ Salida típica:
 +----------------------+-----------+------------+------------+----------+
 |         ID           |  Nombre   |  Estado    |    Tipo    |    IP    |
 +----------------------+-----------+------------+------------+----------+
-|  i-0a1b2c3d4e5f6a7b8 | Curso-PLF | running    | t4g.micro  | 3.9.1.2  |
+|  i-0a1b2c3d4e5f6a7b8 | Curso-PLF | running    | t4g.large  | 3.9.1.2  |
 +----------------------+-----------+------------+------------+----------+
 ```
 
@@ -312,10 +314,12 @@ de inmediato. Selecciona la instancia → botón **Instance state** →
 | Listar / apagar / encender / borrar la VM | Ver el [Anexo B](#anexo-b--tú-tienes-el-control-de-la-vm) |
 | La IP cambió tras reiniciar el lab | `aws ec2 describe-instances --filters Name=tag:Name,Values=Curso-PLF --query "Reservations[].Instances[].PublicIpAddress" --output text` |
 | Perdiste `llavesita.pem` | Vuelve a correr el script: detecta la key huérfana y la recrea |
-| `t4g.micro` (1 GB RAM) se queda corto al compilar | Ya trae swap de 4 GB; si aún así falla, `INSTANCE_TYPE=t4g.small ./lanzar-nodo-arm64.sh` |
+| `run-instances` da `VcpuLimitExceeded` / `UnauthorizedOperation` | El lab no permite `t4g.large`; relanza con `INSTANCE_TYPE=t4g.medium ./lanzar-nodo-arm64.sh` |
+| Ya existe una VM `Curso-PLF` y el script pregunta | Es la guarda anti-duplicados; responde `si` para otra, o `FORCE=1` para saltarla |
 | Terminaste la sesión | Apaga la VM (Anexo B.2) y **End Lab** en Learner Lab; la instancia queda detenida, no borrada |
 
 > 💰 Tu presupuesto es de **$50 USD**, asignados por el docente al inicio del
-> semestre. `t4g.micro` cuesta ≈ $0.0084/hora — apaga el lab al terminar.
+> semestre. `t4g.large` cuesta ≈ $0.067/hora y `t4g.medium` ≈ $0.034/hora —
+**apaga la VM** (Anexo B.2) al terminar cada sesión.
 > ⚠️ Los créditos **vencen al concluir el semestre** y no se acumulan: respalda
 > tu código en GitHub (usa `gh` y Gist) antes del cierre del curso.

@@ -3,6 +3,10 @@
 Guía autocontenida. El curso requiere **SWI-Prolog 9.x** (unidad 1, unidad 4 y
 proyectos finales usan CLP(FD), que viene incluido).
 
+> **Verificado el 2026-09-01** en el nodo del curso (`t4g.large`, Ubuntu 24.04.4
+> aarch64): `apt install swi-prolog` → **SWI-Prolog 9.0.4 for aarch64-linux**,
+> con `library(clpfd)`, `apply`, `assoc` y `dcg/basics` disponibles.
+
 ## Opción A — apt (recomendada, ~1 minuto)
 
 Ubuntu 24.04 (noble) trae SWI-Prolog **9.0.4** en sus repos oficiales, con
@@ -74,11 +78,47 @@ X = 5.
 ?- halt.
 ```
 
-Prueba no interactiva (útil para scripts de CI):
+Prueba no interactiva (útil para scripts de CI). **Un solo `-g` no sirve** con
+operadores de clpfd (`#=`, `#>`, ...): el objetivo se lee al arrancar, antes de
+que `clpfd` cargue sus operadores. Usa **dos `-g`** (el primero carga la
+librería) o un archivo:
 
 ```bash
-swipl -g "use_module(library(clpfd)), X #= 2+2, format('2+2=~w~n',[X])" -t halt
+swipl -g "use_module(library(clpfd))" \
+      -g "X #= 2+2, format('2+2=~w~n',[X])" -t halt
 # 2+2=4
+```
+
+Como archivo `.pl` (la forma normal en el curso):
+
+```bash
+cat > suma.pl << 'EOF'
+:- use_module(library(clpfd)).
+:- initialization(main, main).
+
+main :-
+    X #= 2 + 2,
+    format("2+2 = ~w~n", [X]).
+EOF
+swipl suma.pl
+# 2+2 = 4
+```
+
+Hechos, reglas y backtracking (unidad 1):
+
+```bash
+cat > familia.pl << 'EOF'
+padre(juan, maria).
+padre(juan, pedro).
+padre(pedro, ana).
+
+abuelo(A, N) :- padre(A, P), padre(P, N).
+
+:- initialization((findall(N, abuelo(juan, N), L),
+                   format("nietos de juan: ~w~n", [L]), halt)).
+EOF
+swipl familia.pl
+# nietos de juan: [ana]
 ```
 
 ## Solución de problemas
@@ -88,3 +128,4 @@ swipl -g "use_module(library(clpfd)), X #= 2+2, format('2+2=~w~n',[X])" -t halt
 | `swipl: command not found` | Cierra y reabre la sesión SSH, o `hash -r` |
 | Versión 8.x instalada | Estás en Ubuntu 22.04 — usa Opción B o migra a 24.04 |
 | `library(clpfd)` no existe | Instalaste un paquete mínimo; `sudo apt install swi-prolog` (no `swi-prolog-core`) |
+| `-g "..., X #= ..."`: `Syntax error: Operator expected` | Un solo `-g` no ve los operadores de clpfd; usa dos `-g` o un archivo `.pl` con `:- use_module(library(clpfd)).` |
