@@ -3,7 +3,8 @@
 > **Materia:** Programación Lógica y Funcional
 > **Autor:** Diego Barboza
 > **Repositorio:** `research/Historia de Erlang: cómo Ericsson resolvió la tolerancia a fallos en telefonía (1986)/`
- 
+ <img width="399" height="501" alt="infografia-erlang" src="https://github.com/user-attachments/assets/1ef855d7-8ac0-4373-8013-c9325ba20743" />
+
 ---
  
 ## Tabla de contenidos
@@ -44,7 +45,8 @@ Los lenguajes disponibles en ese momento —C, Pascal, o incluso Prolog, con el 
 Armstrong había estado extendiendo Prolog con primitivas de concurrencia para programar servicios telefónicos básicos, un experimento que terminó derivando en un lenguaje completamente nuevo [2]. La primera versión funcional de Erlang apareció en 1986, desarrollada en el Computer Science Laboratory de Ericsson Telecom AB por Armstrong, Virding y Williams [4]. El nombre "Erlang" se interpreta habitualmente como un homenaje al matemático e ingeniero danés Agner Krarup Erlang, pionero de la teoría de colas aplicada a redes telefónicas, aunque también se lo entiende de forma jocosa como contracción de "Ericsson Language" [3].
  
 Entre 1986 y 1990, Erlang existió como un dialecto interpretado sobre Prolog. Fue recién hacia 1990 cuando se independizó completamente como lenguaje propio, y en 1993 se lanzó su primera versión comercial, momento en el que Ericsson creó una subsidiaria para comercializarlo fuera de la empresa [2].
- 
+ <img width="1368" height="665" alt="linea-tiempo-erlang" src="https://github.com/user-attachments/assets/b57133a0-6b4b-41e3-a3d6-da104a464fb3" />
+
 ### 2.3 Filosofía de diseño: "let it crash"
  
 El principio más distintivo de Erlang es su estrategia de manejo de errores conocida como *"let it crash"* ("déjalo fallar"). En lugar de intentar anticipar y capturar cada posible excepción dentro de cada proceso —como hacen la mayoría de los lenguajes con bloques `try/catch`—, la filosofía de Erlang propone que un proceso que encuentra un estado inesperado simplemente **termine**, y que sea un proceso especializado externo el que detecte esa terminación y decida cómo recuperarse (reiniciarlo, aislarlo, notificar al sistema, etc.) [4]. Esta idea, contraintuitiva para la época, simplifica enormemente el código de negocio: los desarrolladores no necesitan escribir manejo defensivo de errores en cada función, porque la resiliencia se delega a la arquitectura del sistema.
