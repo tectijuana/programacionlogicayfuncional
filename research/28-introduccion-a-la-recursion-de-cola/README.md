@@ -22,9 +22,6 @@ factorial :: (Eq a, Num a) => a -> a
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
 ```
-Aquí tienes el README.md completo y listo para copiar y pegar en tu carpeta:
-
-research/introduccion-a-la-recursion-de-cola/README.md
 
 # Introducción a la recursión de cola y por qué importa
 
