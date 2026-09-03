@@ -85,7 +85,7 @@ echo "🧩 CloudShell AWS - Nodo ARM64"
 echo
 echo "===== 0. Preflight ====="
 command -v aws >/dev/null || { echo "❌ El AWS CLI no está disponible en esta shell." >&2; exit 1; }
-export AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION:-us-east-1a}"
+export AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION:-us-east-1}"
 CALLER=$(aws sts get-caller-identity --query "Arn" --output text)
 need "Región"   "$AWS_DEFAULT_REGION"
 need "Identidad" "$CALLER"
