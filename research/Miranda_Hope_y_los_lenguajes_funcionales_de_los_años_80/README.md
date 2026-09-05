@@ -59,7 +59,17 @@ El lenguaje es fuertemente tipado e incorpora un verificador de tipos que maneja
 Algunas de sus características son las siguientes:
 - **Sin asignación (Transparencia referencial)**: Los lenguajes aplicativos que trabajan en términos de expresiones y sus valores, utilizando recursión en lugar de bucles, resultan mucho más claros y menos propensos a errores. Cada variable recibe un valor una sola vez donde se declara. Eliminar las asignaciones simplifica enormemente el lenguaje.
 - **Uso máximo de tipos definidos por el usuario**: El usuario debe definir sus propios tipos siempre que sea posible (por ejemplo, el tipo edad en lugar del tipo entero). El lenguaje permite tipos polimórficos para que el código sea lo más general posible (por ejemplo, "lista de alphas" en lugar de una lista específica de números).
-- **Operadores sobrecargados**: Es conveniente utilizar símbolos de operación comunes (como +) con una variedad de significados según el tipo de sus argumentos.
+- **Operadores sobrecargados**: Es conveniente utilizar símbolos de operación comunes (como +) con una variedad de significados según el tipo de sus argumentos.  
+
+Ejemplo de código en HOPE con un programa factorial:  
+```
+dec fact : num -> num;
+--- fact 0 <= 1;
+--- fact n <= n*fact(n-1);
+```  
+Cambiar el orden de las cláusulas no altera el significado del programa, ya que la coincidencia de patrones de Hope siempre da prioridad a los patrones más específicos. En Hope se requieren declaraciones explícitas de los tipos de datos ; no existe un algoritmo de inferencia de tipos .  
+  
+Hope proporciona dos estructuras de datos integradas : tuplas y listas 
 
 Un lenguaje aplicativo como HOPE ofrece ventajas considerables para la verificación formal: la ausencia de sentencias de asignación y el reemplazo de la iteración por la recursión le otorga a los programas una forma simple y fácil de analizar. Además, los lenguajes aplicativos no están tan fuertemente ligados a la noción de una máquina secuencial como los lenguajes imperativos; si se dispone de una máquina paralela, las expresiones de las funciones se pueden evaluar simultáneamente.  
 
