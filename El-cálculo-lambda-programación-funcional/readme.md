@@ -20,4 +20,5 @@ La influencia del cálculo lambda se extiende a muchos campos dentro de la infor
 Además, el cálculo lambda ha influenciado el diseño de compiladores y construcciones en programación orientada a objetos. Al introducir conceptos como el ámbito y el cierre, los lenguajes de programación pueden modelar comportamientos similares a aquellos que se encuentran en el cálculo lambda. Las funciones de orden superior son un ejemplo de cómo se pueden tomar funciones como argumentos y devolverlas como resultados. Esto ha demostrado ser particularmente útil en la implementación de estructuras de datos y algoritmos complejos.
 
 Fecha: 06-09-2026
+
 Bibliografía: Teoría del cálculo lambda: Conceptos y aplicaciones detalladas. (s.f.). Programando Voy. Recuperado el 6 de septiembre de 2026, de https://programandovoy.xp.com.es/teoria-del-calculo-lambda-conceptos-y-aplicaciones-detalladas/
