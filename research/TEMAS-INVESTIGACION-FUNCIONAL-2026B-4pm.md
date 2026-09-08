@@ -32,7 +32,55 @@ investigaciones ya integradas en `research/`:
 - *Erlang/OTP y LLMs: arquitectura tolerante a fallos* (queda excluido como tema).
 
 No se admiten temas repetidos ni variantes menores de un tema ya trabajado; el
-docente asigna o confirma el tema por Google Classroom.
+docente asigna o confirma el tema por Google Classroom. Hay **40 temas para 40
+estudiantes**: asignación uno a uno.
+
+## Asignación de temas (corte 08/09/26)
+
+Lista de estudiantes según el gradebook de Google Classroom (grupo 4pm, 40 estudiantes).
+
+| # | Estudiante | Tema asignado |
+|:-:|:-----------|:--------------|
+| 1 | AGUILAR AGUILAR, LUIS DANIEL | 1. El cálculo lambda de Alonzo Church (1936) como fundamento teórico de la programación funcional |
+| 2 | AGUIRRE DAVILA, HUGO IRAM | 2. Lisp (John McCarthy, 1958): el primer lenguaje funcional y sus ideas duraderas |
+| 3 | BALLESTEROS CRUZ, ALDO JUVENTINO | 3. De ISWIM a ML: la línea que llevó a los lenguajes funcionales tipados |
+| 4 | BARAJAS CARPIO, ENRIQUE | 4. Historia de Haskell: por qué un comité creó un lenguaje "puro y perezoso" en 1990 |
+| 5 | BARBOZA CARBALLO, DIEGO ANTONIO | 5. Historia de Erlang: cómo Ericsson resolvió la tolerancia a fallos en telefonía (1986) |
+| 6 | BOJORQUEZ VALDEZ, VICTOR MANUEL | 6. Miranda, Hope y los lenguajes funcionales de los años ochenta |
+| 7 | CAMACHO OTAÑEZ, JUAN PABLO | 7. Línea de tiempo de la programación funcional: de 1930 a Gleam (2024) |
+| 8 | CAMARILLO MOLINA, CRISTIAN | 8. John Backus y su conferencia Turing de 1977: "¿Puede liberarse la programación del estilo von Neumann?" |
+| 9 | COTA HERNANDEZ, CHRISTIAN ARMANDO | 9. ¿Qué es un paradigma de programación? Imperativo, orientado a objetos, funcional y lógico |
+| 10 | CRUZ SANCHEZ, KEVIN ALFREDO | 10. Programación declarativa frente a imperativa: describir "qué" en lugar de "cómo" |
+| 11 | CUEVAS MARQUEZ, PABLO ANGEL | 11. Funciones puras: definición, ejemplos y contraejemplos |
+| 12 | DEL ANGEL DEL ANGEL, EMMANUEL | 12. Transparencia referencial y por qué facilita razonar sobre el código |
+| 13 | ESPAÑA PEREZ, MIGUEL ANGEL | 13. Efectos secundarios: qué son y por qué la programación funcional busca controlarlos |
+| 14 | ESTRADA RODRIGUEZ, MELANI | 14. Inmutabilidad: datos que no cambian y qué implica para el programador |
+| 15 | FUENTES MONTAÑO, AXEL | 15. Expresiones frente a sentencias: programar evaluando en lugar de ordenar |
+| 16 | GARCIA CARO, CARLOS ALEJANDRO | 16. Ligado de nombres frente a asignación destructiva de variables |
+| 17 | GARCIA RODRIGUEZ, MARCOS DANIEL | 17. El concepto de estado y cómo lo maneja un lenguaje funcional |
+| 18 | GOMEZ CUEVAS, CARLOS | 18. Funciones de primera clase: pasar y devolver funciones como cualquier dato |
+| 19 | GONZALEZ CRISTOBAL, OMAR | 19. Funciones de orden superior: `map`, `filter` y `reduce` explicadas desde cero |
+| 20 | GRANDE ORTEGA, MAXIMILIANO | 20. Funciones anónimas y expresiones lambda |
+| 21 | HERNANDEZ CUADRAS, ANA CECILIA | 21. Composición de funciones: construir programas encadenando funciones pequeñas |
+| 22 | LARES MENA, ANGEL FERNANDO | 22. Currificación y aplicación parcial: una introducción con ejemplos |
+| 23 | LEPE GARCIA, CESAR | 23. *Closures* (clausuras): funciones que recuerdan su entorno |
+| 24 | LOPEZ MOLGADO, JORGE LUIS | 24. El operador *pipe* de Elixir (`|>`) y la lectura de izquierda a derecha |
+| 25 | LUIS JUAN CAMACHO, CESAR ADRIAN | 25. Recursión como alternativa a los bucles: caso base y caso recursivo |
+| 26 | MALDONADO AVENDAÑO, VALERIA | 26. Factorial, Fibonacci y sumatoria: los ejemplos clásicos paso a paso |
+| 27 | MARTINEZ GARCIA, SEBASTIAN | 27. Recorrer listas de forma recursiva |
+| 28 | MARTINEZ MARTA, JORGE EMILIANO | 28. Introducción a la recursión de cola y por qué importa |
+| 29 | MEDRANO VARGAS, STEPHANIE ARIANA | 29. Errores comunes al aprender recursión: falta de caso base y desbordamiento de pila |
+| 30 | MIJANGOS GARIBAY, EMILY | 30. Listas enlazadas inmutables: `cons`, cabeza y cola |
+| 31 | NEYRA MENDEZ, ANGEL CASSIEL | 31. Tuplas y registros: agrupar datos sin clases |
+| 32 | NOLASCO AYALA, GAEL | 32. *Pattern matching* (coincidencia de patrones): una introducción |
+| 33 | PADILLA, DYLAN ALEXIS | 33. Tipos algebraicos de datos sencillos: enumeraciones y variantes |
+| 34 | PARRA ESPINOZA, HERIB ARTURO | 34. Representar la ausencia de valor sin `null`: `Maybe`, `Option` y `nil` |
+| 35 | PEREZ FLORES, ANDRES MANUEL | 35. Primeros pasos en Haskell con GHCi |
+| 36 | PINEDA GOMEZ, RICARDO ALEJANDRO | 36. Primeros pasos en Elixir con IEx y Mix |
+| 37 | RAMIREZ BAUTISTA, IRENE | 37. Primeros pasos en Clojure y la programación dirigida por REPL |
+| 38 | RODRIGUEZ GALLARDO, HOWARD | 38. Instalación y configuración de entornos funcionales (Erlang, GHC, Elixir, Clojure) |
+| 39 | SALCIDO MAGAÑA, MONICA | 39. Programación funcional en lenguajes de uso común: JavaScript, Python y Java Streams |
+| 40 | SANTOYO TORRES, SANTOS ABRAHAM | 40. Dónde se usa la programación funcional hoy: WhatsApp (Erlang), Discord (Elixir) y Nubank (Clojure) --- panorama introductorio |
 
 ## Entrega esperada
 
@@ -73,64 +121,64 @@ generado se revisa, se entiende y se cita; y su uso se declara en `anexo.md`.
 
 ## Historia y antecedentes
 
-1. El cálculo lambda de Alonzo Church (1936) como fundamento teórico de la programación funcional
-2. Lisp (John McCarthy, 1958): el primer lenguaje funcional y sus ideas duraderas
-3. De ISWIM a ML: la línea que llevó a los lenguajes funcionales tipados
-4. Historia de Haskell: por qué un comité creó un lenguaje "puro y perezoso" en 1990
-5. Historia de Erlang: cómo Ericsson resolvió la tolerancia a fallos en telefonía (1986)
-6. Miranda, Hope y los lenguajes funcionales de los años ochenta
-7. Línea de tiempo de la programación funcional: de 1930 a Gleam (2024)
-8. John Backus y su conferencia Turing de 1977: "¿Puede liberarse la programación del estilo von Neumann?"
+1. El cálculo lambda de Alonzo Church (1936) como fundamento teórico de la programación funcional — **AGUILAR AGUILAR, LUIS DANIEL**
+2. Lisp (John McCarthy, 1958): el primer lenguaje funcional y sus ideas duraderas — **AGUIRRE DAVILA, HUGO IRAM**
+3. De ISWIM a ML: la línea que llevó a los lenguajes funcionales tipados — **BALLESTEROS CRUZ, ALDO JUVENTINO**
+4. Historia de Haskell: por qué un comité creó un lenguaje "puro y perezoso" en 1990 — **BARAJAS CARPIO, ENRIQUE**
+5. Historia de Erlang: cómo Ericsson resolvió la tolerancia a fallos en telefonía (1986) — **BARBOZA CARBALLO, DIEGO ANTONIO**
+6. Miranda, Hope y los lenguajes funcionales de los años ochenta — **BOJORQUEZ VALDEZ, VICTOR MANUEL**
+7. Línea de tiempo de la programación funcional: de 1930 a Gleam (2024) — **CAMACHO OTAÑEZ, JUAN PABLO**
+8. John Backus y su conferencia Turing de 1977: "¿Puede liberarse la programación del estilo von Neumann?" — **CAMARILLO MOLINA, CRISTIAN**
 
 ## Conceptos fundamentales
 
-9. ¿Qué es un paradigma de programación? Imperativo, orientado a objetos, funcional y lógico
-10. Programación declarativa frente a imperativa: describir "qué" en lugar de "cómo"
-11. Funciones puras: definición, ejemplos y contraejemplos
-12. Transparencia referencial y por qué facilita razonar sobre el código
-13. Efectos secundarios: qué son y por qué la programación funcional busca controlarlos
-14. Inmutabilidad: datos que no cambian y qué implica para el programador
-15. Expresiones frente a sentencias: programar evaluando en lugar de ordenar
-16. Ligado de nombres frente a asignación destructiva de variables
-17. El concepto de estado y cómo lo maneja un lenguaje funcional
+9. ¿Qué es un paradigma de programación? Imperativo, orientado a objetos, funcional y lógico — **COTA HERNANDEZ, CHRISTIAN ARMANDO**
+10. Programación declarativa frente a imperativa: describir "qué" en lugar de "cómo" — **CRUZ SANCHEZ, KEVIN ALFREDO**
+11. Funciones puras: definición, ejemplos y contraejemplos — **CUEVAS MARQUEZ, PABLO ANGEL**
+12. Transparencia referencial y por qué facilita razonar sobre el código — **DEL ANGEL DEL ANGEL, EMMANUEL**
+13. Efectos secundarios: qué son y por qué la programación funcional busca controlarlos — **ESPAÑA PEREZ, MIGUEL ANGEL**
+14. Inmutabilidad: datos que no cambian y qué implica para el programador — **ESTRADA RODRIGUEZ, MELANI**
+15. Expresiones frente a sentencias: programar evaluando en lugar de ordenar — **FUENTES MONTAÑO, AXEL**
+16. Ligado de nombres frente a asignación destructiva de variables — **GARCIA CARO, CARLOS ALEJANDRO**
+17. El concepto de estado y cómo lo maneja un lenguaje funcional — **GARCIA RODRIGUEZ, MARCOS DANIEL**
 
 ## Funciones como valores
 
-18. Funciones de primera clase: pasar y devolver funciones como cualquier dato
-19. Funciones de orden superior: `map`, `filter` y `reduce` explicadas desde cero
-20. Funciones anónimas y expresiones lambda
-21. Composición de funciones: construir programas encadenando funciones pequeñas
-22. Currificación y aplicación parcial: una introducción con ejemplos
-23. *Closures* (clausuras): funciones que recuerdan su entorno
-24. El operador *pipe* de Elixir (`|>`) y la lectura de izquierda a derecha
+18. Funciones de primera clase: pasar y devolver funciones como cualquier dato — **GOMEZ CUEVAS, CARLOS**
+19. Funciones de orden superior: `map`, `filter` y `reduce` explicadas desde cero — **GONZALEZ CRISTOBAL, OMAR**
+20. Funciones anónimas y expresiones lambda — **GRANDE ORTEGA, MAXIMILIANO**
+21. Composición de funciones: construir programas encadenando funciones pequeñas — **HERNANDEZ CUADRAS, ANA CECILIA**
+22. Currificación y aplicación parcial: una introducción con ejemplos — **LARES MENA, ANGEL FERNANDO**
+23. *Closures* (clausuras): funciones que recuerdan su entorno — **LEPE GARCIA, CESAR**
+24. El operador *pipe* de Elixir (`|>`) y la lectura de izquierda a derecha — **LOPEZ MOLGADO, JORGE LUIS**
 
 ## Recursión
 
-25. Recursión como alternativa a los bucles: caso base y caso recursivo
-26. Factorial, Fibonacci y sumatoria: los ejemplos clásicos paso a paso
-27. Recorrer listas de forma recursiva
-28. Introducción a la recursión de cola y por qué importa
-29. Errores comunes al aprender recursión: falta de caso base y desbordamiento de pila
+25. Recursión como alternativa a los bucles: caso base y caso recursivo — **LUIS JUAN CAMACHO, CESAR ADRIAN**
+26. Factorial, Fibonacci y sumatoria: los ejemplos clásicos paso a paso — **MALDONADO AVENDAÑO, VALERIA**
+27. Recorrer listas de forma recursiva — **MARTINEZ GARCIA, SEBASTIAN**
+28. Introducción a la recursión de cola y por qué importa — **MARTINEZ MARTA, JORGE EMILIANO**
+29. Errores comunes al aprender recursión: falta de caso base y desbordamiento de pila — **MEDRANO VARGAS, STEPHANIE ARIANA**
 
 ## Datos y coincidencia de patrones
 
-30. Listas enlazadas inmutables: `cons`, cabeza y cola
-31. Tuplas y registros: agrupar datos sin clases
-32. *Pattern matching* (coincidencia de patrones): una introducción
-33. Tipos algebraicos de datos sencillos: enumeraciones y variantes
-34. Representar la ausencia de valor sin `null`: `Maybe`, `Option` y `nil`
+30. Listas enlazadas inmutables: `cons`, cabeza y cola — **MIJANGOS GARIBAY, EMILY**
+31. Tuplas y registros: agrupar datos sin clases — **NEYRA MENDEZ, ANGEL CASSIEL**
+32. *Pattern matching* (coincidencia de patrones): una introducción — **NOLASCO AYALA, GAEL**
+33. Tipos algebraicos de datos sencillos: enumeraciones y variantes — **PADILLA, DYLAN ALEXIS**
+34. Representar la ausencia de valor sin `null`: `Maybe`, `Option` y `nil` — **PARRA ESPINOZA, HERIB ARTURO**
 
 ## Primer contacto con los lenguajes
 
-35. Primeros pasos en Haskell con GHCi
-36. Primeros pasos en Elixir con IEx y Mix
-37. Primeros pasos en Clojure y la programación dirigida por REPL
-38. Instalación y configuración de entornos funcionales (Erlang, GHC, Elixir, Clojure)
+35. Primeros pasos en Haskell con GHCi — **PEREZ FLORES, ANDRES MANUEL**
+36. Primeros pasos en Elixir con IEx y Mix — **PINEDA GOMEZ, RICARDO ALEJANDRO**
+37. Primeros pasos en Clojure y la programación dirigida por REPL — **RAMIREZ BAUTISTA, IRENE**
+38. Instalación y configuración de entornos funcionales (Erlang, GHC, Elixir, Clojure) — **RODRIGUEZ GALLARDO, HOWARD**
 
 ## Contexto e industria
 
-39. Programación funcional en lenguajes de uso común: JavaScript, Python y Java Streams
-40. Dónde se usa la programación funcional hoy: WhatsApp (Erlang), Discord (Elixir) y Nubank (Clojure) --- panorama introductorio
+39. Programación funcional en lenguajes de uso común: JavaScript, Python y Java Streams — **SALCIDO MAGAÑA, MONICA**
+40. Dónde se usa la programación funcional hoy: WhatsApp (Erlang), Discord (Elixir) y Nubank (Clojure) --- panorama introductorio — **SANTOYO TORRES, SANTOS ABRAHAM**
 
 \newpage
 
