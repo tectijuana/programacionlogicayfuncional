@@ -25,6 +25,7 @@ Lazy:   pide el siguiente → recibe 1 → pide el siguiente → recibe 2 → ..
 |---------|-------------|
 | `lazy.hs` | Listas infinitas en Haskell: Fibonacci, primos, comparación de memoria |
 | `stream.exs` | Streams lazy en Elixir: pipeline sobre millones de registros IMSS |
+| [PRIMEROS_PASOS_ELIXIR_IEX_MIX.md](PRIMEROS_PASOS_ELIXIR_IEX_MIX.md) | Investigación: uso inicial del REPL IEx y proyectos con Mix |
 
 ---
 
