@@ -28,7 +28,7 @@ Classroom. Hay **16 temas para 16 estudiantes**: asignación uno a uno.
 
 ## Asignación de temas (corte 08/09/26)
 
-Fuente de la lista de estudiantes: `research/26b-Programación_Lógica_y_Funcional_2pm.md`.
+Lista de estudiantes según el gradebook de Google Classroom (grupo 2pm, 16 estudiantes).
 
 | # | Estudiante | Tema asignado |
 |:-:|:-----------|:--------------|
