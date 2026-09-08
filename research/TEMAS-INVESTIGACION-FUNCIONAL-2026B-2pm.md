@@ -26,6 +26,29 @@ No se admiten temas repetidos ni variantes menores de un tema ya trabajado ni de
 un tema de la lista de las 4pm; el docente asigna o confirma el tema por Google
 Classroom. Hay **16 temas para 16 estudiantes**: asignación uno a uno.
 
+## Asignación de temas (corte 08/09/26)
+
+Fuente de la lista de estudiantes: `research/26b-Programación_Lógica_y_Funcional_2pm.md`.
+
+| # | Estudiante | Tema asignado |
+|:-:|:-----------|:--------------|
+| 1 | CASTRO REYES, LIZETH ROXANA | 1. Evaluación perezosa frente a evaluación estricta: qué se calcula y cuándo, con ejemplos en Haskell y Elixir |
+| 2 | CRUZ RANGEL, RAUL ANTONIO | 2. Fold a la izquierda y fold a la derecha (`foldl` / `foldr`): diferencias, asociatividad y cuándo usar cada uno |
+| 3 | DANIELS CEBALLOS, AXEL | 3. Listas por comprensión (*list comprehensions*): sintaxis y traducción a `map`/`filter` en Haskell, Elixir y Python |
+| 4 | DURAN PONCE, LUIS ADAO LEONEL | 4. Estructuras de datos persistentes e inmutables: cómo se "modifica" compartiendo memoria (Clojure, panorama introductorio) |
+| 5 | GALLEGOS HERNANDEZ, LEONARDO | 5. Introducción a las clases de tipos (*type classes*) de Haskell con `Eq`, `Ord` y `Show` |
+| 6 | ORENDAIN CAMACHO, DIEGO ALEJANDRO | 6. Inferencia de tipos Hindley-Milner: qué es, qué garantiza y qué lenguajes la usan (Haskell, OCaml) |
+| 7 | PECH GONZALEZ, LUIS ARIEL | 7. Funciones totales frente a funciones parciales: por qué se evitan `head` y `tail` sobre listas arbitrarias |
+| 8 | PEREZ LOPEZ, CARLOS IVAN | 8. El sistema de módulos y espacios de nombres: comparación introductoria entre Elixir, Haskell y OCaml (`.mli`) |
+| 9 | RODRIGUEZ MENDIVIL, FABIAN OSVALDO | 9. Control de flujo sin `if` anidados: guardas y expresiones `case` / `cond` en lenguajes funcionales |
+| 10 | RODRIGUEZ PERAZA, CARLOS ELIAB | 10. Manejo de errores funcional: `Either` / `Result` y el patrón "railway" frente a excepciones |
+| 11 | RUIZ SANCHEZ, JOSE MANUEL | 11. Flujos perezosos con `Stream` en Elixir: procesar colecciones grandes sin cargarlas en memoria |
+| 12 | TORRES MORENO, DIEGO ANTONIO | 12. Comparación de sintaxis: definir e invocar una misma función en Haskell, Elixir, OCaml, Clojure y Erlang |
+| 13 | VALDEZ AMPARO, ANDRES CARLOS | 13. Recursión de cola frente a bucles imperativos: medición de tiempo y memoria con un caso concreto (suma o Fibonacci) |
+| 14 | VALDEZ AMPARO, RICARDO DAVID | 14. El REPL como herramienta de aprendizaje: flujo de trabajo en GHCi, IEx y `clj`/`lein repl` |
+| 15 | VILLALOBOS LEON, CESAR ALEJANDRO | 15. Un intérprete mínimo de expresiones aritméticas: árbol de sintaxis y evaluación recursiva con *pattern matching* |
+| 16 | VILLANUEVA BARAJAS, JOSUE | 16. Validación de datos mexicanos (CURP y RFC) con funciones puras y de orden superior: `map`, `filter` y composición |
+
 ## Entrega esperada
 
 Carpeta personal dentro de `research/<nombre-del-tema>/` con:
@@ -59,31 +82,31 @@ Carpeta personal dentro de `research/<nombre-del-tema>/` con:
 
 ## Evaluación y modelo de cómputo
 
-1. Evaluación perezosa frente a evaluación estricta: qué se calcula y cuándo, con ejemplos en Haskell y Elixir
-2. Fold a la izquierda y fold a la derecha (`foldl` / `foldr`): diferencias, asociatividad y cuándo usar cada uno
-3. Listas por comprensión (*list comprehensions*): sintaxis y traducción a `map`/`filter` en Haskell, Elixir y Python
-4. Estructuras de datos persistentes e inmutables: cómo se "modifica" compartiendo memoria (Clojure, panorama introductorio)
+1. Evaluación perezosa frente a evaluación estricta: qué se calcula y cuándo, con ejemplos en Haskell y Elixir — **CASTRO REYES, LIZETH ROXANA**
+2. Fold a la izquierda y fold a la derecha (`foldl` / `foldr`): diferencias, asociatividad y cuándo usar cada uno — **CRUZ RANGEL, RAUL ANTONIO**
+3. Listas por comprensión (*list comprehensions*): sintaxis y traducción a `map`/`filter` en Haskell, Elixir y Python — **DANIELS CEBALLOS, AXEL**
+4. Estructuras de datos persistentes e inmutables: cómo se "modifica" compartiendo memoria (Clojure, panorama introductorio) — **DURAN PONCE, LUIS ADAO LEONEL**
 
 ## Tipos e inferencia (primer contacto)
 
-5. Introducción a las clases de tipos (*type classes*) de Haskell con `Eq`, `Ord` y `Show`
-6. Inferencia de tipos Hindley-Milner: qué es, qué garantiza y qué lenguajes la usan (Haskell, OCaml)
-7. Funciones totales frente a funciones parciales: por qué se evitan `head` y `tail` sobre listas arbitrarias
-8. El sistema de módulos y espacios de nombres: comparación introductoria entre Elixir, Haskell y OCaml (`.mli`)
+5. Introducción a las clases de tipos (*type classes*) de Haskell con `Eq`, `Ord` y `Show` — **GALLEGOS HERNANDEZ, LEONARDO**
+6. Inferencia de tipos Hindley-Milner: qué es, qué garantiza y qué lenguajes la usan (Haskell, OCaml) — **ORENDAIN CAMACHO, DIEGO ALEJANDRO**
+7. Funciones totales frente a funciones parciales: por qué se evitan `head` y `tail` sobre listas arbitrarias — **PECH GONZALEZ, LUIS ARIEL**
+8. El sistema de módulos y espacios de nombres: comparación introductoria entre Elixir, Haskell y OCaml (`.mli`) — **PEREZ LOPEZ, CARLOS IVAN**
 
 ## Control de flujo y manejo de errores
 
-9. Control de flujo sin `if` anidados: guardas y expresiones `case` / `cond` en lenguajes funcionales
-10. Manejo de errores funcional: `Either` / `Result` y el patrón "railway" frente a excepciones
-11. Flujos perezosos con `Stream` en Elixir: procesar colecciones grandes sin cargarlas en memoria
+9. Control de flujo sin `if` anidados: guardas y expresiones `case` / `cond` en lenguajes funcionales — **RODRIGUEZ MENDIVIL, FABIAN OSVALDO**
+10. Manejo de errores funcional: `Either` / `Result` y el patrón "railway" frente a excepciones — **RODRIGUEZ PERAZA, CARLOS ELIAB**
+11. Flujos perezosos con `Stream` en Elixir: procesar colecciones grandes sin cargarlas en memoria — **RUIZ SANCHEZ, JOSE MANUEL**
 
 ## Práctica, medición y comparación
 
-12. Comparación de sintaxis: definir e invocar una misma función en Haskell, Elixir, OCaml, Clojure y Erlang
-13. Recursión de cola frente a bucles imperativos: medición de tiempo y memoria con un caso concreto (suma o Fibonacci)
-14. El REPL como herramienta de aprendizaje: flujo de trabajo en GHCi, IEx y `clj`/`lein repl`
-15. Un intérprete mínimo de expresiones aritméticas: árbol de sintaxis y evaluación recursiva con *pattern matching*
-16. Validación de datos mexicanos (CURP y RFC) con funciones puras y de orden superior: `map`, `filter` y composición
+12. Comparación de sintaxis: definir e invocar una misma función en Haskell, Elixir, OCaml, Clojure y Erlang — **TORRES MORENO, DIEGO ANTONIO**
+13. Recursión de cola frente a bucles imperativos: medición de tiempo y memoria con un caso concreto (suma o Fibonacci) — **VALDEZ AMPARO, ANDRES CARLOS**
+14. El REPL como herramienta de aprendizaje: flujo de trabajo en GHCi, IEx y `clj`/`lein repl` — **VALDEZ AMPARO, RICARDO DAVID**
+15. Un intérprete mínimo de expresiones aritméticas: árbol de sintaxis y evaluación recursiva con *pattern matching* — **VILLALOBOS LEON, CESAR ALEJANDRO**
+16. Validación de datos mexicanos (CURP y RFC) con funciones puras y de orden superior: `map`, `filter` y composición — **VILLANUEVA BARAJAS, JOSUE**
 
 \newpage
 
