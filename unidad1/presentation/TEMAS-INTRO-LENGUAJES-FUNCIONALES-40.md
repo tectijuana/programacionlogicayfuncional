@@ -39,6 +39,21 @@ de evaluación y sintaxis, (3) sistema de tipos / runtime, (4) demo en vivo + ca
 Roster en orden de lista; bloques de 4. Roles internos: **(1)** contexto/historia ·
 **(2)** modelo de cómputo y sintaxis · **(3)** tipos/runtime · **(4)** demo en vivo + caso real.
 
+### Carpeta de cada equipo
+
+| Equipo | Lenguaje | Carpeta (README de plantilla) |
+|:-:|:--|:--|
+| 1 | Lisp / Scheme | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo1 |
+| 2 | Haskell | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo2 |
+| 3 | Erlang / OTP | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo3 |
+| 4 | Elixir | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo4 |
+| 5 | OCaml | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo5 |
+| 6 | Clojure | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo6 |
+| 7 | Scala 3 | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo7 |
+| 8 | F# | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo8 |
+| 9 | Gleam | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo9 |
+| 10 | Elm | https://github.com/tectijuana/programacionlogicayfuncional/tree/main/unidad1/presentation/equipo10 |
+
 ### Equipo 1 — Lisp / Scheme
 | Rol | Estudiante |
 |:-:|:--|
