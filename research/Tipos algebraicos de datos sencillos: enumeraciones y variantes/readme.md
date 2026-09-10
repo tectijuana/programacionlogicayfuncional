@@ -31,11 +31,9 @@
 
 ## 1. Introducción
 
-Uno de los pilares de los lenguajes de programación funcional modernos —como Haskell, OCaml, F# o Elm— es su sistema de tipos, y dentro de este, los **tipos algebraicos de datos** (*Algebraic Data Types*, ADT) ocupan un lugar central. A diferencia de los lenguajes imperativos clásicos, donde definir una nueva estructura de datos suele implicar clases, herencia o registros con banderas de control, la programación funcional ofrece un mecanismo declarativo, conciso y seguro en tiempo de compilación para modelar datos que pueden tomar **una entre varias formas posibles**.
+Uno de los pilares de los lenguajes de programación funcional modernos, como Haskell, OCaml, F# o Elm, es su sistema de tipos, y dentro de este, los **tipos algebraicos de datos** (*Algebraic Data Types* por sus siglas en inglés, ADT) ocupan un lugar central. A diferencia de los lenguajes imperativos clásicos, donde definir una nueva estructura de datos suele implicar clases, herencia o registros con banderas de control, la programación funcional ofrece un mecanismo declarativo, conciso y seguro en tiempo de compilación para modelar datos que pueden tomar **una entre varias formas posibles**.
 
-Este documento se enfoca en el caso más sencillo e introductorio de los ADT: las **enumeraciones** (conjuntos cerrados de valores constantes) y las **variantes** (constructores que además transportan datos). El objetivo es comprender su fundamento matemático —la noción de "álgebra" de tipos suma y tipos producto—, su sintaxis en distintos lenguajes funcionales y su relación directa con otro pilar de la programación funcional: la **coincidencia de patrones** (*pattern matching*), que permite manipular estos datos de forma segura y exhaustiva.
-
-El tema se relaciona directamente con los contenidos de Programación Lógica y Funcional porque los ADT son la base sobre la cual se construyen estructuras de datos inmutables (listas, árboles, opcionales, resultados de error) que luego se procesan mediante funciones puras y recursión, en lugar de mutación de estado.
+Este documento se enfoca en el caso más sencillo e introductorio de los ADT: las **enumeraciones** (conjuntos cerrados de valores constantes) y las **variantes** (constructores que además transportan datos). El objetivo es comprender su fundamento matemático, la noción de "álgebra" de tipos suma y tipos producto, su sintaxis en distintos lenguajes funcionales y su relación directa con otro pilar de la programación funcional: la **coincidencia de patrones**, que permite manipular estos datos de forma segura y exhaustiva.
 
 ---
 
@@ -49,7 +47,7 @@ De manera informal, un ADT se declara enumerando uno o más **constructores** (t
 
 ### 2.2 Enumeraciones: el caso más simple
 
-Una **enumeración** es un tipo algebraico en el que todos los constructores son *nularios*, es decir, no reciben ningún argumento [3]. Cada constructor representa simplemente una etiqueta o valor constante distinto. Este es el caso más simple —y más cercano a los `enum` de lenguajes como C, Java o C++— pero con la ventaja de integrarse de forma nativa con el sistema de tipos y el *pattern matching* del lenguaje [4].
+Una **enumeración** es un tipo algebraico en el que todos los constructores son *nularios*, es decir, no reciben ningún argumento [3]. Cada constructor representa simplemente una etiqueta o valor constante distinto. Este es el caso más simple, y más cercano a los `enum` de lenguajes como C, Java o C++, pero con la ventaja de integrarse de forma nativa con el sistema de tipos y el *pattern matching* del lenguaje [4].
 
 Ejemplo conceptual (días de la semana):
 
@@ -57,7 +55,7 @@ Ejemplo conceptual (días de la semana):
 type dia = Lunes | Martes | Miércoles | Jueves | Viernes | Sábado | Domingo
 ```
 
-Aquí `dia` es el **tipo**, y `Lunes`, `Martes`, etc., son los siete **constructores** posibles. Ningún constructor lleva datos adicionales: el conjunto de valores del tipo `dia` es exactamente esos siete elementos, ni uno más ni uno menos (a diferencia de representar los días con enteros, donde valores como `-5` o `42` serían "días" inválidos pero técnicamente representables).
+Aquí `dia` es el **tipo**, y `Lunes`, `Martes`, etc., son los siete **constructores** posibles. Ningún constructor lleva datos adicionales: el conjunto de valores del tipo `dia` es exactamente esos siete elementos, ni uno más ni uno menos.
 
 ### 2.3 Variantes: constructores con datos asociados
 
@@ -178,7 +176,7 @@ safeDiv x y = OK (x / y)
 -- safeDiv 10 0 => Failure
 ```
 
-Este ejemplo —adaptado del tutorial oficial *School of Haskell*— ilustra el paso de una simple enumeración a una variante real: el constructor `OK` transporta un `Double`, mientras que `Failure` no transporta nada, combinando ambos estilos en un mismo tipo [7]. Esta misma idea es la base del tipo `Maybe` de la biblioteca estándar de Haskell, usado para representar cómputos que pueden fallar sin recurrir a excepciones ni a valores nulos.
+Este ejemplo adaptado del tutorial oficial *School of Haskell*, ilustra el paso de una simple enumeración a una variante real: el constructor `OK` transporta un `Double`, mientras que `Failure` no transporta nada, combinando ambos estilos en un mismo tipo [7]. Esta misma idea es la base del tipo `Maybe` de la biblioteca estándar de Haskell, usado para representar cómputos que pueden fallar sin recurrir a excepciones ni a valores nulos.
 
 ### 3.4 Variante con datos (OCaml) — figuras geométricas
 
@@ -212,7 +210,7 @@ let rec suma = function
   | Nodo (v, izq, der) -> v + suma izq + suma der
 ```
 
-Este patrón —un tipo polimórfico `'a tree` con un caso base `Leaf` y un caso recursivo `Node`— es el ejemplo estándar utilizado para mostrar cómo los ADT combinan constructores con y sin datos, polimorfismo y recursión en una sola declaración [8].
+Este patrón un tipo polimórfico `'a tree` con un caso base `Leaf` y un caso recursivo `Node`, es el ejemplo estándar utilizado para mostrar cómo los ADT combinan constructores con y sin datos, polimorfismo y recursión en una sola declaración [8].
 
 ---
 
@@ -229,7 +227,7 @@ Los tipos algebraicos de datos no son un tema aislado dentro de Programación L�
 
 ## 5. Conclusiones
 
-Los tipos algebraicos de datos —y en particular su forma más sencilla, las enumeraciones y las variantes— constituyen una de las herramientas más poderosas y a la vez más accesibles de la programación funcional. Una enumeración modela un conjunto cerrado y finito de posibilidades sin datos adicionales, mientras que una variante extiende esa idea permitiendo que cada posibilidad transporte información propia. Ambas construcciones se explican mediante dos operaciones algebraicas simples —suma y producto— lo que da al concepto su nombre y su solidez matemática.
+Los tipos algebraicos de datos constituyen una de las herramientas más poderosas y a la vez más accesibles de la programación funcional. Una enumeración modela un conjunto cerrado y finito de posibilidades sin datos adicionales, mientras que una variante extiende esa idea permitiendo que cada posibilidad transporte información propia. Ambas construcciones se explican mediante dos operaciones algebraicas simples, suma y producto, lo que da al concepto su nombre y su solidez matemática.
 
 Más allá de su fundamento teórico, su relevancia práctica es enorme: permiten representar el dominio de un problema de forma precisa, detectar en tiempo de compilación los casos no contemplados gracias al *pattern matching* exhaustivo, y evitar errores comunes en otros paradigmas, como el uso de valores nulos o banderas de estado ambiguas. Por ello, dominar este tema resulta indispensable antes de abordar estructuras más avanzadas de la programación funcional, como los tipos recursivos, los tipos polimórficos y los tipos algebraicos generalizados (GADT).
 
