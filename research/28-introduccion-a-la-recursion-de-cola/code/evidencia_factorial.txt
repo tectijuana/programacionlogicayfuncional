@@ -1,0 +1,5 @@
+=== Factorial Normal vs Cola ===
+factorial(10) Normal: 3628800
+factorial(10) Cola:   3628800
+factorial(20) Normal: 2432902008176640000
+factorial(20) Cola:   2432902008176640000

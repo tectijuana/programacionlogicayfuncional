@@ -1,0 +1,5 @@
+=== Suma de Lista Normal vs Cola ===
+Lista: [1, 2, 3, 4, 5]
+Normal: 15
+Cola:   15
+Lista de 100000 elementos: 5000050000
