@@ -58,7 +58,7 @@ Salida esperada:
 
 ## Grabación de respaldo (asciinema cloud)
 
-- URL: _(pegar la URL de asciinema.org tras `asciinema upload`)_
+- URL: _(https://asciinema.org/a/Qr0dumJwIND4f6rN)_
 - Cómo: `asciinema rec demo.cast` → `asciinema upload demo.cast` (o `asciinema auth` y `asciinema rec`)
 
 ## Diapositivas
