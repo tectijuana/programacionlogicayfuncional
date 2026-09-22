@@ -69,9 +69,14 @@ val it: int list = [4; 16; 36; 64; 100]
 
 ## Bibliografía (IEEE)
 
-1. _(fuente 1)_
-2. _(fuente 2)_
-3. _(fuente 3)_
+[1] G. Tan, "A brief history of functional programming," Penn State University, 
+    [En línea]. Disponible en: https://www.cse.psu.edu/~gxt29/historyOfFP/historyOfFP.html.
+[2] I. V. Barrios, "Programación funcional," Platzi, [En línea]. Disponible en: 
+    https://platzi.com/blog/programacion-funcional.
+[3] Coco Solution, "Introducción a la programación funcional," [En línea]. 
+    Disponible en: https://cocosolution.com/blog/programacion-funcional. 
+[4] Microsoft, "F# language reference," [En línea]. Disponible en: 
+    https://docs.microsoft.com/en-us/dotnet/fsharp/.
 
 ---
 
