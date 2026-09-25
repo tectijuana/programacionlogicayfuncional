@@ -13,9 +13,9 @@
 ## Datos del lenguaje
 
 - **Año / origen:** 1958 (Lisp, John McCarthy) · Scheme 1975 (Sussman y Steele)
-- **Creador(es):** _(completar)_
+- **Creador(es):** _John McCarthy (Lisp, 1958) y Gerald J. Sussman y Guy L. Steele Jr. (Scheme, 1975)._
 - **Modelo de evaluación:** _(estricto; `delay`/`force` para perezoso)_
-- **Sistema de tipos:** _(dinámico; completar)_
+- **Sistema de tipos:** _Dinámico y fuertemente tipado (los tipos se verifican en tiempo de ejecución, no en compilación)._
 - **REPL / herramienta:** `racket` o `mit-scheme` / `guile`
 - **Caso real verificado (obligatorio en pantalla):** IA simbólica histórica; Scheme como lenguaje de *Structure and Interpretation of Computer Programs* (MIT). _(fuente IEEE abajo)_
 
@@ -38,10 +38,11 @@ sudo apt install racket          # Linux
 racket -e '(for ([i (in-range 1 11)]) (displayln i))'
 
 # Segundo ejemplo idiomático
-# (completar: p. ej. suma recursiva de una lista)
+# (suma recursiva de una lista)
+racket -e '(define (suma-lista lst) (if (null? lst) 0 (+ (car lst) (suma-lista (cdr lst))))) (displayln (suma-lista (list 1 2 3 4 5)))'
 ```
 
-Salida esperada:
+Salida esperada 1 :
 
 ```
 1
@@ -55,10 +56,14 @@ Salida esperada:
 9
 10
 ```
+Salida esperada 2 :
+```
+15
+```
 
 ## Grabación de respaldo (asciinema cloud)
 
-- URL: _(pegar la URL de asciinema.org tras `asciinema upload`)_
+- URL: _(https://asciinema.org/a/Qr0dumJwIND4f6rN)_
 - Cómo: `asciinema rec demo.cast` → `asciinema upload demo.cast` (o `asciinema auth` y `asciinema rec`)
 
 ## Diapositivas
@@ -66,10 +71,17 @@ Salida esperada:
 - `slides.pdf` — 5–8 diapositivas, subir a esta carpeta **antes** de la sesión.
 
 ## Bibliografía (IEEE)
+[1] J. McCarthy, "Recursive functions of symbolic expressions and their computation by machine, Part I," Communications of the ACM, vol. 3, no. 4, pp. 184–195, Apr. 1960.
 
-1. _(fuente 1)_
-2. _(fuente 2)_
-3. _(fuente 3)_
+[2] H. Abelson, G. J. Sussman, and J. Sussman, Structure and Interpretation of Computer Programs, 2nd ed. Cambridge, MA, USA: MIT Press, 1996.
+
+[3] H. Abelson, G. J. Sussman, and J. Sussman, Structure and Interpretation of Computer Programs, JavaScript ed. Cambridge, MA, USA: MIT Press, 2022.
+
+[4] G. J. Sussman and G. L. Steele Jr., "Scheme: An interpreter for extended lambda calculus," MIT AI Lab, Cambridge, MA, USA, AI Memo 349, Dec. 1975.
+
+[5] G. J. Sussman and G. L. Steele Jr., "Scheme: An interpreter for extended lambda calculus," Higher-Order and Symbolic Computation, vol. 11, no. 4, pp. 405–439, Dec. 1998.
+
+[6] W. Sack, "A matter of interpretation: A review of Structure and Interpretation of Computer Programs (JavaScript edition)," Computational Culture, no. 9, 2023.
 
 ---
 
