@@ -1,3 +1,6 @@
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/d2013d5d-bdf3-4dbe-abfb-8b94f2be964a" />
+
+
 # Práctica — Erlang en acción con micro:bit y sensores reales
 
 > **Tema 2.1 · Programación Lógica y Funcional (ISC) · TecNM Campus Tijuana**
