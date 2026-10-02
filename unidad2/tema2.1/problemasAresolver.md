@@ -175,3 +175,105 @@ WhatsApp y Discord no usan Erlang/Elixir para todo, sino para la parte del siste
 donde las señales 3 (flujo de mensajes) y "muchos independientes que pueden fallar"
 dominan. Elegir el paradigma por el problema, y no por moda, es la habilidad que se
 espera de un ingeniero.
+
+---
+
+## Quiz — ¿Ya sabes reconocer un problema funcional?
+
+Responde sin ver la guía. Las respuestas están al final, ocultas: ábrelas solo
+cuando hayas terminado.
+
+**1.** Describes tu solución así: *"encuentra todas las formas de acomodar a los
+alumnos en los salones sin que choquen horarios"*. ¿Qué paradigma es el más natural?
+
+- a) Funcional
+- b) Lógico (Prolog / CLP(FD))
+- c) Imperativo
+
+**2.** ¿Qué señal funcional aparece en este pseudocódigo de BASIC?
+
+```text
+S = 0
+FOR I = 1 TO N
+    S = S + I * I
+NEXT I
+```
+
+- a) Señal 2 — dato recursivo
+- b) Señal 4 — acumulador disfrazado (*fold*)
+- c) Ninguna: `S` cambia, así que es estado mutable
+
+**3.** Cap. 9, P11: 10 vendedores, sueldo base de \$9,000 más 5% de comisión sobre
+sus ventas; calcular lo que gana cada uno. ¿Qué señal domina?
+
+- a) Señal 3 — pipeline de datos
+- b) Señal 5 — un error cuesta caro, solo eso
+- c) Es un foco rojo: hay que modificar la lista de vendedores
+
+**4.** Verdadero o falso: *"Si un problema prende un foco rojo, está prohibido
+resolverlo en Erlang"*.
+
+**5.** ¿Cuál de estos problemas prende un **foco rojo** para el enfoque funcional?
+
+- a) Cap. 7, P85 — la conjetura de Collatz
+- b) Cap. 6, P81 — calcular la inversa de una matriz
+- c) Cap. 7, P14 — primos palíndromos
+
+**6.** Escribe la **frase** (Paso 1) que describe el Cap. 7, P14: encontrar los
+números primos que siguen siendo primos al invertir sus dígitos.
+
+**7.** En Erlang, `X = 5.` seguido de `X = 10.` produce un error. ¿Cuál de las
+cinco señales se apoya directamente en esa garantía para que la prueba rápida
+(Paso 4) funcione?
+
+**8.** Un sistema recibe lecturas de 200 sensores sísmicos; si un sensor se cae, el
+sistema debe seguir funcionando y reiniciarlo. ¿Por qué Erlang/OTP es buena opción
+aquí y no solo "cualquier lenguaje funcional"?
+
+**9.** Cap. 4, P2 pide un **menú** para convertir grados ↔ radianes. Si decides
+resolverlo en Erlang, ¿cómo organizas el código para respetar el paradigma?
+
+**10.** Completa el comentario de justificación para el **Cap. 7, P85** (Collatz):
+
+```erlang
+%% Problema: Cap. 7, P85 — conjetura de Collatz
+%% Frase:     ...
+%% Señales:   ...
+%% Focos rojos: ...
+```
+
+<details>
+<summary><strong>Respuestas</strong> (ábrelas al terminar)</summary>
+
+1. **b)** "Encuentra los que cumplan…" es la frase típica del paradigma lógico.
+   Es un problema de restricciones (compáralo con Cap. 13, P33).
+2. **b)** `S` es un acumulador: equivale a
+   `lists:foldl(fun(I, S) -> S + I * I end, 0, lists:seq(1, N))`.
+   Que "cambie" no lo vuelve estado: cada vuelta produce un valor nuevo.
+3. **a)** Lista de ventas → calcular comisión → sumar al sueldo base. Es un `map`
+   sobre la lista; no se modifica nada, se produce una lista nueva.
+4. **Falso.** Se vale; solo debes explicar cómo lo resolviste (por ejemplo,
+   separando el núcleo puro de la entrada/salida).
+5. **b)** La inversa de una matriz se calcula con muchas modificaciones en su
+   lugar; en funcional implica copiar la matriz en cada paso. Collatz y los primos
+   palíndromos dependen solo de la entrada.
+6. Algo como: *"los primos de la lista cuyo número invertido también es primo"*.
+   Es un `filter` con dos condiciones.
+7. La garantía de **asignación única** es la que permite contestar "sí" a
+   *"¿puedo nombrar cada valor intermedio sin reasignar?"*. Se relaciona sobre
+   todo con la **señal 1**: si nada cambia, la salida solo depende de la entrada.
+8. Porque además de inmutabilidad, OTP ofrece **procesos ligeros y supervisores**
+   (*"let it crash"*): cada sensor es un proceso y un supervisor lo reinicia si
+   falla. Esa tolerancia a fallos no la da cualquier lenguaje funcional.
+9. Cálculos (`grados_a_radianes/1`, `radianes_a_grados/1`) como **funciones
+   puras**; una función aparte, delgada, que lee la opción del teclado, llama a la
+   función pura e imprime. Así el foco rojo queda aislado.
+10. Ejemplo de respuesta:
+    ```erlang
+    %% Problema: Cap. 7, P85 — conjetura de Collatz
+    %% Frase:     "la secuencia de N es N seguido de la secuencia del siguiente término, hasta llegar a 1"
+    %% Señales:   1 (solo depende de N), 2 (definición recursiva)
+    %% Focos rojos: ninguno
+    ```
+
+</details>
