@@ -19,6 +19,7 @@ y dominar el pattern matching como alternativa funcional a los `if`/`switch` imp
 | [`TUTORIAL_ERLANG.md`](TUTORIAL_ERLANG.md) | **Tutorial consolidado básico → intermedio → avanzado** (13 ejemplos verificados en OTP 25 y 26) |
 | [`tutorial_erlang/`](tutorial_erlang/) | Código del tutorial + `verificar.sh` |
 | [`problemasAresolver.md`](problemasAresolver.md) | **Criterio para decidir cuándo usar un lenguaje funcional** + banco de problemas (Spencer / TecNM) |
+| [`erlangmbit.md`](erlangmbit.md) | **Práctica con hardware:** micro:bit + Erlang/OTP (sensores, supervisor, let it crash) + 15 prácticas con Arduino, Pico W y ESP32 |
 
 > El `TUTORIAL_ERLANG.md` recorre de una sola vez la ruta completa: tipos y
 > pattern matching (nivel 1), procesos y `gen_server` (nivel 2), supervisión,
