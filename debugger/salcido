@@ -1,0 +1,15 @@
+%%%-------------------------------------------------------------------
+%%% Programación Lógica y Funcional · TecNM Tijuana
+%%% Tema: Depuración de programas Erlang
+%%% Alumno: Salcido Magaña Monica
+%%%
+%%% Módulo de practica para la elaboracion de 10 programas en erlang
+%%%
+%%% saluda/1 funciona siempre.
+%%%-------------------------------------------------------------------
+
+-module(salcido).
+-export([saludo/0]).
+
+saludo() ->
+    io:format("Hola, Monica!~n").
