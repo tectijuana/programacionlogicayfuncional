@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flota40 · Telemetría y mando</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --mut:#666; --line:#ddd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14161a; --fg:#e8e8e8; --mut:#999; --line:#333; } }
+  body { margin:0; font:14px system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:10px 16px; display:flex; gap:16px; flex-wrap:wrap; align-items:baseline; border-bottom:1px solid var(--line); }
+  h1 { font-size:16px; margin:0; }
+  .k { color:var(--mut); } b { font-variant-numeric:tabular-nums; }
+  #app { display:grid; grid-template-columns:1fr 340px; height:calc(100vh - 44px); }
+  #map { height:100%; }
+  #lista { overflow:auto; border-left:1px solid var(--line); }
+  table { border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums; }
+  th,td { padding:4px 8px; text-align:right; border-bottom:1px solid var(--line); }
+  th { position:sticky; top:0; background:var(--bg); }
+  td:last-child,th:last-child { text-align:left; }
+  .sos { color:#d62828; font-weight:700; } .sin_senal { color:var(--mut); }
+  h2 { font-size:13px; margin:12px 8px 4px; } #ev { list-style:none; margin:0; padding:0 8px 12px; font-size:12px; } #ev li { padding:2px 0; border-bottom:1px solid var(--line); }
+  @media (max-width:760px) { #app { grid-template-columns:1fr; grid-template-rows:50vh 1fr; } #lista { border-left:0; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Flota40 · Telemetría y mando</h1>
+  <span><span class="k">semis</span> <b id="n">0</b></span>
+  <span><span class="k">SOS</span> <b id="nsos">0</b></span>
+  <span><span class="k">sin señal</span> <b id="nmuerto">0</b></span>
+  <span><span class="k">paquetes UDP</span> <b id="pk">0</b></span>
+</header>
+<div id="app"><div id="map"></div><div id="lista"><table><thead><tr><th>ID</th><th>km/h</th><th>sats</th><th>hdop</th><th>edad</th><th>estado</th></tr></thead><tbody id="tb"></tbody></table><h2>Eventos</h2><ul id="ev"></ul></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([23.6, -102.5], 5);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '© OpenStreetMap'}).addTo(map);
+const color = {rodando:'#2a9d8f', detenido:'#e9a100', sos:'#d62828', sin_senal:'#888'};
+const marcas = new Map();
+
+async function tick() {
+  try {
+    const d = await (await fetch('/flota.json', {cache:'no-store'})).json();
+    document.getElementById('n').textContent = d.semis.length;
+    document.getElementById('pk').textContent = d.paquetes;
+    document.getElementById('nsos').textContent = d.semis.filter(s => s.estado === 'sos').length;
+    document.getElementById('nmuerto').textContent = d.semis.filter(s => s.estado === 'sin_senal').length;
+    const tb = document.getElementById('tb'); tb.textContent = '';
+    for (const s of d.semis) {
+      let m = marcas.get(s.id);
+      if (!m) { m = L.circleMarker([s.lat, s.lon], {radius:7, weight:1, fillOpacity:.85}).addTo(map); marcas.set(s.id, m); }
+      m.setLatLng([s.lat, s.lon]).setStyle({color:color[s.estado], fillColor:color[s.estado]})
+       .bindTooltip('semi ' + s.id + ' · ' + s.kmh + ' km/h · ' + s.estado);
+      const tr = tb.insertRow(); tr.className = s.estado;
+      for (const v of [s.id, s.kmh, s.sats, s.hdop, s.edad + ' s', s.estado]) tr.insertCell().textContent = v;
+    }
+  } catch (e) { /* servidor caido: reintenta */ }
+}
+async function eventos() {
+  try {
+    const e = await (await fetch('/eventos.json', {cache:'no-store'})).json();
+    const ul = document.getElementById('ev'); ul.textContent = '';
+    for (const x of e) { const li = document.createElement('li');
+      li.textContent = new Date(x.hora).toLocaleTimeString() + ' · ' + x.tipo + ' · semi ' + x.id + ' ' + x.detalle;
+      if (x.tipo === 'sos' || x.tipo === 'cmd_fallido') li.className = 'sos'; ul.appendChild(li); }
+  } catch (e) {}
+}
+tick(); eventos(); setInterval(tick, 1000); setInterval(eventos, 2000);
+</script>
+</body>
+</html>
