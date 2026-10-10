@@ -57,7 +57,7 @@ handle_info({udp, _, _, _, <<"CMD|", Resto/binary>>}, S = #s{port = Port}) when 
 handle_info({Port, {data, {eol, <<"ACK,", Seq/binary>>}}}, S = #s{port = Port, id = Id, sock = Sock}) ->
     %% El micro:bit confirmo que aplico la orden -> acuse a la central.
     gen_udp:send(Sock, flota_cfg:host(), ?PUERTO,
-                 iolist_to_binary(io_lib:format("ACK|~b|~s", [Id, string:trim(Seq)]))),
+                 iolist_to_binary(io_lib:format("ACK|~b|~s", [Id, quitar_fin_de_linea(Seq)]))),
     {noreply, S};
 handle_info({Port, {data, {eol, Linea}}}, S = #s{port = Port}) ->
     {noreply, procesar(parsear(Linea), S)};
@@ -97,11 +97,14 @@ abrir_cmd(Cmd) ->
 flag_stty() ->
     case os:type() of {unix, darwin} -> "-f"; _ -> "-F" end.
 
+%% string:trim/1 revienta (badarg) con bytes que no son UTF-8 (ruido al conectar el cable).
+quitar_fin_de_linea(Bin) -> binary:replace(Bin, [<<"\r">>, <<"\n">>], <<>>, [global]).
+
 %% Linea del micro:bit: <<"12,19.43000,-99.13000,85,12,9,rodando\r">>
 %%   seq,lat,lon,kmh,hdop10,sats,estado   -> se reenvia tal cual a la central (que valida).
 %% Aqui solo se descarta lo que no tiene la FORMA correcta; la confianza en el dato es de fix.erl.
 parsear(Linea) ->
-    case binary:split(string:trim(Linea), <<",">>, [global]) of
+    case binary:split(quitar_fin_de_linea(Linea), <<",">>, [global]) of
         [Seq, La, Lo, V, H, N, E] ->
             try {ok, binary_to_integer(Seq), binary_to_float(La), binary_to_float(Lo),
                  binary_to_integer(V), binary_to_integer(H), binary_to_integer(N), E}

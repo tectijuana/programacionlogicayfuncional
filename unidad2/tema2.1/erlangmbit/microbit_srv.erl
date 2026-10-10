@@ -56,12 +56,16 @@ handle_info({Port, {exit_status, Codigo}}, S = #{port := Port}) ->
 
 %% Línea esperada: <<"x,y,z,temp\r">> (print() de MicroPython termina en \r\n)
 parsear(Linea) ->
-    Campos = binary:split(string:trim(Linea), <<",">>, [global, trim_all]),
+    Campos = binary:split(quitar_fin_de_linea(Linea), <<",">>, [global, trim_all]),
     try [binary_to_integer(C) || C <- Campos] of
         [X, Y, Z, T] -> {ok, X, Y, Z, T};
         _            -> descartar
     catch error:badarg -> descartar
     end.
+
+%% string:trim/1 revienta (badarg) con bytes que no son UTF-8, y un micro:bit recien
+%% conectado a veces manda ruido: se quitan \r\n a nivel de bytes.
+quitar_fin_de_linea(Bin) -> binary:replace(Bin, [<<"\r">>, <<"\n">>], <<>>, [global]).
 
 procesar(descartar, S) -> S;
 procesar({ok, X, Y, Z, T}, S = #{lecturas := N, alertas := A}) ->
