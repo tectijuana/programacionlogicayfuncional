@@ -24,6 +24,9 @@ Las pulsaciones "manuales" se simulan con `@A/@B/@L`: `rpc:call(semi7@host, semi
 | Caída de un nodo completo → evento `perdido` | ≈ 6 s (umbral de sin-señal 5 s + barrido cada 2 s) |
 | Memoria por nodo semi / central | ≈ 53 MB / 53 MB; cola de mensajes de la central = 0 |
 
+**Segunda corrida (9-oct, tras quitar `string:trim/1`):** 40/40 nodos; 388 fixes en 10 s (97 %); SOS→evento 204–459 ms;
+ACK 306–561 ms; nodo caído→`perdido` ≈ 6.1 s; memoria 52.9 / 53.3 MB; cola de la central 0; 17 pruebas eunit OK. Sin regresiones.
+
 Notas honestas:
 - **El 95 % no es pérdida de red.** `central:paquetes()` cuenta solo fixes *aceptados*. La traza trae fallas a propósito
   (salto atípico, túnel) y la validación descartó 9 y registró 15 `sin_fix` y 7 `huecos` en 30 s. Además el `sleep(100)` de

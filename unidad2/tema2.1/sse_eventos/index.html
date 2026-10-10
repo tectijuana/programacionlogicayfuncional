@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSE vs polling</title>
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --mut:#666; --line:#ddd; --ok:#2a9d8f; --alerta:#e9a100; --sos:#d62828; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14161a; --fg:#e8e8e8; --mut:#999; --line:#333; } }
+  body { margin:0; font:14px system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:10px 16px; border-bottom:1px solid var(--line); }
+  h1 { font-size:16px; margin:0 0 2px; } .k { color:var(--mut); }
+  main { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px; }
+  section { border:1px solid var(--line); border-radius:6px; padding:10px 12px; min-width:0; }
+  h2 { font-size:14px; margin:0 0 6px; }
+  .stats { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:8px; } b { font-variant-numeric:tabular-nums; }
+  ul { list-style:none; margin:0; padding:0; max-height:55vh; overflow:auto; font-size:13px; }
+  li { padding:3px 0; border-bottom:1px solid var(--line); } .ok{color:var(--ok)} .alerta{color:var(--alerta)} .sos{color:var(--sos);font-weight:700}
+  @media (max-width:700px) { main { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header><h1>El mismo evento, dos formas de enterarse</h1>
+<span class="k">Latencia = hora en que el navegador lo ve − hora en que el servidor lo publicó (misma máquina).</span></header>
+<main>
+  <section><h2>SSE (el servidor empuja) <span id="est" class="k">conectando…</span></h2>
+    <div class="stats"><span><span class="k">eventos</span> <b id="sn">0</b></span>
+      <span><span class="k">latencia media</span> <b id="sl">–</b> ms</span>
+      <span><span class="k">peticiones HTTP</span> <b id="sp">1</b></span></div><ul id="sul"></ul></section>
+  <section><h2>Polling cada 1 s (el navegador pregunta)</h2>
+    <div class="stats"><span><span class="k">eventos</span> <b id="pn">0</b></span>
+      <span><span class="k">latencia media</span> <b id="pl">–</b> ms</span>
+      <span><span class="k">peticiones HTTP</span> <b id="pp">0</b></span></div><ul id="pul"></ul></section>
+</main>
+<script>
+function panel(prefix) {
+  const vistos = new Set(); let n = 0, suma = 0;
+  return function (ev) {
+    if (vistos.has(ev.id)) return; vistos.add(ev.id);
+    const lat = Date.now() - ev.t; n++; suma += lat;
+    document.getElementById(prefix + 'n').textContent = n;
+    document.getElementById(prefix + 'l').textContent = Math.round(suma / n);
+    const li = document.createElement('li'); li.className = ev.tipo;
+    li.textContent = '#' + ev.id + ' · ' + ev.tipo + ' · ' + ev.texto + ' · ' + lat + ' ms';
+    const ul = document.getElementById(prefix + 'ul'); ul.prepend(li);
+  };
+}
+const verSse = panel('s'), verPoll = panel('p');
+
+const es = new EventSource('/stream');
+es.onopen  = () => document.getElementById('est').textContent = '● conectado';
+es.onerror = () => document.getElementById('est').textContent = '○ reconectando… (reenvía lo perdido con Last-Event-ID)';
+for (const tipo of ['ok', 'alerta', 'sos']) es.addEventListener(tipo, e => verSse(JSON.parse(e.data)));
+
+let peticiones = 0;
+setInterval(async () => {
+  try {
+    const evs = await (await fetch('/polling', {cache: 'no-store'})).json();
+    document.getElementById('pp').textContent = ++peticiones;
+    evs.slice().sort((a, b) => a.id - b.id).forEach(verPoll);
+  } catch (e) {}
+}, 1000);
+</script>
+</body>
+</html>
