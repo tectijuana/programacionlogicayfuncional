@@ -36,9 +36,27 @@ Vas a ver con tus propios ojos tres ideas del curso:
 | **Pattern matching** | Una línea válida, una línea basura y un cable desconectado son tres cláusulas distintas |
 | **"Let it crash"** | Desconectas el cable a propósito y el supervisor levanta el proceso solo |
 
-> **Antes de empezar:** repasa los niveles 1 y 2 de
+> **Antes de empezar:** haz primero [`patrones_mbit.md`](patrones_mbit.md) (Práctica 0) y repasa los niveles 1 y 2 de
 > [`TUTORIAL_ERLANG.md`](TUTORIAL_ERLANG.md) (pattern matching, `gen_server`)
 > y la sección 3.1 (supervisor).
+
+---
+
+## Escenario: Clarvi, transporte de carga
+
+> **Empresa ficticia con fines didácticos.** Clarvi no existe; el escenario sirve para darle propósito al código.
+
+**Clarvi**, transportista de carga con base en Tijuana, prototipa una unidad de cabina barata para sus tractocamiones. Un
+micro:bit hace de unidad: su acelerómetro detecta frenados bruscos o golpes (en esta práctica, el "sismo" de la central),
+y su temperatura vigila la cabina o la carga. Tú construyes la central de monitoreo.
+
+**Justificación:** una central de monitoreo que se cae cuando un cable se afloja es peor que no tener central, porque da
+falsa tranquilidad. En un camión los cables se mueven, se desconectan y se vuelven a conectar. Por eso esta práctica no se
+queda en leer datos (eso lo viste en [`patrones_mbit.md`](patrones_mbit.md)): agrega un **supervisor** para que el
+servicio se recupere solo, y un **límite de reintentos** para que un fallo permanente se note en vez de repetirse sin fin.
+El siguiente paso, [`flota40/`](flota40/), multiplica este mismo diseño por 40 unidades con una central de mando.
+
+> Este proyecto no es una fantasía académica: modela un tipo de problema (dispositivos poco confiables que se desconectan, servicios que deben recuperarse solos) que en la industria se resuelve con procesos supervisados. No afirma que ninguna empresa concreta use esta arquitectura.
 
 ---
 
@@ -112,7 +130,9 @@ handle_info({Port, {exit_status, Codigo}}, S = #{port := Port}) ->
 nuevo que el `gen_server` usa en el siguiente mensaje.
 
 El supervisor ([`erlangmbit/microbit_sup.erl`](erlangmbit/microbit_sup.erl)) usa
-`one_for_one` con un máximo de **5 reinicios en 30 segundos**.
+`one_for_one` con un máximo de **5 reinicios en 60 segundos**. Si al reiniciar el
+cable no está, `init/1` espera 5 s antes de fallar (`?ESPERA_MS`); sin esa pausa
+los 5 reintentos se agotarían en medio segundo y no alcanzarías a reconectar.
 
 ---
 
@@ -137,9 +157,9 @@ erl
 Ahora haz los **tres experimentos** y anota lo que pasa:
 
 1. **Agita** el micro:bit. Debe aparecer `ALERTA sismo: ... mg` en la consola.
-2. **Desconecta** el cable y vuelve a conectarlo antes de 30 s. ¿Qué dice el log?
+2. **Desconecta** el cable y vuelve a conectarlo antes de 20 s. ¿Qué dice el log?
    ¿Siguen contando las lecturas desde cero o desde donde iban? ¿Por qué?
-3. **Desconéctalo** y déjalo así. Después de 5 intentos el supervisor se rinde.
+3. **Desconéctalo** y déjalo así. Después de 5 intentos (unos 25 s) el supervisor se rinde.
    ¿Por qué es bueno que un supervisor tenga un límite?
 
 > **Sin hardware:** `bash erlangmbit/simular.sh` reproduce lecturas, una línea

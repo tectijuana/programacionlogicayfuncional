@@ -4,6 +4,7 @@
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2]).
 
 -define(UMBRAL_MG, 1800).  %% en reposo la magnitud es ~1024 mg (1 g)
+-define(ESPERA_MS, 5000).  %% pausa antes de fallar si no hay cable (tiempo para reconectar)
 
 %% Dev = "/dev/cu.usbmodem1102" (macOS) | "/dev/ttyACM0" (Linux)
 %% {cmd, Cmd} permite simular el micro:bit sin hardware.
@@ -18,6 +19,16 @@ init({cmd, Cmd}) ->
                      [{args, ["-c", Cmd]}, {line, 256}, binary, exit_status]),
     {ok, #{port => Port, lecturas => 0, alertas => 0}};
 init(Dev) ->
+    case file:read_file_info(Dev) of
+        {ok, _}    -> abrir_serial(Dev);
+        {error, _} ->
+            %% Sin cable: esperar antes de fallar; si no, el supervisor agota
+            %% sus reinicios en milisegundos y no da tiempo de reconectar.
+            timer:sleep(?ESPERA_MS),
+            {stop, {sin_dispositivo, Dev}}
+    end.
+
+abrir_serial(Dev) ->
     %% stdin del port -> micro:bit (segundo plano); micro:bit -> stdout del port.
     %% Si se desconecta el cable, el `cat` de lectura termina y llega exit_status.
     init({cmd, "stty " ++ flag_stty() ++ " " ++ Dev ++ " 115200 raw -echo"

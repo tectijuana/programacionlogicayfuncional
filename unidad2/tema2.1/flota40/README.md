@@ -10,6 +10,14 @@ Este proyecto no es una fantasía académica: modela un tipo de problema (teleme
 muchos clientes concurrentes, fallas aisladas) que en la industria se resuelve con la
 arquitectura de procesos de Erlang/OTP.
 
+## Escenario: Clarvi
+
+*Empresa ficticia con fines didácticos.* **Clarvi**, transportista de carga con base en Tijuana, quiere ver en una sola
+pantalla 40 tractocamiones, detectar un SOS del operador en segundos y ordenar desde la central (detener, avisar a las
+unidades cercanas) aunque algún dispositivo mande datos defectuosos o se desconecte. Cada equipo de la mesa opera
+**4 unidades** de la flota; la central y el dashboard son el centro de control de Clarvi. Antecedente:
+[`../patrones_mbit.md`](../patrones_mbit.md) (leer el dispositivo) y [`../erlangmbit.md`](../erlangmbit.md) (supervisión).
+
 ## Correr
 
 ```
