@@ -13,7 +13,7 @@
 ## Datos del lenguaje
 
 - **Año / origen:** 1986 (Ericsson), open source 1998
-- **Creador(es):** _(completar)_
+- **Creador(es):** Joe Armstrong, Robert Virding y Mike Williams.
 - **Modelo de evaluación:** estricto
 - **Sistema de tipos:** dinámico; `dialyzer` para análisis estático opcional
 - **REPL / herramienta:** `erl` / `erlc`
@@ -63,7 +63,7 @@ Salida esperada:
 
 ## Grabación de respaldo (asciinema cloud)
 
-- URL: _(pegar la URL de asciinema.org tras `asciinema upload`)_
+- URL: https://asciinema.org/a/1Nv9ddpV9dtp3YE9
 - Cómo: `asciinema rec demo.cast` → `asciinema upload demo.cast`
 
 ## Diapositivas
@@ -72,9 +72,10 @@ Salida esperada:
 
 ## Bibliografía (IEEE)
 
-1. _(fuente 1)_
-2. _(fuente 2)_
-3. _(fuente 3)_
+1.J. Armstrong, "A history of Erlang," en Proceedings of the Third ACM SIGPLAN Conference on History of Programming Languages, San Diego, CA, USA, 2007, pp. 6-1–6-26.
+2. F. Hébert, Learn You Some Erlang for Great Good! 1ra ed. San Francisco, CA: No Starch Press, 2013.
+3. "The WhatsApp Architecture WhatsApp Uses To Deliver 10 Billion Messages A Day," High Scalability, 2014. [En línea]. Disponible en: http://highscalability.com.
+4. E. Letuchy, "Erlang at Facebook and WhatsApp," IEEE Software, vol. 31, no. 1, pp. 71-75, 2014
 
 ---
 
