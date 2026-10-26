@@ -60,18 +60,29 @@ Salida esperada:
 
 ## Grabación de respaldo (asciinema cloud)
 
-- URL: _(pegar la URL de asciinema.org tras `asciinema upload`)_
-- Cómo: `asciinema rec demo.cast` → `asciinema upload demo.cast`
+- URL: https://asciinema.org/a/CCzCdCx1pSFJi8tY 
 
 ## Diapositivas
 
-- `slides.pdf` — 5–8 diapositivas, subir a esta carpeta **antes** de la sesión.
+- [Ver presentación de Elixir (PDF)](./slides.pdf)
 
 ## Bibliografía (IEEE)
 
-1. _(fuente 1)_
-2. _(fuente 2)_
-3. _(fuente 3)_
+[1] S. Vishnevskiy, “How Discord Scaled Elixir to 5,000,000 Concurrent Users,” Discord Engineering Blog, Jul. 6, 2017. [Online]. Available: https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users
+
+[2] Elixir Team, “The Elixir programming language,” Elixir. [Online]. Available: https://elixir-lang.org/. [Accessed: Sep. 22, 2026].
+
+[3] Erlang/OTP Team, “Overview—OTP Design Principles,” Erlang Documentation. [Online]. Available: https://www.erlang.org/doc/system/design_principles.html. [Accessed: Sep. 22, 2026].
+
+[4] Erlang/OTP Team, “gen_server—OTP Design Principles,” Erlang Documentation. [Online]. Available: https://www.erlang.org/doc/apps/stdlib/gen_server.html. [Accessed: Sep. 22, 2026].
+
+[5] Erlang/OTP Team, “supervisor—OTP Design Principles,” Erlang Documentation. [Online]. Available: https://www.erlang.org/doc/apps/stdlib/supervisor.html. [Accessed: Sep. 22, 2026].
+
+[6] Elixir Team, “Kernel.SpecialForms,” HexDocs. [Online]. Available: https://hexdocs.pm/elixir/Kernel.SpecialForms.html. [Accessed: Sep. 22, 2026].
+
+[7] Elixir Team, “GenServer,” HexDocs. [Online]. Available: https://hexdocs.pm/elixir/GenServer.html. [Accessed: Sep. 22, 2026].
+
+[8] Elixir Team, “Enumerable and Streams,” Elixir Documentation. [Online]. Available: https://elixir-lang.org/getting-started/enumerables-and-streams.html. [Accessed: Sep. 22, 2026].
 
 ---
 
