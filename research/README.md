@@ -20,3 +20,6 @@ para el estudiante — es la **complementariedad**: los LLM aportan fluidez
 conversacional y generativa, mientras los paradigmas declarativos del curso
 aportan lo que los LLM no garantizan por sí mismos: razonamiento verificable
 (Prolog) e infraestructura confiable en producción (Erlang/OTP).
+
+
+<img width="1254" height="1254" alt="Pull Request" src="https://github.com/user-attachments/assets/d394d4f5-b733-4654-b9b5-aae39954e42f" />
